@@ -1,0 +1,12 @@
+litetweaker.title.screen.configs=LiteTweaker %s - Configs
+
+litetweaker.config.tab.generic=Generic
+litetweaker.config.tab.hotkeys=Hotkeys
+litetweaker.config.tab.tweaks=Tweaks
+
+litetweaker.feature_toggle.name.placeignoreentity=Place Ignore Entity
+litetweaker.feature_toggle.name.disableslowdown=Disable Slow Down
+
+litetweaker.hotkeys.category.generic=Generic
+litetweaker.hotkeys.category.generic_hotkeys=Hotkeys
+litetweaker.hotkeys.category.tweak_toggle_hotkeys=Tweak Hotkeys

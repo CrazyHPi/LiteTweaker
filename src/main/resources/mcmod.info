@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "litetweaker",
+    "name": "LiteTweaker",
+    "description": "Adds another bunch of configurable client-side tweaks",
+    "version": "${mod_version}",
+    "mcversion": "${minecraft_version}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [ "Crazy_H" ],
+    "credits": "masa",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

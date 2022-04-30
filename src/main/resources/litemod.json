@@ -1,0 +1,7 @@
+{
+    "name": "litetweaker",
+    "mcversion": "1.12.2",
+    "mixinConfigs": [
+        "mixins.litetweaker.json"
+    ]
+}

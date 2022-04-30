@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "xyz.crazyh.litetweaker.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "mixins.litetweaker.refmap.json",
+  "minVersion": "0.7",
+  "mixins": [
+    "disableBlockBreakingCooldown.MixinPLayerControllerMP",
+    "disablePlayerSlowDown.MixinBlockSoulSand",
+    "disablePlayerSlowDown.MixinEntityPlayer",
+    "disablePlayerSlowDown.MixinEntityPlayerSP",
+    "placeIgnoreEntity.MixinItemBlock"
+  ]
+}
