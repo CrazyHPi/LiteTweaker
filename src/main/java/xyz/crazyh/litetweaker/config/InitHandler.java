@@ -1,14 +1,11 @@
-package xyz.crazyh.litetweaker;
+package xyz.crazyh.litetweaker.config;
 
 import fi.dy.masa.malilib.config.JsonModConfig;
 import fi.dy.masa.malilib.event.InitializationHandler;
 import fi.dy.masa.malilib.event.dispatch.InitializationDispatcherImpl;
 import fi.dy.masa.malilib.gui.config.ConfigSearchInfo;
 import fi.dy.masa.malilib.registry.Registry;
-import xyz.crazyh.litetweaker.config.Actions;
-import xyz.crazyh.litetweaker.config.Callbacks;
-import xyz.crazyh.litetweaker.config.Configs;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.Reference;
 import xyz.crazyh.litetweaker.gui.ConfigScreen;
 import xyz.crazyh.litetweaker.gui.TweaksToggleConfigWidget;
 import xyz.crazyh.litetweaker.gui.info.TweakConfigStatusWidget;

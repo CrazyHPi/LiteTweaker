@@ -10,3 +10,6 @@ litetweaker.feature_toggle.name.disableslowdown=Disable Slow Down
 litetweaker.hotkeys.category.generic=Generic
 litetweaker.hotkeys.category.generic_hotkeys=Hotkeys
 litetweaker.hotkeys.category.tweak_toggle_hotkeys=Tweak Hotkeys
+
+liteloader.message.refresh_inventory=Refreshing inventory
+liteloader.message.clear_ghost_block=Clearing ghost blocks

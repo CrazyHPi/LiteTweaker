@@ -6,6 +6,7 @@ import com.mumfrey.liteloader.Tickable;
 import com.mumfrey.liteloader.modconfig.ConfigPanel;
 import fi.dy.masa.malilib.registry.Registry;
 import net.minecraft.client.Minecraft;
+import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
 
 import java.io.File;

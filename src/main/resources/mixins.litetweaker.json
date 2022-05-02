@@ -5,6 +5,8 @@
   "refmap": "mixins.litetweaker.refmap.json",
   "minVersion": "0.7",
   "mixins": [
+    "additionalBlockBreakingCooldown.MixinPLayerControllerMP",
+    "autoRespawn.MixinNetHandlerPlayClient",
     "disableBlockBreakingCooldown.MixinPLayerControllerMP",
     "disablePlayerSlowDown.MixinBlockSoulSand",
     "disablePlayerSlowDown.MixinEntityPlayer",
