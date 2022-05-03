@@ -20,7 +20,7 @@ public class Actions {
             ActionUtils.registerBooleanConfigActions(Reference.MOD_INFO, tweak.getBooleanConfig(), tweak.getKeyBind());
         }
 
-        //ActionUtils.registerBooleanConfigActions(Configs.Generic.OPTIONS);
+        ActionUtils.registerBooleanConfigActions(Configs.Generic.OPTIONS);
     }
 
     //register

@@ -22,6 +22,7 @@ public class LiteTweakerHotkeyProvider implements HotkeyProvider {
     public List<? extends Hotkey> getAllHotkeys() {
         ImmutableList.Builder<Hotkey> builder = ImmutableList.builder();
 
+        builder.addAll(Configs.Generic.OPTIONS_HOTKEY);
         builder.addAll(Hotkeys.HOTKEY_LIST);
         builder.addAll(TweaksToggle.TOGGLE_HOTKEYS);
 
@@ -35,6 +36,7 @@ public class LiteTweakerHotkeyProvider implements HotkeyProvider {
     @Override
     public List<HotkeyCategory> getHotkeysByCategories() {
         return ImmutableList.of(
+                new HotkeyCategory(Reference.MOD_INFO, "litetweaker.hotkeys.category.generic", Configs.Generic.OPTIONS_HOTKEY),
                 new HotkeyCategory(Reference.MOD_INFO, "litetweaker.hotkeys.category.generic_hotkeys", Hotkeys.HOTKEY_LIST),
                 new HotkeyCategory(Reference.MOD_INFO, "litetweaker.hotkeys.category.tweak_toggle_hotkeys", TweaksToggle.TOGGLE_HOTKEYS)
         );

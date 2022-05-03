@@ -5,8 +5,9 @@ import com.google.common.collect.ImmutableList;
 import fi.dy.masa.malilib.config.category.BaseConfigOptionCategory;
 import fi.dy.masa.malilib.config.category.ConfigOptionCategory;
 import fi.dy.masa.malilib.config.option.*;
+import fi.dy.masa.malilib.input.Hotkey;
 import xyz.crazyh.litetweaker.Reference;
-import xyz.crazyh.litetweaker.util.AutoDropContainerType;
+import xyz.crazyh.litetweaker.util.autoContainerProcess.AutoDropContainerType;
 
 import java.util.List;
 
@@ -45,6 +46,13 @@ public class Configs {
                 CUSTOM_TITLE
         );
 
+        public static final List<Hotkey> OPTIONS_HOTKEY = ImmutableList.of(
+                ADDITIONAL_BLOCK_BREAKING_COOLDOWN,
+                AUTO_CLEAR_GHOST_BLOCK,
+                AUTO_DROP_CONTAINER,
+                AUTO_FILL_CONTAINER,
+                AUTO_REFRESH_INVENTORY
+        );
     }
 
     public static final int CURRENT_VERSION = 1;

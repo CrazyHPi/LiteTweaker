@@ -6,6 +6,7 @@
   "minVersion": "0.7",
   "mixins": [
     "additionalBlockBreakingCooldown.MixinPLayerControllerMP",
+    "autoDropAndFillContainer.MixinNetHandlerPlayClient",
     "autoRespawn.MixinNetHandlerPlayClient",
     "disableBlockBreakingCooldown.MixinPLayerControllerMP",
     "disablePlayerSlowDown.MixinBlockSoulSand",

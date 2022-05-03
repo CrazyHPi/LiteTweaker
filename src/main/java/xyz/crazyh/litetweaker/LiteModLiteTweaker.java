@@ -6,12 +6,20 @@ import com.mumfrey.liteloader.Tickable;
 import com.mumfrey.liteloader.modconfig.ConfigPanel;
 import fi.dy.masa.malilib.registry.Registry;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
+import xyz.crazyh.litetweaker.config.Configs;
 import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
+import xyz.crazyh.litetweaker.util.AntiGhostBlock;
+import xyz.crazyh.litetweaker.util.CustomTitle;
+import xyz.crazyh.litetweaker.util.RefreshInventory;
 
 import java.io.File;
 
 public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
+    public static int autoClearGhostBlockCounter;
+    public static int autoRefreshInventoryCounter;
+
 
     /**
      * Default constructor. All LiteMods must have a default constructor. In general you should do very little
@@ -83,6 +91,20 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
      */
     @Override
     public void onTick(Minecraft minecraft, float partialTicks, boolean inGame, boolean clock) {
+        if (clock) {
+            if (Configs.Generic.AUTO_CLEAR_GHOST_BLOCK.getBooleanValue()) {
+                if (autoClearGhostBlockCounter++ >= Configs.Generic.AUTO_CLEAR_GHOST_BLOCK_INTERVAL.getIntegerValue()) {
+                    AntiGhostBlock.silentClearGhostBlock();
+                    autoClearGhostBlockCounter = 0;
+                }
+            }
 
+            if (Configs.Generic.AUTO_REFRESH_INVENTORY.getBooleanValue()) {
+                if (autoRefreshInventoryCounter++ >= Configs.Generic.AUTO_REFRESH_INVENTORY_INTERVAL.getIntegerValue()) {
+                    RefreshInventory.silentRefreshInv();
+                    autoRefreshInventoryCounter = 0;
+                }
+            }
+        }
     }
 }

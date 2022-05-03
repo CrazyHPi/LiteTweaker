@@ -1,4 +1,4 @@
-package xyz.crazyh.litetweaker.util;
+package xyz.crazyh.litetweaker.util.autoContainerProcess;
 
 import com.google.common.collect.ImmutableList;
 import fi.dy.masa.malilib.config.value.BaseOptionListConfigValue;
