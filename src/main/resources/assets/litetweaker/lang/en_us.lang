@@ -4,13 +4,61 @@ litetweaker.config.tab.generic=Generic
 litetweaker.config.tab.hotkeys=Hotkeys
 litetweaker.config.tab.tweaks=Tweaks
 
-litetweaker.feature_toggle.name.placeignoreentity=Place Ignore Entity
-litetweaker.feature_toggle.name.disableslowdown=Disable Slow Down
-
 litetweaker.hotkeys.category.generic=Generic
 litetweaker.hotkeys.category.generic_hotkeys=Hotkeys
 litetweaker.hotkeys.category.tweak_toggle_hotkeys=Tweak Hotkeys
 
+litetweaker.config.name.additionalblockbreakingcooldown=Additional Block Breaking Cooldown
+litetweaker.config.name.additionaldelay=Additional Block Breaking Cooldown Time
+litetweaker.config.name.autoclearghostblock=Auto Clear Ghost Block
+litetweaker.config.name.autoclearghostblockinterval=Auto Clear Ghost Block Interval
+litetweaker.config.name.autodropcontainer=Auto Drop Container
+litetweaker.config.name.autodropcontainertype=Auto Drop Container Type
+litetweaker.config.name.autofillcontainer=Auto Fill Container
+litetweaker.config.name.autofillcontainerlimit=Auto Fill Container Limit
+litetweaker.config.name.autorefreshinventory=Auto Refresh Inventory
+litetweaker.config.name.autorefreshinventoryinterval=Auto Refresh Inventory Interval
+litetweaker.config.name.backgroundfpslimit=Background FPS Limit
+litetweaker.config.name.customtitle=Custom Title
+
+litetweaker.config.comment.additionalblockbreakingcooldown=Add a configurable amount of delay between two instant mined block.\nUseful when building redstone machines or your mouse is douvle clicking
+litetweaker.config.comment.additionaldelay=The amount of dalay add between mining two blocks, in gametick.
+litetweaker.config.comment.autoclearghostblock=Automatically clear ghost blocks for you.\nNote some server may kick you because this send a lot packet in 1gt.
+litetweaker.config.comment.autoclearghostblockinterval=Interval between auto clearing ghost blocks, in gametick.
+litetweaker.config.comment.autodropcontainer=Drop all the content in the container you clicked.
+litetweaker.config.comment.autodropcontainertype=Change which type of container you want to drop, useful when using crafting station.
+litetweaker.config.comment.autofillcontainer=Fill the container with content above the limit in your inventory.
+litetweaker.config.comment.autofillcontainerlimit=Only fill item stacks above this limit.
+litetweaker.config.comment.autorefreshinventory=Automatically refresh you inventory.\nUseful when inventory changed quickly and out of sync with server.
+litetweaker.config.comment.autorefreshinventoryinterval=Inventory between auto refresh inventory, in gametick.
+litetweaker.config.comment.backgroundfpslimit=Limit the game fps when not focused, saves some CPU and GPU usage.
+litetweaker.config.comment.customtitle=Change the game title to whatever you want.
+
+litetweaker.feature_toggle.name.placeignoreentity=Place Ignore Entity
+litetweaker.feature_toggle.name.disableslowdown=Disable Slow Down
+litetweaker.feature_toggle.name.betterf3ncycle=Better F3+N Cycle
+litetweaker.feature_toggle.name.autorespawn=Auto Respawn
+litetweaker.feature_toggle.name.autofish=Auto Fish
+litetweaker.feature_toggle.name.disableblockbreakingcooldown=Disable Block Breaking Cooldown
+
+litetweaker.feature_toggle.comment.placeignoreentity=Allot you to place block inside of entity when in creative.
+litetweaker.feature_toggle.comment.disableslowdown=Player won't be slowed down by cobweb, soulsand and using item.
+litetweaker.feature_toggle.comment.betterf3ncycle=Now it works like 1.15, which you can directly switch to creative in non spectator mode.
+litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
+litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
+litetweaker.feature_toggle.comment.disableblockbreakingcooldown=Remove the cool down between mining two non-instant mined block.
+
+litetweaker.hotkey.name.clearghostblock=Clear Ghost Block
+litetweaker.hotkey.name.openconfiggui=Open Config Gui
+litetweaker.hotkey.name.refreshinventory=Refresh Inventory
+
+litetweaker.hotkey.comment.clearghostblock=Press to manually clear ghost block once.\nNote: this doesn't clear piston ghost block.
+litetweaker.hotkey.comment.openconfiggui=Press to open config screen.
+litetweaker.hotkey.comment.refreshinventory=Press to manually refresh your inventory by forcing server to resend your inv.
+
 litetweaker.message.refresh_inventory=Refreshing inventory
 litetweaker.message.clear_ghost_block=Clearing ghost blocks
 litetweaker.message.catch_fish=You just catch a fish! or whatever it is?
+
+litetweaker.label.auto_drop_container_type.shulker=Shulker Box Only
+litetweaker.label.auto_drop_container_type.all=All Valid Container

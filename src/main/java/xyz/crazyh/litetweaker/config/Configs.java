@@ -27,8 +27,8 @@ public class Configs {
         public static final HotkeyedBooleanConfig AUTO_FILL_CONTAINER = new HotkeyedBooleanConfig("autoFillContainer", false, "");
         public static final IntegerConfig AUTO_FILL_CONTAINER_LIMIT = new IntegerConfig("autoFillContainerLimit", 3, 1, 36);
 
-        public static final HotkeyedBooleanConfig AUTO_REFRESH_INVENTORY = new HotkeyedBooleanConfig("autoRefreshInvenroty", false, "");
-        public static final IntegerConfig AUTO_REFRESH_INVENTORY_INTERVAL = new IntegerConfig("autoRefreshInvenrotyInterval", 100, 1, 1000);
+        public static final HotkeyedBooleanConfig AUTO_REFRESH_INVENTORY = new HotkeyedBooleanConfig("autoRefreshInventory", false, "");
+        public static final IntegerConfig AUTO_REFRESH_INVENTORY_INTERVAL = new IntegerConfig("autoRefreshInventoryInterval", 100, 1, 1000);
 
         public static final IntegerConfig BACKGROUND_FPS_LIMIT = new IntegerConfig("backgroundFPSLimit", -1, -1, 999);
         public static final StringConfig CUSTOM_TITLE  = new StringConfig("customTitle", "Minecraft 1.12.2");
