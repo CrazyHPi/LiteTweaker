@@ -18,10 +18,6 @@ import xyz.crazyh.litetweaker.util.RefreshInventory;
 import java.io.File;
 
 public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
-    public static int autoClearGhostBlockCounter;
-    public static int autoRefreshInventoryCounter;
-
-
     /**
      * Default constructor. All LiteMods must have a default constructor. In general you should do very little
      * in the mod constructor EXCEPT for initialising any non-game-interfacing components or performing
