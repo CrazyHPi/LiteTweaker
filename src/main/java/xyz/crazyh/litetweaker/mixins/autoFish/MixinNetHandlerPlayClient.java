@@ -18,7 +18,7 @@ public abstract class MixinNetHandlerPlayClient {
     )
     private void autoFish(SPacketSoundEffect packetIn, CallbackInfo ci) {
         if (TweaksToggle.AUTO_FISH.getBooleanValue() && SoundEvents.ENTITY_BOBBER_SPLASH.equals(packetIn.getSound())) {
-            AutoFish.useFishingRod();
+            AutoFish.retractFishingRod();
         }
     }
 }

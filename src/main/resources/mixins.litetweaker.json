@@ -10,6 +10,7 @@
     "autoFish.MixinNetHandlerPlayClient",
     "autoRespawn.MixinNetHandlerPlayClient",
     "backgroundFPSLimit.MixinMinecraft",
+    "betterF3nCycle.MixinMinecraft",
     "disableBlockBreakingCooldown.MixinPLayerControllerMP",
     "disablePlayerSlowDown.MixinBlockSoulSand",
     "disablePlayerSlowDown.MixinEntityPlayer",

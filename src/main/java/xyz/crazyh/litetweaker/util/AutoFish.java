@@ -10,9 +10,7 @@ import net.minecraft.util.EnumHand;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 public class AutoFish {
-    private static int tickCounter;
-
-    public static void useFishingRod() {
+    public static void retractFishingRod() {
         Minecraft mc = Minecraft.getMinecraft();
         EntityPlayerSP playerSP = mc.player;
 
@@ -30,6 +28,7 @@ public class AutoFish {
         }
     }
 
+    private static int tickCounter;
     public static void autoReUseFishingRod(Minecraft minecraft, boolean inGame, boolean clock) {
         if (!TweaksToggle.AUTO_FISH.getBooleanValue()) {
             return;
