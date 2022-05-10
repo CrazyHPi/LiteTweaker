@@ -30,6 +30,7 @@ public class Configs {
         public static final HotkeyedBooleanConfig AUTO_REFRESH_INVENTORY = new HotkeyedBooleanConfig("autoRefreshInvenroty", false, "");
         public static final IntegerConfig AUTO_REFRESH_INVENTORY_INTERVAL = new IntegerConfig("autoRefreshInvenrotyInterval", 100, 1, 1000);
 
+        public static final IntegerConfig BACKGROUND_FPS_LIMIT = new IntegerConfig("backgroundFPSLimit", -1, -1, 999);
         public static final StringConfig CUSTOM_TITLE  = new StringConfig("customTitle", "Minecraft 1.12.2");
 
         public static final ImmutableList<ConfigOption<?>> OPTIONS = ImmutableList.of(
@@ -43,6 +44,7 @@ public class Configs {
                 AUTO_FILL_CONTAINER_LIMIT,
                 AUTO_REFRESH_INVENTORY,
                 AUTO_REFRESH_INVENTORY_INTERVAL,
+                BACKGROUND_FPS_LIMIT,
                 CUSTOM_TITLE
         );
 

@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 public enum TweaksToggle implements ConfigInfo {
     AUTO_RESPAWN("autoRespawn", false),
+    AUTO_FISH("autoFish",false),
     PLACE_IGNORE_ENTITY("placeIgnoreEntity", false),
     DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
     DISABLE_SLOW_DOWN("disableSlowDown", false);

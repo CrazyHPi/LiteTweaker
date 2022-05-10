@@ -7,7 +7,9 @@
   "mixins": [
     "additionalBlockBreakingCooldown.MixinPLayerControllerMP",
     "autoDropAndFillContainer.MixinNetHandlerPlayClient",
+    "autoFish.MixinNetHandlerPlayClient",
     "autoRespawn.MixinNetHandlerPlayClient",
+    "backgroundFPSLimit.MixinMinecraft",
     "disableBlockBreakingCooldown.MixinPLayerControllerMP",
     "disablePlayerSlowDown.MixinBlockSoulSand",
     "disablePlayerSlowDown.MixinEntityPlayer",

@@ -11,6 +11,7 @@ import xyz.crazyh.litetweaker.config.Configs;
 import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
 import xyz.crazyh.litetweaker.util.AntiGhostBlock;
+import xyz.crazyh.litetweaker.util.AutoFish;
 import xyz.crazyh.litetweaker.util.CustomTitle;
 import xyz.crazyh.litetweaker.util.RefreshInventory;
 
@@ -91,7 +92,8 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
      */
     @Override
     public void onTick(Minecraft minecraft, float partialTicks, boolean inGame, boolean clock) {
-        if (clock) {
+        //TODO: move these to its own util class
+        if (clock && inGame) {
             if (Configs.Generic.AUTO_CLEAR_GHOST_BLOCK.getBooleanValue()) {
                 if (autoClearGhostBlockCounter++ >= Configs.Generic.AUTO_CLEAR_GHOST_BLOCK_INTERVAL.getIntegerValue()) {
                     AntiGhostBlock.silentClearGhostBlock();
@@ -106,5 +108,6 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
                 }
             }
         }
+        AutoFish.autoReUseFishingRod(minecraft, inGame, clock);
     }
 }
