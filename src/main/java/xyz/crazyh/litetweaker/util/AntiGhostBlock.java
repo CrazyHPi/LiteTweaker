@@ -7,15 +7,28 @@ import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.network.play.client.CPacketPlayerDigging;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
+import xyz.crazyh.litetweaker.config.Configs;
 
 public class AntiGhostBlock {
     public static void clearGhostBlock() {
         clear();
-        MessageUtils.printCustomActionbarMessage("liteloader.message.clear_ghost_block");
+        MessageUtils.printCustomActionbarMessage("litetweaker.message.clear_ghost_block");
     }
 
     public static void silentClearGhostBlock() {
         clear();
+    }
+
+    private static int autoClearGhostBlockCounter;
+    public static void autoClearGhostBlock(boolean inGame, boolean clock) {
+        if (clock && inGame){
+            if (Configs.Generic.AUTO_CLEAR_GHOST_BLOCK.getBooleanValue()) {
+                if (autoClearGhostBlockCounter++ >= Configs.Generic.AUTO_CLEAR_GHOST_BLOCK_INTERVAL.getIntegerValue()) {
+                    AntiGhostBlock.silentClearGhostBlock();
+                    autoClearGhostBlockCounter = 0;
+                }
+            }
+        }
     }
 
     private static void clear() {

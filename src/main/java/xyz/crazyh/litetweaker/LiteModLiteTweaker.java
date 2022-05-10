@@ -92,22 +92,8 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
      */
     @Override
     public void onTick(Minecraft minecraft, float partialTicks, boolean inGame, boolean clock) {
-        //TODO: move these to its own util class
-        if (clock && inGame) {
-            if (Configs.Generic.AUTO_CLEAR_GHOST_BLOCK.getBooleanValue()) {
-                if (autoClearGhostBlockCounter++ >= Configs.Generic.AUTO_CLEAR_GHOST_BLOCK_INTERVAL.getIntegerValue()) {
-                    AntiGhostBlock.silentClearGhostBlock();
-                    autoClearGhostBlockCounter = 0;
-                }
-            }
-
-            if (Configs.Generic.AUTO_REFRESH_INVENTORY.getBooleanValue()) {
-                if (autoRefreshInventoryCounter++ >= Configs.Generic.AUTO_REFRESH_INVENTORY_INTERVAL.getIntegerValue()) {
-                    RefreshInventory.silentRefreshInv();
-                    autoRefreshInventoryCounter = 0;
-                }
-            }
-        }
+        AntiGhostBlock.autoClearGhostBlock(inGame, clock);
+        RefreshInventory.autoRefreshInv(inGame, clock);
         AutoFish.autoReUseFishingRod(minecraft, inGame, clock);
     }
 }

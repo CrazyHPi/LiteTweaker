@@ -8,15 +8,28 @@ import net.minecraft.init.Blocks;
 import net.minecraft.inventory.ClickType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.CPacketClickWindow;
+import xyz.crazyh.litetweaker.config.Configs;
 
 public class RefreshInventory {
     public static void refreshInv() {
         refresh();
-        MessageUtils.printCustomActionbarMessage("liteloader.message.refresh_inventory");
+        MessageUtils.printCustomActionbarMessage("litetweaker.message.refresh_inventory");
     }
 
     public static void silentRefreshInv() {
         refresh();
+    }
+
+    private static int autoRefreshInventoryCounter;
+    public static void autoRefreshInv(boolean inGame, boolean clock) {
+        if (clock && inGame) {
+            if (Configs.Generic.AUTO_REFRESH_INVENTORY.getBooleanValue()) {
+                if (autoRefreshInventoryCounter++ >= Configs.Generic.AUTO_REFRESH_INVENTORY_INTERVAL.getIntegerValue()) {
+                    RefreshInventory.silentRefreshInv();
+                    autoRefreshInventoryCounter = 0;
+                }
+            }
+        }
     }
 
     private static void refresh() {

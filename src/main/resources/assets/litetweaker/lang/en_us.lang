@@ -11,5 +11,6 @@ litetweaker.hotkeys.category.generic=Generic
 litetweaker.hotkeys.category.generic_hotkeys=Hotkeys
 litetweaker.hotkeys.category.tweak_toggle_hotkeys=Tweak Hotkeys
 
-liteloader.message.refresh_inventory=Refreshing inventory
-liteloader.message.clear_ghost_block=Clearing ghost blocks
+litetweaker.message.refresh_inventory=Refreshing inventory
+litetweaker.message.clear_ghost_block=Clearing ghost blocks
+litetweaker.message.catch_fish=You just catch a fish! or whatever it is?
