@@ -32,7 +32,7 @@ public abstract class MixinItemBlock{
 
     @Inject(
             method = "canPlaceBlockOnSide",
-            at = @At("TAIL"),
+            at = @At("RETURN"),
             cancellable = true
     )
     private void skipCollision(World worldIn, BlockPos pos, EnumFacing side, EntityPlayer player, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {

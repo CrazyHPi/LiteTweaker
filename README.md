@@ -14,7 +14,7 @@ Inspired by:
 
 ---
 
-Complie:
+## Complie
 
 * Clone the repo
 * Add malilib 0.51.0 as dependency (using local gradle dependency or check [this](https://discord.com/channels/169369095538606080/913891227802427402/952894138502750259))

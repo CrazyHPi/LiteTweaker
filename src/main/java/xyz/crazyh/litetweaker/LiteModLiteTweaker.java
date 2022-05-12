@@ -6,13 +6,10 @@ import com.mumfrey.liteloader.Tickable;
 import com.mumfrey.liteloader.modconfig.ConfigPanel;
 import fi.dy.masa.malilib.registry.Registry;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
-import xyz.crazyh.litetweaker.config.Configs;
 import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
 import xyz.crazyh.litetweaker.util.AntiGhostBlock;
 import xyz.crazyh.litetweaker.util.AutoFish;
-import xyz.crazyh.litetweaker.util.CustomTitle;
 import xyz.crazyh.litetweaker.util.RefreshInventory;
 
 import java.io.File;
