@@ -4,7 +4,9 @@ This is a client-side tweak mod that adds some useful* feature to 1.12 client.
 
 Press `END` to open congif menu, or open it on liteloader side bar, or drag down menu on the top right of any mod using new malilib(masa <3).
 
-**This mod needs [malilib](https://github.com/maruohon/malilib) >= 0.51.0** and load on [LiteLoader](http://www.liteloader.com/).
+**This mod needs [malilib](https://github.com/maruohon/malilib) >= 0.51.0** and loads on [LiteLoader](http://www.liteloader.com/).
+
+[Feature List](https://github.com/CrazyHPi/LiteTweaker/blob/master/docs/Features.md)
 
 ---
 
