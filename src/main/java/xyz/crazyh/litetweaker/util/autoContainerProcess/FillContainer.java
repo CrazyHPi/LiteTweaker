@@ -44,7 +44,7 @@ public class FillContainer {
             }
 
             if (bestSlot !=null && !playerSP.inventory.mainInventory.isEmpty()) {
-                int success = 0;
+                int success = 1;
                 for (int i = packetIn.getSlotCount(); i < packetIn.getSlotCount() + 36; i++) {
                     Slot slot = container.getSlot(i);
                     if (slot != bestSlot && InventoryUtils.areStacksEqual(slot.getStack(), bestSlot.getStack())) {
