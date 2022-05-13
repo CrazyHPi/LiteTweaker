@@ -18,11 +18,14 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public enum TweaksToggle implements ConfigInfo {
+    //sort these from A-Z, then disable options
     AUTO_RESPAWN("autoRespawn", false),
     AUTO_FISH("autoFish",false),
     BETTER_F3N_CYCLE("betterF3nCycle", false),
+    CREATIVE_NO_CLIP("creativeNoClip", false),
     PLACE_IGNORE_ENTITY("placeIgnoreEntity", false),
     DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
+    DISABLE_SLIME_BOUNCE("disableSlimeBounce", false),
     DISABLE_SLOW_DOWN("disableSlowDown", false);
 
     public static final ImmutableList<TweaksToggle> VALUES = ImmutableList.copyOf(values());

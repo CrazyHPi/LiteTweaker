@@ -11,10 +11,13 @@
     "autoRespawn.MixinNetHandlerPlayClient",
     "backgroundFPSLimit.MixinMinecraft",
     "betterF3nCycle.MixinMinecraft",
+    "creativeNoClip.MixinEntityPlayer",
+    "creativeNoClip.MixinEntityRenderer",
     "disableBlockBreakingCooldown.MixinPLayerControllerMP",
     "disablePlayerSlowDown.MixinBlockSoulSand",
     "disablePlayerSlowDown.MixinEntityPlayer",
     "disablePlayerSlowDown.MixinEntityPlayerSP",
+    "disableSlimeBounce.MixinBlockSlime",
     "placeIgnoreEntity.MixinItemBlock"
   ]
 }

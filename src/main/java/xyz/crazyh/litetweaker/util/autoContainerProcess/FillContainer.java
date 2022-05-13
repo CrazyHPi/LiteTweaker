@@ -52,18 +52,16 @@ public class FillContainer {
                         success++;
                     }
                 }
+                //move best slot last
                 mc.playerController.windowClick(winID, bestSlot.slotNumber, 0, ClickType.QUICK_MOVE, playerSP);
+
+                playerSP.closeScreen();
                 MessageUtils.printCustomActionbarMessage("litetweaker.message.fill_container", packetIn.getGuiId(), success);
+                return true;
             }
-
-
-            /*for (int i = 0; i < 27; i++) {
-                shiftMove((GuiContainer) mc.currentScreen, packetIn.getSlotCount()+i, packetIn.getWindowId());
-            }*/
-
-            //RefreshInventory.silentRefreshInv();
             playerSP.closeScreen();
-            return true;
+            MessageUtils.printCustomActionbarMessage("fill_container_failed");
+            return false;
         }
 
         return false;

@@ -40,6 +40,8 @@ litetweaker.feature_toggle.name.betterf3ncycle=Better F3+N Cycle
 litetweaker.feature_toggle.name.autorespawn=Auto Respawn
 litetweaker.feature_toggle.name.autofish=Auto Fish
 litetweaker.feature_toggle.name.disableblockbreakingcooldown=Disable Block Breaking Cooldown
+litetweaker.feature_toggle.name.disableslimebounce=Disable Slime Block Bounce
+litetweaker.feature_toggle.name.creativenoclip=Creative No Clip
 
 litetweaker.feature_toggle.comment.placeignoreentity=Allot you to place block inside of entity when in creative.
 litetweaker.feature_toggle.comment.disableslowdown=Player won't be slowed down by cobweb, soulsand and using item.
@@ -47,6 +49,8 @@ litetweaker.feature_toggle.comment.betterf3ncycle=Now it works like 1.15, which 
 litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
 litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
 litetweaker.feature_toggle.comment.disableblockbreakingcooldown=Remove the cool down between mining two non-instant mined block.
+litetweaker.feature_toggle.comment.disableslimebounce=Slime block acts like normal block, won't bounce player when jumping.\nWorks better with DisableSlimeSlowDown.
+litetweaker.feature_toggle.comment.creativenoclip=Allow you tho pahse through wall when in creative flying.
 
 litetweaker.hotkey.name.clearghostblock=Clear Ghost Block
 litetweaker.hotkey.name.openconfiggui=Open Config Gui
@@ -59,7 +63,8 @@ litetweaker.hotkey.comment.refreshinventory=Press to manually refresh your inven
 litetweaker.message.refresh_inventory=Refreshing inventory
 litetweaker.message.clear_ghost_block=Clearing ghost blocks
 litetweaker.message.catch_fish=You just catch a fish! or whatever it is?
-litetweaker.message.fill_container=Successfully filled %s with %s item(s).
+litetweaker.message.fill_container=Filled %s with %s item(s)
+litetweaker.message.fill_container_failed=Nothing filled
 
 litetweaker.label.auto_drop_container_type.shulker=Shulker Box Only
 litetweaker.label.auto_drop_container_type.all=All Valid Container
