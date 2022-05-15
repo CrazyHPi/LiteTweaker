@@ -1,25 +1,16 @@
 buildscript {
     repositories {
-        mavenLocal()
+        jcenter()
         mavenCentral()
-        maven {
-            name = "sonatype"
-            url = "https://oss.sonatype.org/content/repositories/snapshots/"
-        }
         maven {
             name = "forge"
             url = "https://files.minecraftforge.net/maven"
         }
         maven {
             name = 'sponge'
-            url = 'https://repo.spongepowered.org/maven'
+            url = 'https://repo.spongepowered.org/repository/maven-public'
         }
-        maven {
-            url = 'https://jitpack.io'
-        }
-        maven {
-            url 'https://masa.dy.fi/maven'
-        }
+    }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
