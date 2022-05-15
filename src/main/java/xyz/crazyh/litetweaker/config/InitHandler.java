@@ -24,22 +24,24 @@ public class InitHandler implements InitializationHandler {
      */
     @Override
     public void registerModHandlers() {
-        //regcfg
+        //cfgs
         Registry.CONFIG_MANAGER.registerConfigHandler(new JsonModConfig(Reference.MOD_INFO, Configs.CURRENT_VERSION, Configs.CATEGORIES));
 
         Registry.CONFIG_SCREEN.registerConfigScreenFactory(Reference.MOD_INFO, ConfigScreen::create);
         Registry.CONFIG_TAB.registerConfigTabProvider(Reference.MOD_INFO, ConfigScreen::getConfigTabs);
 
+        //widget
         Registry.CONFIG_WIDGET.registerConfigWidgetFactory(TweaksToggle.class, TweaksToggleConfigWidget::new);
-
         Registry.CONFIG_WIDGET.registerConfigSearchInfo(TweaksToggle.class, new ConfigSearchInfo<TweaksToggle>(true, true).setBooleanStorageGetter(TweaksToggle::getBooleanConfig).setKeyBindGetter(TweaksToggle::getKeyBind));
 
         Registry.CONFIG_STATUS_WIDGET.registerConfigStatusWidgetFactory(TweaksToggle.class, TweakConfigStatusWidget::new, "litetweaker:csi_value_tweak_toggle");
 
+        //input
         Registry.HOTKEY_MANAGER.registerHotkeyProvider(LiteTweakerHotkeyProvider.INSTANCE);
         Registry.INPUT_DISPATCHER.registerKeyboardInputHandler(InputHandler.INSTANCE);
         Registry.INPUT_DISPATCHER.registerMouseInputHandler(InputHandler.INSTANCE);
 
+        //hotkey callback
         Actions.init();
         Callbacks.init();
     }

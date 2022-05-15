@@ -5,6 +5,7 @@
   "refmap": "mixins.litetweaker.refmap.json",
   "minVersion": "0.7",
   "mixins": [
+    "stepUp.MixinEntityPlayerSP",
     "additionalBlockBreakingCooldown.MixinPLayerControllerMP",
     "autoDropAndFillContainer.MixinNetHandlerPlayClient",
     "autoFish.MixinNetHandlerPlayClient",
@@ -17,7 +18,10 @@
     "disablePlayerSlowDown.MixinBlockSoulSand",
     "disablePlayerSlowDown.MixinEntityPlayer",
     "disablePlayerSlowDown.MixinEntityPlayerSP",
+    "disablePumpkinOverlay.MixinGuiIngame",
     "disableSlimeBounce.MixinBlockSlime",
+    "disableVignette.MixinGuiIngame",
+    "disableWaterFov.MixinEntityRenderer",
     "placeIgnoreEntity.MixinItemBlock"
   ]
 }

@@ -6,7 +6,6 @@ import xyz.crazyh.litetweaker.util.CustomTitle;
 
 public class Callbacks {
     public static void init() {
-        Minecraft mc = GameUtils.getClient();
 
         Hotkeys.OPEN_CONFIG_GUI.createCallbackForAction(Actions.OPEN_CONFIG_GUI);
         Hotkeys.CLEAR_GHOST_BLOCK.createCallbackForAction(Actions.CLEAR_GHOST_BLOCK);

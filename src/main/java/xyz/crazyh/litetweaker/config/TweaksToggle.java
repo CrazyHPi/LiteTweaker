@@ -18,15 +18,20 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public enum TweaksToggle implements ConfigInfo {
-    //sort these from A-Z, then disable options
-    AUTO_RESPAWN("autoRespawn", false),
+    //sort these from A-Z, then disable options (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
+    //move disable options to its own page when we have too many tweaks one day
     AUTO_FISH("autoFish",false),
+    AUTO_RESPAWN("autoRespawn", false),
     BETTER_F3N_CYCLE("betterF3nCycle", false),
     CREATIVE_NO_CLIP("creativeNoClip", false),
     PLACE_IGNORE_ENTITY("placeIgnoreEntity", false),
+    STEP_UP("stepUp", false),
     DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
+    DISABLE_PUMPKIN_OVERLAY("disablePumkinOverlay", false),
     DISABLE_SLIME_BOUNCE("disableSlimeBounce", false),
-    DISABLE_SLOW_DOWN("disableSlowDown", false);
+    DISABLE_SLOW_DOWN("disableSlowDown", false),
+    DISABLE_VIGNETTING("disableVignetting", false),
+    DISABLE_WATER_FOV("disableWaterFov", false);
 
     public static final ImmutableList<TweaksToggle> VALUES = ImmutableList.copyOf(values());
     public static final ImmutableList<BooleanConfig> TOGGLE_CONFIGS = ImmutableList.copyOf(VALUES.stream().map(TweaksToggle::getBooleanConfig).collect(Collectors.toList()));
