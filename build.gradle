@@ -11,7 +11,6 @@ buildscript {
             url = 'https://repo.spongepowered.org/repository/maven-public'
         }
     }
-    }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
         classpath 'org.spongepowered:mixingradle:0.4-SNAPSHOT'
