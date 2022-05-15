@@ -70,8 +70,8 @@ minecraft {
 //deobfCompile "malilib-liteloader-1.12.2-0.51.0-deobf.jar"
 dependencies {
     //some gradle magic needed here I guess
-    deobfCompile "fi.dy.masa.malilib:malilib-liteloader-1.12.2:0.51.0:deobf"
-    compile "com.google.code.findbugs:jsr305:3.0.2"
+    //deobfCompile "fi.dy.masa.malilib:malilib-liteloader-1.12.2:0.51.0:deobf"
+    deobfCompile "fi.dy.masa.malilib:malilib-liteloader-" + config.minecraft_version_out + ":" + config.malilib_version + ":deobf"
 }
 
 sourceSets {
