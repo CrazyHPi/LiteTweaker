@@ -15,7 +15,7 @@ public abstract class MixinEntityPlayerSP {
     )
     private void stepUp(CallbackInfo ci) {
         if (TweaksToggle.STEP_UP.getBooleanValue()) {
-            ((EntityPlayerSP) (Object) this).stepHeight = 1.1F;
+            ((EntityPlayerSP) (Object) this).stepHeight = 1.125F;
         } else {
             ((EntityPlayerSP) (Object) this).stepHeight = 0.6F;
         }
