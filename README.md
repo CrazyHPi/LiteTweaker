@@ -1,6 +1,6 @@
 # LiteTweaker
 
-This is a client-side tweak mod that adds some useful* feature to 1.12 client.
+This is a client-side tweak mod that adds some useful features<sup>*1</sup> to 1.12 client.
 
 Press `END` to open congif menu, or open it on liteloader side bar, or drag down menu on the top right of any mod using new malilib(masa <3).
 
@@ -16,9 +16,15 @@ Inspired by:
 
 ---
 
-## Complie
+## Build
 
 * Clone the repo
-* Add malilib 0.51.0 as dependency (using local gradle dependency or check [this](https://discord.com/channels/169369095538606080/913891227802427402/952894138502750259))
+* Add malilib 0.51.0 as dependency (using local dependency<sup>*2</sup> or check [this](https://discord.com/channels/169369095538606080/913891227802427402/952894138502750259))
 * Run `gradlew build` at repo directory
 * Complied `.litemod` file will be in build/libs/
+
+### Notes
+
+*1: Some features might consider cheating depend on the server you are playing on, while some are just for fun. Thoungh most feature should be pretty useful.
+
+*2: [masa&#39;s maven server](https://masa.dy.fi/maven/fi/dy/masa/malilib/malilib-liteloader-1.12.2/) where you can get malilib builds or you can build from source.

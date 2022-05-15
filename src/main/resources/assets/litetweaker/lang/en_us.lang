@@ -34,23 +34,33 @@ litetweaker.config.comment.autorefreshinventoryinterval=Inventory between auto r
 litetweaker.config.comment.backgroundfpslimit=Limit the game fps when not focused, saves some CPU and GPU usage.
 litetweaker.config.comment.customtitle=Change the game title to whatever you want.
 
-litetweaker.feature_toggle.name.placeignoreentity=Place Ignore Entity
-litetweaker.feature_toggle.name.disableslowdown=Disable Slow Down
-litetweaker.feature_toggle.name.betterf3ncycle=Better F3+N Cycle
-litetweaker.feature_toggle.name.autorespawn=Auto Respawn
 litetweaker.feature_toggle.name.autofish=Auto Fish
+litetweaker.feature_toggle.name.autorespawn=Auto Respawn
+litetweaker.feature_toggle.name.betterf3ncycle=Better F3+N Cycle
+litetweaker.feature_toggle.name.creativenoclip=Creative No Clip
+litetweaker.feature_toggle.name.placeignoreentity=Place Ignore Entity
+litetweaker.feature_toggle.name.stepup=Step Up
+
+litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
+litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
+litetweaker.feature_toggle.comment.betterf3ncycle=Now it works like 1.15, which you can directly switch to creative in non spectator mode.
+litetweaker.feature_toggle.comment.creativenoclip=Allows you to phase through wall when in creative flying.
+litetweaker.feature_toggle.comment.placeignoreentity=Allows you to place block inside of entity when in creative.
+litetweaker.feature_toggle.comment.stepup=Allows you to walk up one height blocks(0.6->1.125).
+
 litetweaker.feature_toggle.name.disableblockbreakingcooldown=Disable Block Breaking Cooldown
 litetweaker.feature_toggle.name.disableslimebounce=Disable Slime Block Bounce
-litetweaker.feature_toggle.name.creativenoclip=Creative No Clip
+litetweaker.feature_toggle.name.disableslowdown=Disable Slow Down
+litetweaker.feature_toggle.name.disablepumpkinoverlay=Disable Pumpkin Overlay
+litetweaker.feature_toggle.name.disablevignetting=Disable Vignetting
+litetweaker.feature_toggle.name.disablewaterfov=Disable In-Water Fov
 
-litetweaker.feature_toggle.comment.placeignoreentity=Allot you to place block inside of entity when in creative.
-litetweaker.feature_toggle.comment.disableslowdown=Player won't be slowed down by cobweb, soulsand and using item.
-litetweaker.feature_toggle.comment.betterf3ncycle=Now it works like 1.15, which you can directly switch to creative in non spectator mode.
-litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
-litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
-litetweaker.feature_toggle.comment.disableblockbreakingcooldown=Remove the cool down between mining two non-instant mined block.
+litetweaker.feature_toggle.comment.disableblockbreakingcooldown=Removes the cool down between mining two non-instant mined block.
 litetweaker.feature_toggle.comment.disableslimebounce=Slime block acts like normal block, won't bounce player when jumping.\nWorks better with DisableSlimeSlowDown.
-litetweaker.feature_toggle.comment.creativenoclip=Allow you tho pahse through wall when in creative flying.
+litetweaker.feature_toggle.comment.disableslowdown=Player won't be slowed down by cobweb, soulsand and using item.
+litetweaker.feature_toggle.comment.disablepumpkinoverlay=Removes the texture when wearing pumpkin in helmet slot.
+litetweaker.feature_toggle.comment.disablevignetting=Removes the annoying dimming effect when light level is low.\normally when you in noclip and your head is in non-translucent block.
+litetweaker.feature_toggle.comment.disablewaterfov=Disables the fov change when your head is in water.
 
 litetweaker.hotkey.name.clearghostblock=Clear Ghost Block
 litetweaker.hotkey.name.openconfiggui=Open Config Gui

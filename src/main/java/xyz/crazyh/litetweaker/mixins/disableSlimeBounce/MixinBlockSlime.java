@@ -20,6 +20,8 @@ public abstract class MixinBlockSlime {
     private void noBounce(World worldIn, Entity entityIn, CallbackInfo ci) {
         if (TweaksToggle.DISABLE_SLIME_BOUNCE.getBooleanValue() && entityIn instanceof EntityPlayerSP) {
             entityIn.fallDistance = 0;
+            //reset player's motion so player won't bounce when turing this off on slime
+            entityIn.motionY = 0.0D;
             ci.cancel();
         }
     }
