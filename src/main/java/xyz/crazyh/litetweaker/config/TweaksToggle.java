@@ -27,7 +27,7 @@ public enum TweaksToggle implements ConfigInfo {
     PLACE_IGNORE_ENTITY("placeIgnoreEntity", false),
     STEP_UP("stepUp", false),
     DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
-    DISABLE_PUMPKIN_OVERLAY("disablePumkinOverlay", false),
+    DISABLE_PUMPKIN_OVERLAY("disablePumpkinOverlay", false),
     DISABLE_SLIME_BOUNCE("disableSlimeBounce", false),
     DISABLE_SLOW_DOWN("disableSlowDown", false),
     DISABLE_VIGNETTING("disableVignetting", false),

@@ -56,6 +56,7 @@ public class FillContainer {
                 mc.playerController.windowClick(winID, bestSlot.slotNumber, 0, ClickType.QUICK_MOVE, playerSP);
 
                 playerSP.closeScreen();
+                RefreshInventory.silentRefreshInv();
                 MessageUtils.printCustomActionbarMessage("litetweaker.message.fill_container", packetIn.getGuiId(), success);
                 return true;
             }

@@ -5,6 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.network.play.client.CPacketPlayerDigging;
+import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import xyz.crazyh.litetweaker.config.Configs;
@@ -58,5 +59,12 @@ public class AntiGhostBlock {
             }
 
         }
+    }
+
+    private static void test() {
+        Minecraft minecraft = Minecraft.getMinecraft();
+        EntityPlayerSP playerSP = minecraft.player;
+        NetHandlerPlayClient client = minecraft.getConnection();
+        //CPacketPlayerTryUseItemOnBlock packet = new CPacketPlayerTryUseItemOnBlock();
     }
 }
