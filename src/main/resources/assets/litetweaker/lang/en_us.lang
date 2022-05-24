@@ -20,6 +20,7 @@ litetweaker.config.name.autorefreshinventory=Auto Refresh Inventory
 litetweaker.config.name.autorefreshinventoryinterval=Auto Refresh Inventory Interval
 litetweaker.config.name.backgroundfpslimit=Background FPS Limit
 litetweaker.config.name.customtitle=Custom Title
+litetweaker.config.name.clienttime=Client Time
 
 litetweaker.config.comment.additionalblockbreakingcooldown=Add a configurable amount of delay between two instant mined block.\nUseful when building redstone machines or your mouse is douvle clicking
 litetweaker.config.comment.additionaldelay=The amount of dalay add between mining two blocks, in gametick.
@@ -33,6 +34,7 @@ litetweaker.config.comment.autorefreshinventory=Automatically refresh you invent
 litetweaker.config.comment.autorefreshinventoryinterval=Inventory between auto refresh inventory, in gametick.
 litetweaker.config.comment.backgroundfpslimit=Limit the game fps when not focused, saves some CPU and GPU usage.
 litetweaker.config.comment.customtitle=Change the game title to whatever you want.
+litetweaker.config.comment.clienttime=The client time you want to override, in gametick.
 
 litetweaker.feature_toggle.name.autofish=Auto Fish
 litetweaker.feature_toggle.name.autorespawn=Auto Respawn
@@ -40,6 +42,7 @@ litetweaker.feature_toggle.name.betterf3ncycle=Better F3+N Cycle
 litetweaker.feature_toggle.name.creativenoclip=Creative No Clip
 litetweaker.feature_toggle.name.placeignoreentity=Place Ignore Entity
 litetweaker.feature_toggle.name.stepup=Step Up
+litetweaker.feature_toggle.name.clienttimeoverride=Client Time Override
 
 litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
 litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
@@ -47,6 +50,7 @@ litetweaker.feature_toggle.comment.betterf3ncycle=Now it works like 1.15, which 
 litetweaker.feature_toggle.comment.creativenoclip=Allows you to phase through wall when in creative flying.
 litetweaker.feature_toggle.comment.placeignoreentity=Allows you to place block inside of entity when in creative.
 litetweaker.feature_toggle.comment.stepup=Allows you to walk up one height blocks(0.6->1.125).
+litetweaker.feature_toggle.comment.clienttimeoverride=Change the client time to whatever you want.
 
 litetweaker.feature_toggle.name.disableblockbreakingcooldown=Disable Block Breaking Cooldown
 litetweaker.feature_toggle.name.disableslimebounce=Disable Slime Block Bounce

@@ -5,15 +5,6 @@
   "refmap": "mixins.litetweaker.refmap.json",
   "minVersion": "0.7",
   "mixins": [
-    "Tweaks.stepUp.MixinEntityPlayerSP",
-    "Tweaks.additionalBlockBreakingCooldown.MixinPLayerControllerMP",
-    "Tweaks.autoDropAndFillContainer.MixinNetHandlerPlayClient",
-    "Tweaks.autoFish.MixinNetHandlerPlayClient",
-    "Tweaks.autoRespawn.MixinNetHandlerPlayClient",
-    "Tweaks.backgroundFPSLimit.MixinMinecraft",
-    "Tweaks.betterF3nCycle.MixinMinecraft",
-    "Tweaks.creativeNoClip.MixinEntityPlayer",
-    "Tweaks.creativeNoClip.MixinEntityRenderer",
     "Disables.disableBlockBreakingCooldown.MixinPLayerControllerMP",
     "Disables.disablePlayerSlowDown.MixinBlockSoulSand",
     "Disables.disablePlayerSlowDown.MixinEntityPlayer",
@@ -22,6 +13,17 @@
     "Disables.disableSlimeBounce.MixinBlockSlime",
     "Disables.disableVignette.MixinGuiIngame",
     "Disables.disableWaterFov.MixinEntityRenderer",
-    "Tweaks.placeIgnoreEntity.MixinItemBlock"
+    "Tweaks.additionalBlockBreakingCooldown.MixinPLayerControllerMP",
+    "Tweaks.autoDropAndFillContainer.MixinNetHandlerPlayClient",
+    "Tweaks.autoFish.MixinNetHandlerPlayClient",
+    "Tweaks.autoRespawn.MixinNetHandlerPlayClient",
+    "Tweaks.backgroundFPSLimit.MixinMinecraft",
+    "Tweaks.betterF3nCycle.MixinMinecraft",
+    "Tweaks.clientTimeOverride.MixinWorldInfo",
+    "Tweaks.creativeNoClip.MixinEntityPlayer",
+    "Tweaks.creativeNoClip.MixinEntityRenderer",
+    "Tweaks.fillNoUpdates.MixinCommandFill",
+    "Tweaks.placeIgnoreEntity.MixinItemBlock",
+    "Tweaks.stepUp.MixinEntityPlayerSP"
   ]
 }
