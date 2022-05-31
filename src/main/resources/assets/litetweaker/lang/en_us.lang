@@ -62,7 +62,7 @@ litetweaker.feature_toggle.name.disableslowdown=Disable Slow Down
 litetweaker.feature_toggle.name.disablepumpkinoverlay=Disable Pumpkin Overlay
 litetweaker.feature_toggle.name.disablevignetting=Disable Vignetting
 litetweaker.feature_toggle.name.disablewaterfov=Disable In-Water Fov Change
-litetweaker.feature_toggle.name.disbalebeaconbeam=Disable Beacon Beam
+litetweaker.feature_toggle.name.disablebeaconbeam=Disable Beacon Beam
 
 litetweaker.feature_toggle.comment.disableblockbreakingcooldown=Removes the cool down between mining two non-instant mined block.
 litetweaker.feature_toggle.comment.disableslimebounce=Slime block acts like normal block, won't bounce player when jumping.\nWorks better with DisableSlimeSlowDown.
@@ -70,7 +70,7 @@ litetweaker.feature_toggle.comment.disableslowdown=Player won't be slowed down b
 litetweaker.feature_toggle.comment.disablepumpkinoverlay=Removes the texture when wearing pumpkin in helmet slot.
 litetweaker.feature_toggle.comment.disablevignetting=Removes the annoying dimming effect when light level is low.\normally when you in noclip and your head is in non-translucent block.
 litetweaker.feature_toggle.comment.disablewaterfov=Disables the fov change when your head is in water.
-litetweaker.feature_toggle.comment.disbalebeaconbeam=Disables beacon beam from rendering.
+litetweaker.feature_toggle.comment.disablebeaconbeam=Disables beacon beam from rendering.
 
 litetweaker.hotkey.name.clearghostblock=Clear Ghost Block
 litetweaker.hotkey.name.openconfiggui=Open Config Gui
