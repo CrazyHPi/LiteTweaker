@@ -5,7 +5,7 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.network.play.client.CPacketPlayer;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
-public class noFall {
+public class NoFall {
     public static void cancelPlayerFall(Minecraft minecraft, boolean inGame, boolean clock) {
         EntityPlayerSP playerSP = Minecraft.getMinecraft().player;
 

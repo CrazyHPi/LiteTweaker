@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 public enum TweaksToggle implements ConfigInfo {
     //sort these from A-Z, then disable options (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
     //move disable options to its own page when we have too many tweaks one day
+    ANVIL_RENAME_COPY("anvilRenameCopy", false),
     AUTO_FISH("autoFish",false),
     AUTO_RESPAWN("autoRespawn", false),
     BETTER_F3N_CYCLE("betterF3nCycle", false),
