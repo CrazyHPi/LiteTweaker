@@ -11,6 +11,7 @@ import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
 import xyz.crazyh.litetweaker.util.AntiGhostBlock;
 import xyz.crazyh.litetweaker.util.AutoFish;
 import xyz.crazyh.litetweaker.util.RefreshInventory;
+import xyz.crazyh.litetweaker.util.noFall;
 
 import java.io.File;
 
@@ -88,5 +89,6 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
         AntiGhostBlock.autoClearGhostBlock(inGame, clock);
         RefreshInventory.autoRefreshInv(inGame, clock);
         AutoFish.autoReUseFishingRod(minecraft, inGame, clock);
+        noFall.cancelPlayerFall(minecraft, inGame, clock);
     }
 }
