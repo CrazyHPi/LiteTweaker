@@ -5,7 +5,14 @@ import com.google.common.collect.ImmutableList;
 import fi.dy.masa.malilib.config.category.BaseConfigOptionCategory;
 import fi.dy.masa.malilib.config.category.ConfigOptionCategory;
 import fi.dy.masa.malilib.config.option.*;
+import fi.dy.masa.malilib.config.option.list.BlackWhiteListConfig;
+import fi.dy.masa.malilib.config.option.list.BlockListConfig;
+import fi.dy.masa.malilib.config.value.BlackWhiteList;
 import fi.dy.masa.malilib.input.Hotkey;
+import fi.dy.masa.malilib.util.BlockUtils;
+import fi.dy.masa.malilib.util.restriction.UsageRestriction;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import xyz.crazyh.litetweaker.Reference;
 import xyz.crazyh.litetweaker.util.autoContainerProcess.AutoDropContainerType;
 
@@ -31,8 +38,10 @@ public class Configs {
         public static final IntegerConfig AUTO_REFRESH_INVENTORY_INTERVAL = new IntegerConfig("autoRefreshInventoryInterval", 100, 1, 1000);
 
         public static final IntegerConfig BACKGROUND_FPS_LIMIT = new IntegerConfig("backgroundFPSLimit", -1, -1, 999);
+        //public static final BlackWhiteListConfig<Block> BLOCK_HIT_LIST = new BlackWhiteListConfig<>("blockHitList", BlackWhiteList.blocks(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(Blocks.DRAGON_EGG), ImmutableList.of())) ;
         public static final IntegerConfig CLIENT_TIME = new IntegerConfig("clientTime", 6000, 0, 24000);
         public static final StringConfig CUSTOM_TITLE  = new StringConfig("customTitle", "Minecraft 1.12.2");
+        public static final BlockListConfig PERIMETER_WALL_LIST = new BlockListConfig("perimeterWallList", ImmutableList.of(Blocks.SANDSTONE, Blocks.NETHERRACK), BlockUtils::getBlockRegistryName, BlockUtils::getBlockByRegistryName);
 
         public static final ImmutableList<ConfigOption<?>> OPTIONS = ImmutableList.of(
                 ADDITIONAL_BLOCK_BREAKING_COOLDOWN,
@@ -47,7 +56,8 @@ public class Configs {
                 AUTO_REFRESH_INVENTORY_INTERVAL,
                 BACKGROUND_FPS_LIMIT,
                 CLIENT_TIME,
-                CUSTOM_TITLE
+                CUSTOM_TITLE,
+                PERIMETER_WALL_LIST
         );
 
         public static final List<Hotkey> OPTIONS_HOTKEY = ImmutableList.of(

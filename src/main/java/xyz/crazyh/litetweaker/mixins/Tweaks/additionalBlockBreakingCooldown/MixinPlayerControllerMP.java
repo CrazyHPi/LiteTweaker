@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import xyz.crazyh.litetweaker.config.Configs;
 
 @Mixin(PlayerControllerMP.class)
-public abstract class MixinPLayerControllerMP {
+public abstract class MixinPlayerControllerMP {
     @Shadow
     private int blockHitDelay;
 

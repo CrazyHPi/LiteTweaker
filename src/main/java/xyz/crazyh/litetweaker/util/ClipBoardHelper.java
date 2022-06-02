@@ -14,8 +14,7 @@ public class ClipBoardHelper {
         if (tran != null) {
             if (tran.isDataFlavorSupported(DataFlavor.stringFlavor)) {
                 try {
-                    String s = (String) tran.getTransferData(DataFlavor.stringFlavor);
-                    return s;
+                    return (String) tran.getTransferData(DataFlavor.stringFlavor);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
