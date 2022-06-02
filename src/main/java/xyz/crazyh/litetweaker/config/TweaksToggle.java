@@ -28,6 +28,7 @@ public enum TweaksToggle implements ConfigInfo {
     CREATIVE_NO_CLIP("creativeNoClip", false),
     NO_FALL("noFall", false),
     PERIMETER_WALL_HELPER("perimeterWallHelper", false),
+    PREVENT_DIG_BLOCKS_BELOW("perventDigBlocksBelow", false),
     PLACE_IGNORE_ENTITY("placeIgnoreEntity", false),
     STEP_UP("stepUp", false),
     DISABLE_BEACON_BEAM("disableBeaconBeam", false),

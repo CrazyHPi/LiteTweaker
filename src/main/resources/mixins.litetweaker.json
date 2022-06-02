@@ -25,6 +25,7 @@
     "Tweaks.creativeNoClip.MixinEntityPlayer",
     "Tweaks.creativeNoClip.MixinEntityRenderer",
     "Tweaks.perimeterWalHelper.MixinPlayerControllerMP",
+    "Tweaks.perventDigBlocksBelow.MixinPlayerControllerMP",
     "Tweaks.placeIgnoreEntity.MixinItemBlock",
     "Tweaks.stepUp.MixinEntityPlayerSP"
   ]

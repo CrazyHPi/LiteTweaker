@@ -48,6 +48,7 @@ litetweaker.feature_toggle.name.clienttimeoverride=Client Time Override
 litetweaker.feature_toggle.name.nofall=No Fall
 litetweaker.feature_toggle.name.anvilrenamecopy=Anvil Name Copy
 litetweaker.feature_toggle.name.perimeterwallhelper=Perimeter Wall Helper
+litetweaker.feature_toggle.name.perventdigblocksbelow=Prevent Dis Blocks Below
 
 litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
 litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
@@ -59,6 +60,7 @@ litetweaker.feature_toggle.comment.clienttimeoverride=Change the client time to 
 litetweaker.feature_toggle.comment.nofall=You won't take fall damage.
 litetweaker.feature_toggle.comment.anvilrenamecopy=If you turn this on item in the anvil will automatically renamed to text from your clipboard.
 litetweaker.feature_toggle.comment.perimeterwallhelper=This prevents you digging blocks that has blacklisted block on the top.\nUseful when digging non-regular shape pit.
+litetweaker.feature_toggle.comment.perventdigblocksbelow=Prevents you digging blocks below you.\nUseful when digging.
 
 litetweaker.feature_toggle.name.disableblockbreakingcooldown=Disable Block Breaking Cooldown
 litetweaker.feature_toggle.name.disableslimebounce=Disable Slime Block Bounce
