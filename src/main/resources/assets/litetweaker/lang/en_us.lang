@@ -48,7 +48,8 @@ litetweaker.feature_toggle.name.clienttimeoverride=Client Time Override
 litetweaker.feature_toggle.name.nofall=No Fall
 litetweaker.feature_toggle.name.anvilrenamecopy=Anvil Name Copy
 litetweaker.feature_toggle.name.perimeterwallhelper=Perimeter Wall Helper
-litetweaker.feature_toggle.name.perventdigblocksbelow=Prevent Dis Blocks Below
+litetweaker.feature_toggle.name.perventdigblocksbelow=Prevent Dig Blocks Below
+litetweaker.feature_toggle.name.fakenightvision=Fake Night Vision
 
 litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
 litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
@@ -61,6 +62,7 @@ litetweaker.feature_toggle.comment.nofall=You won't take fall damage.
 litetweaker.feature_toggle.comment.anvilrenamecopy=If you turn this on item in the anvil will automatically renamed to text from your clipboard.
 litetweaker.feature_toggle.comment.perimeterwallhelper=This prevents you digging blocks that has blacklisted block on the top.\nUseful when digging non-regular shape pit.
 litetweaker.feature_toggle.comment.perventdigblocksbelow=Prevents you digging blocks below you.\nUseful when digging.
+litetweaker.feature_toggle.comment.fakenightvision=basically gives you night vision potion effect.\nNote this is different then GammaOverride.
 
 litetweaker.feature_toggle.name.disableblockbreakingcooldown=Disable Block Breaking Cooldown
 litetweaker.feature_toggle.name.disableslimebounce=Disable Slime Block Bounce
@@ -69,6 +71,8 @@ litetweaker.feature_toggle.name.disablepumpkinoverlay=Disable Pumpkin Overlay
 litetweaker.feature_toggle.name.disablevignetting=Disable Vignetting
 litetweaker.feature_toggle.name.disablewaterfov=Disable In-Water Fov Change
 litetweaker.feature_toggle.name.disablebeaconbeam=Disable Beacon Beam
+litetweaker.feature_toggle.name.disableblockhit=Disable Block Hit
+litetweaker.feature_toggle.name.disableentityhit=Disable Entity Hit
 
 litetweaker.feature_toggle.comment.disableblockbreakingcooldown=Removes the cool down between mining two non-instant mined block.
 litetweaker.feature_toggle.comment.disableslimebounce=Slime block acts like normal block, won't bounce player when jumping.\nWorks better with DisableSlimeSlowDown.
@@ -77,6 +81,8 @@ litetweaker.feature_toggle.comment.disablepumpkinoverlay=Removes the texture whe
 litetweaker.feature_toggle.comment.disablevignetting=Removes the annoying dimming effect when light level is low.\normally when you in noclip and your head is in non-translucent block.
 litetweaker.feature_toggle.comment.disablewaterfov=Disables the fov change when your head is in water.
 litetweaker.feature_toggle.comment.disablebeaconbeam=Disables beacon beam from rendering.
+litetweaker.feature_toggle.comment.disableblockhit=This prevents you from both left click and right click the blocks that's in the list.
+litetweaker.feature_toggle.comment.disableentityhit=This prevents you from hitting entities that's in the list.
 
 litetweaker.hotkey.name.clearghostblock=Clear Ghost Block
 litetweaker.hotkey.name.openconfiggui=Open Config Gui
@@ -94,3 +100,8 @@ litetweaker.message.fill_container_failed=Nothing filled
 
 litetweaker.label.auto_drop_container_type.shulker=Shulker Box Only
 litetweaker.label.auto_drop_container_type.all=All Valid Container
+
+litetweaker.label.list_type.blacklist=Black List
+litetweaker.label.list_type.none=None
+litetweaker.label.list_type.whitelist=White List
+litetweaker.title.screen.block_list_edit=Edit Entity List '%s'

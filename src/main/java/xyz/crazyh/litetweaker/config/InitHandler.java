@@ -6,6 +6,8 @@ import fi.dy.masa.malilib.event.dispatch.InitializationDispatcherImpl;
 import fi.dy.masa.malilib.gui.config.ConfigSearchInfo;
 import fi.dy.masa.malilib.registry.Registry;
 import xyz.crazyh.litetweaker.Reference;
+import xyz.crazyh.litetweaker.config.option.EntityListConfig;
+import xyz.crazyh.litetweaker.config.option.EntityListConfigWidget;
 import xyz.crazyh.litetweaker.gui.ConfigScreen;
 import xyz.crazyh.litetweaker.gui.TweaksToggleConfigWidget;
 import xyz.crazyh.litetweaker.gui.info.TweakConfigStatusWidget;
@@ -33,6 +35,7 @@ public class InitHandler implements InitializationHandler {
         //widget
         Registry.CONFIG_WIDGET.registerConfigWidgetFactory(TweaksToggle.class, TweaksToggleConfigWidget::new);
         Registry.CONFIG_WIDGET.registerConfigSearchInfo(TweaksToggle.class, new ConfigSearchInfo<TweaksToggle>(true, true).setBooleanStorageGetter(TweaksToggle::getBooleanConfig).setKeyBindGetter(TweaksToggle::getKeyBind));
+        Registry.CONFIG_WIDGET.registerConfigWidgetFactory(EntityListConfig.class, EntityListConfigWidget::new);
 
         Registry.CONFIG_STATUS_WIDGET.registerConfigStatusWidgetFactory(TweaksToggle.class, TweakConfigStatusWidget::new, "litetweaker:csi_value_tweak_toggle");
 

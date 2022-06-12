@@ -1,6 +1,8 @@
 package xyz.crazyh.litetweaker.util;
 
 import com.google.common.collect.ImmutableList;
+import fi.dy.masa.malilib.config.value.BlackWhiteList;
+import fi.dy.masa.malilib.util.restriction.UsageRestriction;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
@@ -11,17 +13,22 @@ import net.minecraft.world.chunk.Chunk;
 import xyz.crazyh.litetweaker.config.Configs;
 
 public class BlockBlackListHelper {
+    //perimeter wall helper
+    public static final ImmutableList<Block> periWall = Configs.Generic.PERIMETER_WALL_LIST.getValue();
+
+    //disable block hit
+    public static final UsageRestriction<Block> blockHitRestriction = new UsageRestriction<>();
+
     public static boolean checkTopBlockBlackListed(BlockPos pos) {
         WorldClient world = Minecraft.getMinecraft().world;
-        ImmutableList<Block> list = Configs.Generic.PERIMETER_WALL_LIST.getValue();
 
-        return list.contains(world.getBlockState(findHighestNonAirBlock(pos, world)).getBlock());
+        return periWall.contains(world.getBlockState(findHighestNonAirBlock(pos, world)).getBlock());
     }
 
     public static boolean checkBlackListed(BlockPos pos) {
         WorldClient world = Minecraft.getMinecraft().world;
         
-        return false;
+        return !blockHitRestriction.isAllowed(world.getBlockState(pos).getBlock());
     }
 
     public static BlockPos findHighestNonAirBlock(BlockPos pos, World world) {
@@ -37,5 +44,9 @@ public class BlockBlackListHelper {
         }
 
         return pos1;
+    }
+
+    public static void updateBlockHitRestriction(BlackWhiteList<Block> list) {
+        blockHitRestriction.setListContents(list);
     }
 }

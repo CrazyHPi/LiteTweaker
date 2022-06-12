@@ -7,6 +7,8 @@
   "mixins": [
     "Disables.disableBeaconBeam.MixinTileEntityBeaconRenderer",
     "Disables.disableBlockBreakingCooldown.MixinPLayerControllerMP",
+    "Disables.disableBlockHit.MixinPlayerControllerMP",
+    "Disables.disableEntityHit.MixinPlayerControllerMP",
     "Disables.disablePlayerSlowDown.MixinBlockSoulSand",
     "Disables.disablePlayerSlowDown.MixinEntityPlayer",
     "Disables.disablePlayerSlowDown.MixinEntityPlayerSP",
