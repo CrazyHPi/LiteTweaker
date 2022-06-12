@@ -3,10 +3,8 @@ package xyz.crazyh.litetweaker.util;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
@@ -22,7 +20,7 @@ public class BlockBlackListHelper {
 
     public static boolean checkBlackListed(BlockPos pos) {
         WorldClient world = Minecraft.getMinecraft().world;
-
+        
         return false;
     }
 

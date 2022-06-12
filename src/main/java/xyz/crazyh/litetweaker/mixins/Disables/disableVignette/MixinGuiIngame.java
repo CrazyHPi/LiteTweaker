@@ -8,17 +8,6 @@ import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(GuiIngame.class)
 public abstract class MixinGuiIngame {
-    /*@Inject(
-            method = "renderVignette",
-            at = @At("HEAD"),
-            cancellable = true
-    )
-    private void noVignette(float lightLevel, ScaledResolution scaledRes, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_VIGNETTING.getBooleanValue()) {
-            ci.cancel();
-        }
-    }*/
-
     @ModifyVariable(
             method = "renderVignette",
             at = @At(
