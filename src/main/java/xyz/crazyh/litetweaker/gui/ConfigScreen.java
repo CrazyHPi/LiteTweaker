@@ -44,13 +44,13 @@ public class ConfigScreen {
     public static BaseConfigScreen create() {
         // The parent screen should not be set here, to prevent infinite recursion via
         // the call to the parent's setWorldAndResolution -> initScreen -> switch tab -> etc.
-        return new BaseConfigScreen(MOD_INFO, null, ALL_TABS, GENERIC, "litetweaker.title.screen.configs", Reference.MOD_VERSION);
+        return new BaseConfigScreen(MOD_INFO, ALL_TABS, GENERIC, "litetweaker.title.screen.configs", Reference.MOD_VERSION);
     }
 
     public static BaseConfigScreen create(@Nullable GuiScreen currentScreen) {
         // The parent screen should not be set here, to prevent infinite recursion via
         // the call to the parent's setWorldAndResolution -> initScreen -> switch tab -> etc.
-        return new BaseConfigScreen(MOD_INFO, null, ALL_TABS, GENERIC, "litetweaker.title.screen.configs", Reference.MOD_VERSION);
+        return new BaseConfigScreen(MOD_INFO, ALL_TABS, GENERIC, "litetweaker.title.screen.configs", Reference.MOD_VERSION);
     }
 
     public static ImmutableList<ConfigTab> getConfigTabs() {

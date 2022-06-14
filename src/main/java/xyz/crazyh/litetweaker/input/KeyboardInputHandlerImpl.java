@@ -1,11 +1,9 @@
 package xyz.crazyh.litetweaker.input;
 
 import fi.dy.masa.malilib.input.KeyboardInputHandler;
-import fi.dy.masa.malilib.input.MouseInputHandler;
-import fi.dy.masa.malilib.util.data.LeftRight;
 
-public class InputHandler implements KeyboardInputHandler, MouseInputHandler {
-    public static final InputHandler INSTANCE = new InputHandler();
+public class KeyboardInputHandlerImpl implements KeyboardInputHandler {
+    public static final KeyboardInputHandlerImpl INSTANCE = new KeyboardInputHandlerImpl();
 
     private LeftRight lastSidewaysInput = LeftRight.NONE;
     private ForwardBack lastForwardInput = ForwardBack.NONE;
@@ -18,7 +16,7 @@ public class InputHandler implements KeyboardInputHandler, MouseInputHandler {
         return lastForwardInput;
     }
 
-    private InputHandler() {
+    private KeyboardInputHandlerImpl() {
         super();
     }
 
@@ -28,15 +26,6 @@ public class InputHandler implements KeyboardInputHandler, MouseInputHandler {
      */
     @Override
     public boolean onKeyInput(int keyCode, int scanCode, int modifiers, boolean eventKeyState) {
-        return false;
-    }
-
-    /**
-     * Called on mouse events with the key or wheel value and whether the key was pressed or released.
-     * @return true if further processing of this mouse button event should be cancelled
-     */
-    @Override
-    public boolean onMouseInput(int eventButton, int wheelDelta, boolean eventButtonState) {
         return false;
     }
 

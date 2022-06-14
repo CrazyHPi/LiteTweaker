@@ -21,7 +21,7 @@ public class EntityListConfig extends ValueListConfig<Class <? extends Entity>> 
     public EntityListConfig(String name, ImmutableList<Class <? extends Entity>> defaultValues, String comment,
                             Function<Class <? extends Entity>, String> toStringConverter,
                             Function<String, Class <? extends Entity>>  fromStringConverter) {
-        super(name, defaultValues, comment, toStringConverter, fromStringConverter);
+        super(name, defaultValues, toStringConverter, fromStringConverter, comment);
     }
 
     @Override
