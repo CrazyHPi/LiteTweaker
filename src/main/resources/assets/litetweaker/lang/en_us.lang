@@ -22,6 +22,8 @@ litetweaker.config.name.backgroundfpslimit=Background FPS Limit
 litetweaker.config.name.customtitle=Custom Title
 litetweaker.config.name.clienttime=Client Time
 litetweaker.config.name.perimeterwalllist=Perimeter Wall List
+litetweaker.config.name.blockhitlist=Block Hit List
+litetweaker.config.name.entityhitlist=Entity Hit List
 
 litetweaker.config.comment.additionalblockbreakingcooldown=Add a configurable amount of delay between two instant mined block.\nUseful when building redstone machines or your mouse is douvle clicking
 litetweaker.config.comment.additionaldelay=The amount of dalay add between mining two blocks, in gametick.
@@ -37,6 +39,8 @@ litetweaker.config.comment.backgroundfpslimit=Limit the game fps when not focuse
 litetweaker.config.comment.customtitle=Change the game title to whatever you want.
 litetweaker.config.comment.clienttime=The client time you want to override, in gametick.
 litetweaker.config.comment.perimeterwalllist=Block blacklist that get checked on the highest y value.
+litetweaker.config.comment.blockhitlist=Block list that you want to black/white list.
+litetweaker.config.comment.entityhitlist=Entity list that you want to black list, now it uses class name.
 
 litetweaker.feature_toggle.name.autofish=Auto Fish
 litetweaker.feature_toggle.name.autorespawn=Auto Respawn

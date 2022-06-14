@@ -4,9 +4,9 @@ This is a client-side tweak mod that adds some useful features<sup>*1</sup> to 1
 
 Press `END` to open congif menu, or open it on liteloader side bar, or drag down menu on the top right of any mod using new malilib(masa <3).
 
-**This mod requires [malilib](https://github.com/maruohon/malilib) >= 0.51.0** and loads on [LiteLoader](http://www.liteloader.com/).
+**This mod requires [malilib](https://github.com/maruohon/malilib) >= 0.52.0** and loads on [LiteLoader](http://www.liteloader.com/).
 
-[Feature List](https://github.com/CrazyHPi/LiteTweaker/blob/master/docs/Features.md)
+[Feature List](https://github.com/CrazyHPi/LiteTweaker/blob/master/docs/Features.md), ~~not finished yet.~~
 
 Dev build: [check here](https://github.com/CrazyHPi/LiteTweaker/actions), these builds are made with bugs and love.
 
