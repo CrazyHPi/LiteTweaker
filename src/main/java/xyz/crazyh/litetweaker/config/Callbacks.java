@@ -19,7 +19,7 @@ public class Callbacks {
         Configs.Generic.BLOCK_HIT_LIST.setValueLoadCallback(BlockBlackListHelper::updateBlockHitRestriction);
         Configs.Generic.BLOCK_HIT_LIST.setValueChangeCallback((newValue, oldValue) -> BlockBlackListHelper.updateBlockHitRestriction(newValue));
 
-        Configs.Generic.ENTITY_HIT_LIST.setValueLoadCallback(EntityUtils::updateEntityHitRestriction);
-        Configs.Generic.ENTITY_HIT_LIST.setValueChangeCallback(((newValue, oldValue) -> EntityUtils.updateEntityHitRestriction(newValue)));
+        //Configs.Generic.ENTITY_HIT_LIST.setValueLoadCallback(EntityUtils::updateEntityHitRestriction);
+        //Configs.Generic.ENTITY_HIT_LIST.setValueChangeCallback(((newValue, oldValue) -> EntityUtils.updateEntityHitRestriction(newValue)));
     }
 }

@@ -7,6 +7,7 @@ import fi.dy.masa.malilib.config.category.ConfigOptionCategory;
 import fi.dy.masa.malilib.config.option.*;
 import fi.dy.masa.malilib.config.option.list.BlackWhiteListConfig;
 import fi.dy.masa.malilib.config.option.list.BlockListConfig;
+import fi.dy.masa.malilib.config.option.list.StringListConfig;
 import fi.dy.masa.malilib.config.value.BlackWhiteList;
 import fi.dy.masa.malilib.input.Hotkey;
 import fi.dy.masa.malilib.util.game.BlockUtils;
@@ -42,7 +43,8 @@ public class Configs {
         public static final DoubleConfig MINIHUD_FONT_SCALE = new DoubleConfig("minihudFontScale", 1, 0.25, 20);
 
         public static final BlackWhiteListConfig<Block> BLOCK_HIT_LIST = new BlackWhiteListConfig<>("blockHitList", BlackWhiteList.blocks(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(Blocks.DRAGON_EGG), ImmutableList.of())) ;
-        public static final BlackWhiteListConfig<Class <? extends Entity>> ENTITY_HIT_LIST = new BlackWhiteListConfig<>("entityHitList", EntityListConfig.entities(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(EntityEnderCrystal.class), ImmutableList.of()));
+        public static final StringListConfig ENTITY_HIT_LIST = new StringListConfig("entityHitList", ImmutableList.of("EntityEnderCrystal"));
+        //public static final BlackWhiteListConfig<Class <? extends Entity>> ENTITY_HIT_LIST = new BlackWhiteListConfig<>("entityHitList", EntityListConfig.entities(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(EntityEnderCrystal.class), ImmutableList.of()));
         public static final BlockListConfig PERIMETER_WALL_LIST = new BlockListConfig("perimeterWallList", ImmutableList.of(Blocks.SANDSTONE, Blocks.NETHERRACK), BlockUtils::getBlockRegistryName, BlockUtils::getBlockByRegistryName);
 
         public static final ImmutableList<ConfigOption<?>> OPTIONS = ImmutableList.of(

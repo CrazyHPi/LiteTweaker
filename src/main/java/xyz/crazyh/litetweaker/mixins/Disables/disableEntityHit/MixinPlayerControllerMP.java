@@ -12,13 +12,25 @@ import xyz.crazyh.litetweaker.util.EntityUtils;
 
 @Mixin(PlayerControllerMP.class)
 public abstract class MixinPlayerControllerMP {
-    @Inject(
+    //removed due to entity list not useable in forge
+    /*@Inject(
             method = "attackEntity",
             at = @At("HEAD"),
             cancellable = true
     )
     private void disableEntityHit(EntityPlayer playerIn, Entity targetEntity, CallbackInfo ci) {
         if (TweaksToggle.DISABLE_ENTITY_HIT.getBooleanValue() && EntityUtils.checkEntityBlackList(targetEntity.getClass())) {
+            ci.cancel();
+        }
+    }*/
+
+    @Inject(
+            method = "attackEntity",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    private void disableEntityHit(EntityPlayer playerIn, Entity targetEntity, CallbackInfo ci) {
+        if (TweaksToggle.DISABLE_ENTITY_HIT.getBooleanValue() && EntityUtils.checkEntityBlackList(targetEntity.getClass().getName())) {
             ci.cancel();
         }
     }

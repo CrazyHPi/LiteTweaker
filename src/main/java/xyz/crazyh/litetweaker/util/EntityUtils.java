@@ -5,12 +5,20 @@ import fi.dy.masa.malilib.util.restriction.UsageRestriction;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.util.ResourceLocation;
+import xyz.crazyh.litetweaker.config.Configs;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 public class EntityUtils {
+    public static boolean checkEntityBlackList(String name) {
+        String[] s = name.split("\\.");
+
+        return Configs.Generic.ENTITY_HIT_LIST.getValuesAsString().contains(s[s.length-1]);
+    }
+
+    //not used yet
     public static final UsageRestriction<Class <? extends Entity>> entityHitRestriction = new UsageRestriction<>();
 
     public static boolean checkEntityBlackList(Class <? extends Entity> entity) {
