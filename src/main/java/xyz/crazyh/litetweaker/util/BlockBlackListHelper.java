@@ -12,12 +12,15 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import xyz.crazyh.litetweaker.config.Configs;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BlockBlackListHelper {
     //perimeter wall helper
-    public static final ImmutableList<Block> periWall = Configs.Generic.PERIMETER_WALL_LIST.getValue();
+    private static final List<Block> periWall = new ArrayList<>();
 
     //disable block hit
-    public static final UsageRestriction<Block> blockHitRestriction = new UsageRestriction<>();
+    private static final UsageRestriction<Block> blockHitRestriction = new UsageRestriction<>();
 
     public static boolean checkTopBlockBlackListed(BlockPos pos) {
         WorldClient world = Minecraft.getMinecraft().world;
@@ -48,5 +51,10 @@ public class BlockBlackListHelper {
 
     public static void updateBlockHitRestriction(BlackWhiteList<Block> list) {
         blockHitRestriction.setListContents(list);
+    }
+
+    public static void updatePeriWallHelper(List<Block> list) {
+        periWall.clear();
+        periWall.addAll(list);
     }
 }

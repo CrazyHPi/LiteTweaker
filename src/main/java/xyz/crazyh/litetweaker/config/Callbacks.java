@@ -16,6 +16,9 @@ public class Callbacks {
         Configs.Generic.CUSTOM_TITLE.setValueLoadCallback(CustomTitle::changeTitle);
         Configs.Generic.CUSTOM_TITLE.setValueChangeCallback((newValue, oldValue) -> CustomTitle.changeTitle(newValue));
 
+        Configs.Generic.PERIMETER_WALL_LIST.setValueLoadCallback(BlockBlackListHelper::updatePeriWallHelper);
+        Configs.Generic.PERIMETER_WALL_LIST.setValueChangeCallback(((newValue, oldValue) -> BlockBlackListHelper.updatePeriWallHelper(newValue)));
+
         Configs.Generic.BLOCK_HIT_LIST.setValueLoadCallback(BlockBlackListHelper::updateBlockHitRestriction);
         Configs.Generic.BLOCK_HIT_LIST.setValueChangeCallback((newValue, oldValue) -> BlockBlackListHelper.updateBlockHitRestriction(newValue));
 
