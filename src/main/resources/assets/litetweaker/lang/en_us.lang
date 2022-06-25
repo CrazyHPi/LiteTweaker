@@ -91,10 +91,12 @@ litetweaker.feature_toggle.comment.disableentityhit=This prevents you from hitti
 litetweaker.hotkey.name.clearghostblock=Clear Ghost Block
 litetweaker.hotkey.name.openconfiggui=Open Config Gui
 litetweaker.hotkey.name.refreshinventory=Refresh Inventory
+litetweaker.hotkey.name.togglemainhand=Toggle Main Hand
 
 litetweaker.hotkey.comment.clearghostblock=Press to manually clear ghost block once.\nNote: this doesn't clear piston ghost block.
 litetweaker.hotkey.comment.openconfiggui=Press to open config screen.
 litetweaker.hotkey.comment.refreshinventory=Press to manually refresh your inventory by forcing server to resend your inv.
+litetweaker.hotkey.commentname.togglemainhand=Press to switch your main hand
 
 litetweaker.message.refresh_inventory=Refreshing inventory
 litetweaker.message.clear_ghost_block=Clearing ghost blocks

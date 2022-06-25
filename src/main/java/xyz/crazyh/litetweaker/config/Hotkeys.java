@@ -10,10 +10,12 @@ public class Hotkeys {
     public static final HotkeyConfig CLEAR_GHOST_BLOCK = new HotkeyConfig("clearGhostBlock", "", KeyBindSettings.INGAME_MODIFIER);
     public static final HotkeyConfig OPEN_CONFIG_GUI = new HotkeyConfig("openConfigGui", "END");
     public static final HotkeyConfig REFRESH_INVENTORY = new HotkeyConfig("refreshInventory", "", KeyBindSettings.INGAME_MODIFIER);
+    public static final HotkeyConfig TOGGLE_MAIN_HAND = new HotkeyConfig("toggleMainHand", "", KeyBindSettings.INGAME_MODIFIER);
 
     public static final List<HotkeyConfig> HOTKEY_LIST = ImmutableList.of(
             CLEAR_GHOST_BLOCK,
             OPEN_CONFIG_GUI,
-            REFRESH_INVENTORY
+            REFRESH_INVENTORY,
+            TOGGLE_MAIN_HAND
     );
 }

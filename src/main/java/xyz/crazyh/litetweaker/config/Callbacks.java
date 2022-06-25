@@ -1,8 +1,7 @@
 package xyz.crazyh.litetweaker.config;
 
 import xyz.crazyh.litetweaker.util.BlockBlackListHelper;
-import xyz.crazyh.litetweaker.util.CustomTitle;
-import xyz.crazyh.litetweaker.util.EntityUtils;
+import xyz.crazyh.litetweaker.util.RandomUtils;
 
 public class Callbacks {
     public static void init() {
@@ -12,9 +11,10 @@ public class Callbacks {
         Hotkeys.OPEN_CONFIG_GUI.createCallbackForAction(Actions.OPEN_CONFIG_GUI);
         Hotkeys.CLEAR_GHOST_BLOCK.createCallbackForAction(Actions.CLEAR_GHOST_BLOCK);
         Hotkeys.REFRESH_INVENTORY.createCallbackForAction(Actions.REFRESH_INVENTORY);
+        Hotkeys.TOGGLE_MAIN_HAND.createCallbackForAction(Actions.TOGGLE_MAIN_HAND);
 
-        Configs.Generic.CUSTOM_TITLE.setValueLoadCallback(CustomTitle::changeTitle);
-        Configs.Generic.CUSTOM_TITLE.setValueChangeCallback((newValue, oldValue) -> CustomTitle.changeTitle(newValue));
+        Configs.Generic.CUSTOM_TITLE.setValueLoadCallback(RandomUtils::changeTitle);
+        Configs.Generic.CUSTOM_TITLE.setValueChangeCallback((newValue, oldValue) -> RandomUtils.changeTitle(newValue));
 
         Configs.Generic.PERIMETER_WALL_LIST.setValueLoadCallback(BlockBlackListHelper::updatePeriWallHelper);
         Configs.Generic.PERIMETER_WALL_LIST.setValueChangeCallback(((newValue, oldValue) -> BlockBlackListHelper.updatePeriWallHelper(newValue)));
