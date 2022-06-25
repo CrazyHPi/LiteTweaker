@@ -54,7 +54,7 @@ litetweaker.feature_toggle.name.anvilrenamecopy=Anvil Name Copy
 litetweaker.feature_toggle.name.perimeterwallhelper=Perimeter Wall Helper
 litetweaker.feature_toggle.name.perventdigblocksbelow=Prevent Dig Blocks Below
 litetweaker.feature_toggle.name.fakenightvision=Fake Night Vision
-litetweaker.feature_toggle.name.miningGhostBlockFix=Mining Ghost Block Fix
+litetweaker.feature_toggle.name.miningghostblockfix=Mining Ghost Block Fix
 
 litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
 litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
@@ -68,7 +68,7 @@ litetweaker.feature_toggle.comment.anvilrenamecopy=If you turn this on item in t
 litetweaker.feature_toggle.comment.perimeterwallhelper=This prevents you digging blocks that has blacklisted block on the top.\nUseful when digging non-regular shape pit.
 litetweaker.feature_toggle.comment.perventdigblocksbelow=Prevents you digging blocks below you.\nUseful when digging.
 litetweaker.feature_toggle.comment.fakenightvision=basically gives you night vision potion effect.\nNote this is different then GammaOverride.
-litetweaker.feature_toggle.comment.miningGhostBlockFix=Send one more right click packet after you mine block.
+litetweaker.feature_toggle.comment.miningghostblockfix=Send one more right click packet after you mine block.
 
 litetweaker.feature_toggle.name.disableblockbreakingcooldown=Disable Block Breaking Cooldown
 litetweaker.feature_toggle.name.disableslimebounce=Disable Slime Block Bounce
@@ -98,7 +98,7 @@ litetweaker.hotkey.name.togglemainhand=Toggle Main Hand
 litetweaker.hotkey.comment.clearghostblock=Press to manually clear ghost block once.\nNote: this doesn't clear piston ghost block.
 litetweaker.hotkey.comment.openconfiggui=Press to open config screen.
 litetweaker.hotkey.comment.refreshinventory=Press to manually refresh your inventory by forcing server to resend your inv.
-litetweaker.hotkey.commentname.togglemainhand=Press to switch your main hand
+litetweaker.hotkey.comment.togglemainhand=Press to switch your main hand
 
 litetweaker.message.refresh_inventory=Refreshing inventory
 litetweaker.message.clear_ghost_block=Clearing ghost blocks
