@@ -27,6 +27,7 @@
     "Tweaks.clientTimeOverride.MixinWorldInfo",
     "Tweaks.creativeNoClip.MixinEntityPlayer",
     "Tweaks.creativeNoClip.MixinEntityRenderer",
+    "Tweaks.miningGhostBlockFix.MixinPlayerControllerMP",
     "Tweaks.nightVision.MixinEntityLivingBase",
     "Tweaks.nightVision.MixinEntityRenderer",
     "Tweaks.perimeterWalHelper.MixinPlayerControllerMP",

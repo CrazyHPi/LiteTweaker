@@ -26,6 +26,7 @@ public enum TweaksToggle implements ConfigInfo {
     BETTER_F3N_CYCLE("betterF3nCycle", false),
     CLIENT_TIME_OVERRIDE("clientTimeOverride", false),
     CREATIVE_NO_CLIP("creativeNoClip", false),
+    MINING_GHOST_BLOCK_FIX("miningGhostBlockFix", false),
     NO_FALL("noFall", false),
     PERIMETER_WALL_HELPER("perimeterWallHelper", false),
     FAKE_NIGHT_VISION("fakeNightVision", false),
