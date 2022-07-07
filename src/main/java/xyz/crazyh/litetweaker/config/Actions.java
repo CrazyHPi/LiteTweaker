@@ -13,7 +13,8 @@ import xyz.crazyh.litetweaker.util.RefreshInventory;
 
 public class Actions {
     public static final NamedAction OPEN_CONFIG_GUI = register("openConfigScreen", ConfigScreen::open);
-    public static final NamedAction CLEAR_GHOST_BLOCK = register("clearGhostBlock", AntiGhostBlock::clearGhostBlock);
+    public static final NamedAction CLEAR_GHOST_BLOCK = register("clearGhostBlock", AntiGhostBlock::clearGBLeftWithMsg);
+    public static final NamedAction CLEAR_GHOST_BLOCK_RC = register("clearGhostBlockRightClick", AntiGhostBlock::clearGBRightWithMsg);
     public static final NamedAction REFRESH_INVENTORY  = register("refreshInventory", RefreshInventory::refreshInv);
     public static final NamedAction TOGGLE_MAIN_HAND = register("toggleMainHand", RandomUtils::swapMainHand);
 

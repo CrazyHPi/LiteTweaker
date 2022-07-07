@@ -5,13 +5,11 @@ import xyz.crazyh.litetweaker.util.RandomUtils;
 
 public class Callbacks {
     public static void init() {
-        //for some reason you need this for malilib to render on/off switch properly
-        //update: only in dev env, so it doesnt matter?
-
         Hotkeys.OPEN_CONFIG_GUI.createCallbackForAction(Actions.OPEN_CONFIG_GUI);
         Hotkeys.CLEAR_GHOST_BLOCK.createCallbackForAction(Actions.CLEAR_GHOST_BLOCK);
         Hotkeys.REFRESH_INVENTORY.createCallbackForAction(Actions.REFRESH_INVENTORY);
         Hotkeys.TOGGLE_MAIN_HAND.createCallbackForAction(Actions.TOGGLE_MAIN_HAND);
+        Hotkeys.CLEAR_GHOST_BLOCK_RC.createCallbackForAction(Actions.CLEAR_GHOST_BLOCK_RC);
 
         Configs.Generic.CUSTOM_TITLE.setValueLoadCallback(RandomUtils::changeTitle);
         Configs.Generic.CUSTOM_TITLE.setValueChangeCallback((newValue, oldValue) -> RandomUtils.changeTitle(newValue));
