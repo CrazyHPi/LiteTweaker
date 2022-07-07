@@ -20,6 +20,9 @@ import java.util.stream.Collectors;
 public enum TweaksToggle implements ConfigInfo {
     //sort these from A-Z, then disable options (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
     //move disable options to its own page when we have too many tweaks one day
+    ALWAYS_RENDER_BARRIER_PARTICLES("alwaysRenderBarrierParticles", false),
+    ALWAYS_RENDER_STRUCTURE_VOID_MODEL("alwaysRenderStructureVoidModel", false),
+    ALWAYS_RENDER_BARRIER_MODEL("alwaysRenderBarrierModels", false),
     ANVIL_RENAME_COPY("anvilRenameCopy", false),
     AUTO_FISH("autoFish",false),
     AUTO_RESPAWN("autoRespawn", false),
@@ -36,6 +39,7 @@ public enum TweaksToggle implements ConfigInfo {
     DISABLE_BEACON_BEAM("disableBeaconBeam", false),
     DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
     DISABLE_BLOCK_HIT("disableBlockHit", false),
+    DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE("disableCommandblockOutputToConsole", false),
     DISABLE_ENTITY_HIT("disableEntityHit", false),
     DISABLE_PUMPKIN_OVERLAY("disablePumpkinOverlay", false),
     DISABLE_SLIME_BOUNCE("disableSlimeBounce", false),
