@@ -10,8 +10,8 @@ import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
 import xyz.crazyh.litetweaker.util.AntiGhostBlock;
 import xyz.crazyh.litetweaker.util.AutoFish;
-import xyz.crazyh.litetweaker.util.RefreshInventory;
 import xyz.crazyh.litetweaker.util.NoFall;
+import xyz.crazyh.litetweaker.util.RefreshInventory;
 
 import java.io.File;
 

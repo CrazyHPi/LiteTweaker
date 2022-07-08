@@ -1,4 +1,4 @@
-package xyz.crazyh.litetweaker.mixins.temp;
+package xyz.crazyh.litetweaker.mixins.Random;
 
 import fi.dy.masa.minihud.event.RenderHandler;
 import org.spongepowered.asm.mixin.Mixin;
@@ -8,6 +8,8 @@ import xyz.crazyh.litetweaker.config.Configs;
 
 @Mixin(RenderHandler.class)
 public abstract class MixinRenderHandler {
+    //Generic.MINIHUD_FONT_SCALE
+    //temp tweaks, will remove after masa made a info widget save-able.
     @ModifyArg(
             method = "createStringListRenderer",
             at = @At(

@@ -22,7 +22,7 @@ public enum TweaksToggle implements ConfigInfo {
     //move disable options to its own page when we have too many tweaks one day
     ALWAYS_RENDER_BARRIER_PARTICLES("alwaysRenderBarrierParticles", false),
     ALWAYS_RENDER_STRUCTURE_VOID_MODEL("alwaysRenderStructureVoidModel", false),
-    ALWAYS_RENDER_BARRIER_MODEL("alwaysRenderBarrierModels", false),
+    ALWAYS_RENDER_BARRIER_MODEL("alwaysRenderBarrierModel", false),
     ANVIL_RENAME_COPY("anvilRenameCopy", false),
     AUTO_FISH("autoFish",false),
     AUTO_RESPAWN("autoRespawn", false),
