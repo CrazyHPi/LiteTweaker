@@ -17,6 +17,7 @@
     "Disables.disableSlimeBounce.MixinBlockSlime",
     "Disables.disableVignette.MixinGuiIngame",
     "Disables.disableWaterFov.MixinEntityRenderer",
+    "Random.BlockAccessor",
     "Random.BlocksAccessor",
     "Random.MixinRenderHandler",
     "Tweaks.additionalBlockBreakingCooldown.MixinPlayerControllerMP",

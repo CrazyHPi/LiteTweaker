@@ -10,8 +10,6 @@ import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(Minecraft.class)
 public abstract class MixinMinecraft {
-    @Shadow private static Minecraft instance;
-
     @Redirect(
             method = "processKeyF3",
             at = @At(
