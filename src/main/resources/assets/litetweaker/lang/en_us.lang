@@ -60,6 +60,7 @@ litetweaker.feature_toggle.name.miningghostblockfix=Mining Ghost Block Fix
 litetweaker.feature_toggle.name.alwaysrenderbarrierparticles=Always Render Barrier Particles
 litetweaker.feature_toggle.name.alwaysrenderbarriermodel=Always Render Barrier Model
 litetweaker.feature_toggle.name.alwaysrenderstructurevoidmodel=Always Render Structure Void Model
+litetweaker.feature_toggle.name.quickblockswapper=Quick Block Swapper
 
 litetweaker.feature_toggle.comment.autofish=Automatically retract fish rod when about to catch a fish.\nStop auto re-use fish rod by switching to other item.\nThis might not work at high ping server.
 litetweaker.feature_toggle.comment.autorespawn=Auto respawn when player dies and close the respawn screen.
@@ -77,6 +78,7 @@ litetweaker.feature_toggle.comment.miningghostblockfix=Send one more right click
 litetweaker.feature_toggle.comment.alwaysrenderbarrierparticles=Render barrier particles as in creative holding barrier item.
 litetweaker.feature_toggle.comment.alwaysrenderbarriermodel=Render barrier block texture.
 litetweaker.feature_toggle.comment.alwaysrenderstructurevoidmodel=Render structure void texture.
+litetweaker.feature_toggle.comment.quickblockswapper=Enable this will let you place and break block in same gt, only works in creative.
 
 litetweaker.feature_toggle.name.disableblockbreakingcooldown=Disable Block Breaking Cooldown
 litetweaker.feature_toggle.name.disableslimebounce=Disable Slime Block Bounce
@@ -105,12 +107,14 @@ litetweaker.hotkey.name.clearghostblockrightclick=Clear Ghost Block (Right Click
 litetweaker.hotkey.name.openconfiggui=Open Config Gui
 litetweaker.hotkey.name.refreshinventory=Refresh Inventory
 litetweaker.hotkey.name.togglemainhand=Toggle Main Hand
+litetweaker.hotkey.name.swapblock=Swap Block
 
 litetweaker.hotkey.comment.clearghostblock=Press to manually clear ghost block once.\nNote: this doesn't clear piston ghost block.
 litetweaker.hotkey.comment.clearghostblockrightclick=Press to manually clear ghost block once.\nNote: this will swap you hand item first, then right click all blocks. If server is lagging it might place a lot of blocks. Use with caution.
 litetweaker.hotkey.comment.openconfiggui=Press to open config screen.
 litetweaker.hotkey.comment.refreshinventory=Press to manually refresh your inventory by forcing server to resend your inv.
 litetweaker.hotkey.comment.togglemainhand=Press to switch your main hand
+litetweaker.hotkey.comment.swapblock=Press to attack and use in same gt, mainly use to swap block, only works in creative.
 
 litetweaker.message.refresh_inventory=Refreshing inventory
 litetweaker.message.clear_ghost_block=Clearing ghost blocks

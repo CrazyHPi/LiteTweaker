@@ -17,6 +17,7 @@ public class Actions {
     public static final NamedAction CLEAR_GHOST_BLOCK_RC = register("clearGhostBlockRightClick", AntiGhostBlock::clearGBRightWithMsg);
     public static final NamedAction REFRESH_INVENTORY  = register("refreshInventory", RefreshInventory::refreshInv);
     public static final NamedAction TOGGLE_MAIN_HAND = register("toggleMainHand", RandomUtils::swapMainHand);
+    public static final NamedAction SWAP_BLOCK = register("swapBlock", RandomUtils::swapBlock);
 
     public static void init() {
         for (TweaksToggle tweak : TweaksToggle.VALUES) {

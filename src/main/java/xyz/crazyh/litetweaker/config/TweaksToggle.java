@@ -27,6 +27,7 @@ public enum TweaksToggle implements ConfigInfo {
     AUTO_FISH("autoFish",false),
     AUTO_RESPAWN("autoRespawn", false),
     BETTER_F3N_CYCLE("betterF3nCycle", false),
+    QUICK_BLOCK_SWAPPER("quickBlockSwapper", false),
     CLIENT_TIME_OVERRIDE("clientTimeOverride", false),
     CREATIVE_NO_CLIP("creativeNoClip", false),
     MINING_GHOST_BLOCK_FIX("miningGhostBlockFix", false),

@@ -13,6 +13,7 @@ import xyz.crazyh.litetweaker.gui.TweaksToggleConfigWidget;
 import xyz.crazyh.litetweaker.gui.info.TweakConfigStatusWidget;
 import xyz.crazyh.litetweaker.input.KeyboardInputHandlerImpl;
 import xyz.crazyh.litetweaker.input.LiteTweakerHotkeyProvider;
+import xyz.crazyh.litetweaker.input.MouseInputHandlerImpl;
 
 public class InitHandler implements InitializationHandler {
     /**
@@ -43,7 +44,7 @@ public class InitHandler implements InitializationHandler {
         Registry.HOTKEY_MANAGER.registerHotkeyProvider(LiteTweakerHotkeyProvider.INSTANCE);
         //Haven't use these two yet, so just leave them here?
         //Registry.INPUT_DISPATCHER.registerKeyboardInputHandler(KeyboardInputHandlerImpl.INSTANCE);
-        //Registry.INPUT_DISPATCHER.registerMouseInputHandler(KeyboardInputHandlerImpl.INSTANCE);
+        Registry.INPUT_DISPATCHER.registerMouseClickHandler(new MouseInputHandlerImpl());
 
         //hotkey callback
         Actions.init();

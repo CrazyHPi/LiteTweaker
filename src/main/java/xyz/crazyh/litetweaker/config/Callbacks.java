@@ -10,6 +10,7 @@ public class Callbacks {
         Hotkeys.REFRESH_INVENTORY.createCallbackForAction(Actions.REFRESH_INVENTORY);
         Hotkeys.TOGGLE_MAIN_HAND.createCallbackForAction(Actions.TOGGLE_MAIN_HAND);
         Hotkeys.CLEAR_GHOST_BLOCK_RC.createCallbackForAction(Actions.CLEAR_GHOST_BLOCK_RC);
+        Hotkeys.SWAP_BLOCK.createCallbackForAction(Actions.SWAP_BLOCK);
 
         Configs.Generic.CUSTOM_TITLE.setValueLoadCallback(RandomUtils::changeTitle);
         Configs.Generic.CUSTOM_TITLE.setValueChangeCallback((newValue, oldValue) -> RandomUtils.changeTitle(newValue));
