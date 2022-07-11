@@ -6,7 +6,7 @@ Press `END` to open congif menu, or open it on liteloader side bar, or drag down
 
 **This mod requires [malilib](https://github.com/maruohon/malilib) >= 0.52.0** and loads on [LiteLoader](http://www.liteloader.com/).
 
-[Feature List](https://github.com/CrazyHPi/LiteTweaker/blob/master/docs/Features.md), ~~not finished yet.~~
+~~[Feature List](https://github.com/CrazyHPi/LiteTweaker/blob/master/docs/Features.md), not finished yet.~~
 
 Dev build: [check here](https://github.com/CrazyHPi/LiteTweaker/actions), these builds are made with bugs and love.
 
@@ -14,7 +14,11 @@ Dev build: [check here](https://github.com/CrazyHPi/LiteTweaker/actions), these 
 
 Inspired by:
 
-[TweakerMore](https://github.com/Fallen-Breath/tweakermore) client-side tweak mod on fabric 1.14+
+[TweakerMore](https://github.com/Fallen-Breath/tweakermore) A collection of client-side tweak kits to enhance your Minecraft game experience. Tweak Minecraft and beyond!
+
+[Cuteless Mod](https://github.com/Nessiesson/CutelessMod) Hyperdope mod by nessie and robitobi. Very cute.
+
+[MasaAdditions](https://github.com/hp3721/masaadditions) An add-on mod for Masa's mods, Tweakeroo, MiniHUD, and Litematica.
 
 ---
 
