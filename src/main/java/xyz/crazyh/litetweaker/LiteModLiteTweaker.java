@@ -6,11 +6,8 @@ import com.mumfrey.liteloader.Tickable;
 import com.mumfrey.liteloader.modconfig.ConfigPanel;
 import fi.dy.masa.malilib.registry.Registry;
 import net.minecraft.client.Minecraft;
-import xyz.crazyh.litetweaker.block.BlockFakeBarrier;
-import xyz.crazyh.litetweaker.block.BlockFakeSV;
 import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
-import xyz.crazyh.litetweaker.mixins.Random.BlockAccessor;
 import xyz.crazyh.litetweaker.util.*;
 
 import java.io.File;
@@ -82,8 +79,7 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
      * @param minecraft    Minecraft instance
      * @param partialTicks Partial tick value
      * @param inGame       True if in-game, false if in the menu
-     * @param clock True if this is a new tick, otherwise false if it's a
-     *      regular frame
+     * @param clock        True if this is a new tick, otherwise false if it's a regular frame
      */
     @Override
     public void onTick(Minecraft minecraft, float partialTicks, boolean inGame, boolean clock) {
@@ -91,6 +87,6 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
         RefreshInventory.autoRefreshInv(inGame, clock);
         AutoFish.autoReUseFishingRod(minecraft, inGame, clock);
         NoFall.cancelPlayerFall(minecraft, inGame, clock);
-        RandomUtils.tryToSwap(inGame, clock);
+        //RandomUtils.tryToSwap(inGame, clock);
     }
 }

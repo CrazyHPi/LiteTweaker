@@ -44,6 +44,7 @@
     "Tweaks.perimeterWalHelper.MixinPlayerControllerMP",
     "Tweaks.perventDigBlocksBelow.MixinPlayerControllerMP",
     "Tweaks.placeIgnoreEntity.MixinItemBlock",
+    "Tweaks.quickBlockSwapper.MixinPlayerControllerMP",
     "Tweaks.stepUp.MixinEntityPlayerSP"
   ]
 }

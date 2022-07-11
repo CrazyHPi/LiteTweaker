@@ -1,5 +1,6 @@
 package xyz.crazyh.litetweaker.util;
 
+import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.network.NetHandlerPlayClient;
@@ -10,6 +11,7 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.Display;
+import xyz.crazyh.litetweaker.config.TweaksToggle;
 import xyz.crazyh.litetweaker.input.MouseInputHandlerImpl;
 import xyz.crazyh.litetweaker.mixins.Random.MinecraftAccessor;
 
@@ -37,8 +39,9 @@ public class RandomUtils {
         }
     }
 
+    //kinda buggy, deprecated for now
     public static void tryToSwap(boolean inGame, boolean clock) {
-        if (inGame && clock) {
+        if (inGame && clock && TweaksToggle.QUICK_BLOCK_SWAPPER.getBooleanValue()) {
             if (MouseInputHandlerImpl.isRightPressed && MouseInputHandlerImpl.isLeftPressed) {
                 Minecraft mc = Minecraft.getMinecraft();
                 EntityPlayerSP playerSP = mc.player;
@@ -46,10 +49,12 @@ public class RandomUtils {
                 if (playerSP.isCreative()) {
                     BlockPos pos = mc.objectMouseOver.getBlockPos();
 
-                    mc.playerController.processRightClickBlock(playerSP, mc.world, pos, mc.objectMouseOver.sideHit, mc.objectMouseOver.hitVec, EnumHand.MAIN_HAND);
+                    if (!(mc.world.getBlockState(pos).getBlock() instanceof BlockAir)) {
+                        mc.playerController.processRightClickBlock(playerSP, mc.world, pos, mc.objectMouseOver.sideHit, mc.objectMouseOver.hitVec, EnumHand.MAIN_HAND);
 
-                    MouseInputHandlerImpl.isRightPressed = false;
-                    MouseInputHandlerImpl.isLeftPressed = false;
+                        MouseInputHandlerImpl.isRightPressed = false;
+                        MouseInputHandlerImpl.isLeftPressed = false;
+                    }
                 }
             }
         }
