@@ -39,6 +39,7 @@
     "Tweaks.clientTimeOverride.MixinWorldInfo",
     "Tweaks.creativeNoClip.MixinEntityPlayer",
     "Tweaks.creativeNoClip.MixinEntityRenderer",
+    "Tweaks.entityCulling.MixinRenderItemFrame",
     "Tweaks.miningGhostBlockFix.MixinPlayerControllerMP",
     "Tweaks.nightVision.MixinEntityLivingBase",
     "Tweaks.nightVision.MixinEntityRenderer",
