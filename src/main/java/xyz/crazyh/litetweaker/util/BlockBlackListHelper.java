@@ -1,16 +1,17 @@
 package xyz.crazyh.litetweaker.util;
 
-import com.google.common.collect.ImmutableList;
 import fi.dy.masa.malilib.config.value.BlackWhiteList;
 import fi.dy.masa.malilib.util.restriction.UsageRestriction;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
+import net.minecraft.block.BlockSnow;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
-import xyz.crazyh.litetweaker.config.Configs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,10 @@ public class BlockBlackListHelper {
     public static boolean checkTopBlockBlackListed(BlockPos pos) {
         WorldClient world = Minecraft.getMinecraft().world;
 
-        return periWall.contains(world.getBlockState(findHighestNonAirBlock(pos, world)).getBlock());
+        BlockPos topPos = findHighestNonAirBlockPos(pos, world);
+        Block topBlock = world.getBlockState(topPos).getBlock();
+
+        return topBlock instanceof BlockSnow ? periWall.contains(world.getBlockState(topPos.offset(EnumFacing.DOWN)).getBlock()) : periWall.contains(topBlock);
     }
 
     public static boolean checkBlackListed(BlockPos pos) {
@@ -34,7 +38,7 @@ public class BlockBlackListHelper {
         return !blockHitRestriction.isAllowed(world.getBlockState(pos).getBlock());
     }
 
-    public static BlockPos findHighestNonAirBlock(BlockPos pos, World world) {
+    public static BlockPos findHighestNonAirBlockPos(BlockPos pos, World world) {
 
         Chunk chunk = world.getChunk(pos);
         BlockPos pos1;
