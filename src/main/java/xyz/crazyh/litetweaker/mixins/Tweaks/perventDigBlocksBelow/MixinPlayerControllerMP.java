@@ -1,6 +1,7 @@
 package xyz.crazyh.litetweaker.mixins.Tweaks.perventDigBlocksBelow;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -14,13 +15,17 @@ import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(PlayerControllerMP.class)
 public abstract class MixinPlayerControllerMP {
+    @Shadow
+    @Final
+    private Minecraft mc;
+
     @Inject(
             method = "clickBlock",
             at = @At("HEAD"),
             cancellable = true
     )
     private void cancelClick(BlockPos loc, EnumFacing face, CallbackInfoReturnable<Boolean> cir) {
-        if (TweaksToggle.PREVENT_DIG_BLOCKS_BELOW.getBooleanValue() && loc.getY() < Minecraft.getMinecraft().player.posY) {
+        if (TweaksToggle.PREVENT_DIG_BLOCKS_BELOW.getBooleanValue() && loc.getY() < mc.player.posY && !mc.player.isSneaking()) {
             cir.setReturnValue(false);
         }
     }
@@ -31,7 +36,7 @@ public abstract class MixinPlayerControllerMP {
             cancellable = true
     )
     private void cancelDamage(BlockPos loc, EnumFacing directionFacing, CallbackInfoReturnable<Boolean> cir) {
-        if (TweaksToggle.PREVENT_DIG_BLOCKS_BELOW.getBooleanValue() && loc.getY() < Minecraft.getMinecraft().player.posY) {
+        if (TweaksToggle.PREVENT_DIG_BLOCKS_BELOW.getBooleanValue() && loc.getY() < mc.player.posY && !mc.player.isSneaking()) {
             cir.setReturnValue(true);
         }
     }

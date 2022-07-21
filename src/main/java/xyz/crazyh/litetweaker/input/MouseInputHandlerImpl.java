@@ -10,7 +10,7 @@ public class MouseInputHandlerImpl implements MouseClickHandler {
 
     @Override
     public boolean onMouseClick(int mouseX, int mouseY, int mouseButton, boolean buttonState) {
-        if (TweaksToggle.QUICK_BLOCK_SWAPPER.getBooleanValue()) {
+        if (TweaksToggle.QUICK_BLOCK_SWAP.getBooleanValue()) {
             if (mouseButton == GameUtils.getClient().gameSettings.keyBindAttack.getKeyCode() + 100) {
                 isLeftPressed = buttonState;
             }

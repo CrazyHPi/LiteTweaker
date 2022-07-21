@@ -15,7 +15,8 @@ public class EntityListConfig extends ValueListConfig<Class <? extends Entity>> 
     /**
      * This is a working ListConfig if you wonder
      * But for some reason Forge removed vanilla entity registry so this basically doesn't work with forge<3.
-     * Use StringListConfig for now until I found a fix.
+     * Use StringListConfig for now until I come up with a work around.
+     * Have some ideas but #ToD0
      */
     public EntityListConfig(String name, ImmutableList<Class <? extends Entity>> defaultValues,
                             Function<Class <? extends Entity>, String> toStringConverter,
@@ -69,7 +70,7 @@ public class EntityListConfig extends ValueListConfig<Class <? extends Entity>> 
                 EntityListConfig.create("litetweaker.label.list_type.whitelist", whiteList));
     }
 
-    public static BlackWhiteList<Class <? extends Entity>> entitiyNames(UsageRestriction.ListType type,
+    public static BlackWhiteList<Class <? extends Entity>> entityNames(UsageRestriction.ListType type,
                                                                     ImmutableList<String> blackList,
                                                                     ImmutableList<String> whiteList) {
         return BlackWhiteList.of(type,

@@ -3,11 +3,7 @@ package xyz.crazyh.litetweaker.util;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.client.settings.GameSettings;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.tileentity.TileEntityCommandBlock;
-import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.Display;
@@ -41,7 +37,7 @@ public class RandomUtils {
 
     //kinda buggy, deprecated for now
     public static void tryToSwap(boolean inGame, boolean clock) {
-        if (inGame && clock && TweaksToggle.QUICK_BLOCK_SWAPPER.getBooleanValue()) {
+        if (inGame && clock && TweaksToggle.QUICK_BLOCK_SWAP.getBooleanValue()) {
             if (MouseInputHandlerImpl.isRightPressed && MouseInputHandlerImpl.isLeftPressed) {
                 Minecraft mc = Minecraft.getMinecraft();
                 EntityPlayerSP playerSP = mc.player;

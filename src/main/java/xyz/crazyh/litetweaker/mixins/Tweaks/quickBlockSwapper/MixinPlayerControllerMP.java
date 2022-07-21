@@ -54,7 +54,7 @@ public abstract class MixinPlayerControllerMP {
     }
 
     private void tryToSwap(BlockPos loc, EnumFacing face) {
-        if (TweaksToggle.QUICK_BLOCK_SWAPPER.getBooleanValue()) {
+        if (TweaksToggle.QUICK_BLOCK_SWAP.getBooleanValue()) {
             if (MouseInputHandlerImpl.isRightPressed && MouseInputHandlerImpl.isLeftPressed) {
                 this.processRightClickBlock(this.mc.player, this.mc.world, loc, face, this.mc.objectMouseOver.hitVec, EnumHand.MAIN_HAND);
                 MouseInputHandlerImpl.isRightPressed = false;

@@ -14,6 +14,7 @@
     "Disables.disablePlayerSlowDown.MixinEntityPlayer",
     "Disables.disablePlayerSlowDown.MixinEntityPlayerSP",
     "Disables.disablePumpkinOverlay.MixinGuiIngame",
+    "Disables.disableRealmButton.MixinGuiMainMenu",
     "Disables.disableSlimeBounce.MixinBlockSlime",
     "Disables.disableVignette.MixinGuiIngame",
     "Disables.disableWaterFov.MixinEntityRenderer",
