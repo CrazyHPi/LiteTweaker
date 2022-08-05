@@ -45,6 +45,8 @@
     "Tweaks.nightVision.MixinEntityRenderer",
     "Tweaks.perimeterWalHelper.MixinPlayerControllerMP",
     "Tweaks.perventDigBlocksBelow.MixinPlayerControllerMP",
+    "Tweaks.pickMoreBlocks.MixinBlockHugeMushroom",
+    "Tweaks.pickMoreBlocks.MixinBlockMobSpawner",
     "Tweaks.placeIgnoreEntity.MixinItemBlock",
     "Tweaks.quickBlockSwapper.MixinPlayerControllerMP",
     "Tweaks.stepUp.MixinEntityPlayerSP"

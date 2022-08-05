@@ -35,6 +35,7 @@ public enum TweaksToggle implements ConfigInfo {
     MINING_GHOST_BLOCK_FIX("miningGhostBlockFix", false),
     NO_FALL("noFall", false),
     PERIMETER_WALL_HELPER("perimeterWallHelper", false),
+    PICK_MORE_BLOCKS("pickMoreBlocks", false),
     PLACE_IGNORE_ENTITY("placeIgnoreEntity", false),
     PREVENT_DIG_BLOCKS_BELOW("perventDigBlocksBelow", false),
     QUICK_BLOCK_SWAP("quickBlockSwap", false),
