@@ -8,6 +8,7 @@
     "Disables.disableBeaconBeam.MixinTileEntityBeaconRenderer",
     "Disables.disableBlockBreakingCooldown.MixinPLayerControllerMP",
     "Disables.disableBlockHit.MixinPlayerControllerMP",
+    "Disables.disableBossBar.MixinGuiBossOverlay",
     "Disables.disableCommandblockOutputToConsole.MixinServerCommandManager",
     "Disables.disableEntityHit.MixinPlayerControllerMP",
     "Disables.disablePlayerSlowDown.MixinBlockSoulSand",
@@ -49,6 +50,7 @@
     "Tweaks.pickMoreBlocks.MixinBlockMobSpawner",
     "Tweaks.placeIgnoreEntity.MixinItemBlock",
     "Tweaks.quickBlockSwapper.MixinPlayerControllerMP",
+    "Tweaks.reducedBossBar.MixinGuiBossOverlay",
     "Tweaks.stepUp.MixinEntityPlayerSP"
   ]
 }
