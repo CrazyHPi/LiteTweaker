@@ -34,8 +34,16 @@ public class BlockBlackListHelper {
 
     public static boolean checkBlackListed(BlockPos pos) {
         WorldClient world = Minecraft.getMinecraft().world;
-        
-        return !blockHitRestriction.isAllowed(world.getBlockState(pos).getBlock());
+
+        boolean flag = true;
+
+        try {
+            flag = !blockHitRestriction.isAllowed(world.getBlockState(pos).getBlock());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return flag;
     }
 
     public static BlockPos findHighestNonAirBlockPos(BlockPos pos, World world) {
