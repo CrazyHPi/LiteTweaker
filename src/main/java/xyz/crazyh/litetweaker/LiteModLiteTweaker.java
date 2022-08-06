@@ -86,7 +86,7 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
         AntiGhostBlock.autoClearGhostBlock(inGame, clock);
         RefreshInventory.autoRefreshInv(inGame, clock);
         AutoFish.autoReUseFishingRod(minecraft, inGame, clock);
-        NoFall.cancelPlayerFall(minecraft, inGame, clock);
+        RandomUtils.cancelPlayerFall(minecraft, inGame, clock);
         //RandomUtils.tryToSwap(inGame, clock);
     }
 }

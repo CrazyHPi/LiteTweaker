@@ -21,6 +21,7 @@
     "Disables.disableWaterFov.MixinEntityRenderer",
     "Random.BlockAccessor",
     "Random.BlocksAccessor",
+    "Random.EntityAccessor",
     "Random.MinecraftAccessor",
     "Random.MixinRenderHandler",
     "Tweaks.additionalBlockBreakingCooldown.MixinPlayerControllerMP",
