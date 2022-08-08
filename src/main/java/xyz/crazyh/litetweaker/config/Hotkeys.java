@@ -11,8 +11,8 @@ public class Hotkeys {
     public static final HotkeyConfig CLEAR_GHOST_BLOCK_RC = new HotkeyConfig("clearGhostBlockRightClick", "", KeyBindSettings.INGAME_MODIFIER);
     public static final HotkeyConfig OPEN_CONFIG_GUI = new HotkeyConfig("openConfigGui", "END");
     public static final HotkeyConfig REFRESH_INVENTORY = new HotkeyConfig("refreshInventory", "", KeyBindSettings.INGAME_MODIFIER);
-    public static final HotkeyConfig STOP_ELYTRA_FLYING = new HotkeyConfig("stopElytraFlying", "", KeyBindSettings.INGAME_MODIFIER);
     public static final HotkeyConfig SWAP_BLOCK = new HotkeyConfig("swapBlock", "", KeyBindSettings.INGAME_MODIFIER);
+    public static final HotkeyConfig TOGGLE_ELYTRA_FLYING = new HotkeyConfig("stopElytraFlying", "", KeyBindSettings.INGAME_MODIFIER);
     public static final HotkeyConfig TOGGLE_MAIN_HAND = new HotkeyConfig("toggleMainHand", "", KeyBindSettings.INGAME_MODIFIER);
 
     public static final List<HotkeyConfig> HOTKEY_LIST = ImmutableList.of(
@@ -20,8 +20,8 @@ public class Hotkeys {
             CLEAR_GHOST_BLOCK_RC,
             OPEN_CONFIG_GUI,
             REFRESH_INVENTORY,
-            STOP_ELYTRA_FLYING,
             SWAP_BLOCK,
+            TOGGLE_ELYTRA_FLYING,
             TOGGLE_MAIN_HAND
     );
 }

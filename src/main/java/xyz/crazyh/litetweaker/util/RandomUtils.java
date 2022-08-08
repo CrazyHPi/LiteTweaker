@@ -60,11 +60,9 @@ public class RandomUtils {
         }
     }
 
-    public static void stopElytraFlying() {
+    public static void toggleElytraFlying() {
         EntityPlayerSP playerSP = mc.player;
-        if (playerSP.isElytraFlying()) {
-            ((EntityAccessor) playerSP).invokeSetFlag(7, false);
-        }
+        ((EntityAccessor) playerSP).invokeSetFlag(7, !playerSP.isElytraFlying());
     }
 
     public static void cancelPlayerFall(Minecraft minecraft, boolean inGame, boolean clock) {

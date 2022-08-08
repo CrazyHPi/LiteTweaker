@@ -11,7 +11,7 @@ public class Callbacks {
         Hotkeys.TOGGLE_MAIN_HAND.createCallbackForAction(Actions.TOGGLE_MAIN_HAND);
         Hotkeys.CLEAR_GHOST_BLOCK_RC.createCallbackForAction(Actions.CLEAR_GHOST_BLOCK_RC);
         Hotkeys.SWAP_BLOCK.createCallbackForAction(Actions.SWAP_BLOCK);
-        Hotkeys.STOP_ELYTRA_FLYING.createCallbackForAction(Actions.STOP_ELYTRA_FLYING);
+        Hotkeys.TOGGLE_ELYTRA_FLYING.createCallbackForAction(Actions.TOGGLE_ELYTRA_FLYING);
 
         Configs.Generic.CUSTOM_TITLE.setValueLoadCallback(RandomUtils::changeTitle);
         Configs.Generic.CUSTOM_TITLE.setValueChangeCallback((newValue, oldValue) -> RandomUtils.changeTitle(newValue));
