@@ -5,6 +5,7 @@
   "refmap": "mixins.litetweaker.refmap.json",
   "minVersion": "0.7",
   "mixins": [
+    "Disables.disableArmorStandRendering.MixinRenderArmorStand",
     "Disables.disableBeaconBeam.MixinTileEntityBeaconRenderer",
     "Disables.disableBlockBreakingCooldown.MixinPLayerControllerMP",
     "Disables.disableBlockHit.MixinPlayerControllerMP",
