@@ -4,6 +4,7 @@ import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.tileentity.CommandBlockBaseLogic;
 import net.minecraft.tileentity.TileEntityCommandBlock;
 import net.minecraft.util.text.ITextComponent;
 import org.spongepowered.asm.mixin.Mixin;
@@ -21,8 +22,8 @@ public abstract class MixinServerCommandManager {
             method = "notifyListener",
             at = @At("HEAD")
     )
-    private void checkSender(ICommandSender sender, ICommand command, int flags, String translationKey, Object[] translationArgs, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE.getBooleanValue() && sender.getClass().getEnclosingClass() == TileEntityCommandBlock.class) {
+        private void checkSender(ICommandSender sender, ICommand command, int flags, String translationKey, Object[] translationArgs, CallbackInfo ci) {
+        if (TweaksToggle.DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE.getBooleanValue() && sender instanceof CommandBlockBaseLogic ) {
             shouldCancel = true;
         }
     }
