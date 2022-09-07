@@ -31,6 +31,6 @@ Inspired by:
 
 ### Notes
 
-*1: Some features might consider cheating depend on the server you are playing on, while some are just for fun. Thoungh most feature should be pretty useful.
+*1: **Some features might consider cheating depend on the server you are playing on**, while some are just for fun. Thoungh most feature should be pretty useful.
 
 *2: [masa&#39;s maven server](https://masa.dy.fi/maven/fi/dy/masa/malilib/malilib-liteloader-1.12.2/) where you can get malilib builds or you can build from source.
