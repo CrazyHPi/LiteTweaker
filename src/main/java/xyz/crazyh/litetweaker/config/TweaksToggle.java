@@ -52,6 +52,7 @@ public enum TweaksToggle implements ConfigInfo {
     DISABLE_REALM_BUTTON("disableRealmButton", false),
     DISABLE_SLIME_BOUNCE("disableSlimeBounce", false),
     DISABLE_SLOW_DOWN("disableSlowDown", false),
+    DISABLE_SNEAK_SLOW_DOWN("disableSneakSlowDown", false),
     DISABLE_VIGNETTING("disableVignetting", false),
     DISABLE_WATER_FOV("disableWaterFov", false);
 

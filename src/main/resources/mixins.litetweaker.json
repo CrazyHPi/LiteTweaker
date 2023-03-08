@@ -15,6 +15,7 @@
     "Disables.disablePlayerSlowDown.MixinBlockSoulSand",
     "Disables.disablePlayerSlowDown.MixinEntityPlayer",
     "Disables.disablePlayerSlowDown.MixinEntityPlayerSP",
+    "Disables.disablePlayerSlowDown.MixinMovementInputFromOptions",
     "Disables.disablePumpkinOverlay.MixinGuiIngame",
     "Disables.disableRealmButton.MixinGuiMainMenu",
     "Disables.disableSlimeBounce.MixinBlockSlime",
