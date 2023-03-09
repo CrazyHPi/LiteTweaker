@@ -45,6 +45,7 @@
     "Tweaks.creativeNoClip.MixinEntityRenderer",
     "Tweaks.entityCulling.MixinRenderItemFrame",
     "Tweaks.miningGhostBlockFix.MixinPlayerControllerMP",
+    "Tweaks.newNoteBlock.MixinBlockNote",
     "Tweaks.nightVision.MixinEntityLivingBase",
     "Tweaks.nightVision.MixinEntityRenderer",
     "Tweaks.perimeterWalHelper.MixinPlayerControllerMP",
