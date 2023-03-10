@@ -1,16 +1,9 @@
-package xyz.crazyh.litetweaker.util.autoContainerProcess;
+package xyz.crazyh.litetweaker.util.autoInventoryProcess;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.client.gui.inventory.GuiShulkerBox;
-import net.minecraft.client.player.inventory.ContainerLocalMenu;
 import net.minecraft.inventory.ClickType;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
 import net.minecraft.network.play.server.SPacketOpenWindow;
-import net.minecraft.tileentity.TileEntityShulkerBox;
-import net.minecraft.world.IInteractionObject;
 import xyz.crazyh.litetweaker.config.Configs;
 
 public class DropContainer {

@@ -2,6 +2,7 @@ package xyz.crazyh.litetweaker.config;
 
 import xyz.crazyh.litetweaker.util.BlockBlackListHelper;
 import xyz.crazyh.litetweaker.util.RandomUtils;
+import xyz.crazyh.litetweaker.util.autoInventoryProcess.DropPlayerInventory;
 
 public class Callbacks {
     public static void init() {
@@ -12,6 +13,7 @@ public class Callbacks {
         Hotkeys.CLEAR_GHOST_BLOCK_RC.createCallbackForAction(Actions.CLEAR_GHOST_BLOCK_RC);
         Hotkeys.SWAP_BLOCK.createCallbackForAction(Actions.SWAP_BLOCK);
         Hotkeys.TOGGLE_ELYTRA_FLYING.createCallbackForAction(Actions.TOGGLE_ELYTRA_FLYING);
+        Hotkeys.DROP_INVENTORY.createCallbackForAction(Actions.DROP_INVENTORY);
 
         Configs.Generic.CUSTOM_TITLE.setValueLoadCallback(RandomUtils::changeTitle);
         Configs.Generic.CUSTOM_TITLE.setValueChangeCallback((newValue, oldValue) -> RandomUtils.changeTitle(newValue));
@@ -21,6 +23,9 @@ public class Callbacks {
 
         Configs.Generic.BLOCK_HIT_LIST.setValueLoadCallback(BlockBlackListHelper::updateBlockHitRestriction);
         Configs.Generic.BLOCK_HIT_LIST.setValueChangeCallback((newValue, oldValue) -> BlockBlackListHelper.updateBlockHitRestriction(newValue));
+
+        Configs.Generic.ITEM_DROP_LIST.setValueLoadCallback(DropPlayerInventory::updateItemDropList);
+        Configs.Generic.ITEM_DROP_LIST.setValueChangeCallback(((newValue, oldValue) -> DropPlayerInventory.updateItemDropList(newValue)));
 
         //Configs.Generic.ENTITY_HIT_LIST.setValueLoadCallback(EntityUtils::updateEntityHitRestriction);
         //Configs.Generic.ENTITY_HIT_LIST.setValueChangeCallback(((newValue, oldValue) -> EntityUtils.updateEntityHitRestriction(newValue)));

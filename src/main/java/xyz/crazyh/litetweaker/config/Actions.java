@@ -10,6 +10,7 @@ import xyz.crazyh.litetweaker.gui.ConfigScreen;
 import xyz.crazyh.litetweaker.util.AntiGhostBlock;
 import xyz.crazyh.litetweaker.util.RandomUtils;
 import xyz.crazyh.litetweaker.util.RefreshInventory;
+import xyz.crazyh.litetweaker.util.autoInventoryProcess.DropPlayerInventory;
 
 public class Actions {
     public static final NamedAction OPEN_CONFIG_GUI = register("openConfigScreen", ConfigScreen::open);
@@ -19,6 +20,7 @@ public class Actions {
     public static final NamedAction TOGGLE_MAIN_HAND = register("toggleMainHand", RandomUtils::swapMainHand);
     public static final NamedAction SWAP_BLOCK = register("swapBlock", RandomUtils::swapBlock);
     public static final NamedAction TOGGLE_ELYTRA_FLYING = register("stopElytraFlying", RandomUtils::toggleElytraFlying);
+    public static final NamedAction DROP_INVENTORY = register("dropInventory", DropPlayerInventory::dropInventory);
 
     public static void init() {
         for (TweaksToggle tweak : TweaksToggle.VALUES) {

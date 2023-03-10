@@ -7,18 +7,20 @@ import fi.dy.masa.malilib.config.category.ConfigOptionCategory;
 import fi.dy.masa.malilib.config.option.*;
 import fi.dy.masa.malilib.config.option.list.BlackWhiteListConfig;
 import fi.dy.masa.malilib.config.option.list.BlockListConfig;
+import fi.dy.masa.malilib.config.option.list.ItemListConfig;
 import fi.dy.masa.malilib.config.option.list.StringListConfig;
 import fi.dy.masa.malilib.config.value.BlackWhiteList;
 import fi.dy.masa.malilib.input.Hotkey;
 import fi.dy.masa.malilib.util.game.BlockUtils;
+import fi.dy.masa.malilib.util.game.ItemUtils;
 import fi.dy.masa.malilib.util.restriction.UsageRestriction;
 import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityEnderCrystal;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import xyz.crazyh.litetweaker.Reference;
-import xyz.crazyh.litetweaker.config.option.EntityListConfig;
-import xyz.crazyh.litetweaker.util.autoContainerProcess.AutoDropContainerType;
+import xyz.crazyh.litetweaker.util.autoInventoryProcess.AutoDropContainerType;
 
 import java.util.List;
 
@@ -44,8 +46,10 @@ public class Configs {
 
         public static final BlackWhiteListConfig<Block> BLOCK_HIT_LIST = new BlackWhiteListConfig<>("blockHitList", BlackWhiteList.blocks(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(Blocks.DRAGON_EGG), ImmutableList.of())) ;
         public static final StringListConfig ENTITY_HIT_LIST = new StringListConfig("entityHitList", ImmutableList.of("EntityEnderCrystal"));
+        //not usable cuz forge messing with registry
         //public static final BlackWhiteListConfig<Class <? extends Entity>> ENTITY_HIT_LIST = new BlackWhiteListConfig<>("entityHitList", EntityListConfig.entities(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(EntityEnderCrystal.class), ImmutableList.of()));
         public static final BlockListConfig PERIMETER_WALL_LIST = new BlockListConfig("perimeterWallList", ImmutableList.of(Blocks.SANDSTONE, Blocks.NETHERRACK), BlockUtils::getBlockRegistryName, BlockUtils::getBlockByRegistryName);
+        public static final BlackWhiteListConfig<Item> ITEM_DROP_LIST = new BlackWhiteListConfig<>("itemDropList", BlackWhiteList.itemNames((UsageRestriction.ListType.WHITELIST),ImmutableList.of(), ImmutableList.of("minecraft:stone")));
 
         public static final ImmutableList<ConfigOption<?>> OPTIONS = ImmutableList.of(
                 ADDITIONAL_BLOCK_BREAKING_COOLDOWN,
@@ -63,8 +67,9 @@ public class Configs {
                 CLIENT_TIME,
                 CUSTOM_TITLE,
                 ENTITY_HIT_LIST,
-                PERIMETER_WALL_LIST,
-                MINIHUD_FONT_SCALE
+                ITEM_DROP_LIST,
+                MINIHUD_FONT_SCALE,
+                PERIMETER_WALL_LIST
         );
 
         public static final List<Hotkey> OPTIONS_HOTKEY = ImmutableList.of(

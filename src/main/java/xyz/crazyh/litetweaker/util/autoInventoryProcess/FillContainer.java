@@ -1,4 +1,4 @@
-package xyz.crazyh.litetweaker.util.autoContainerProcess;
+package xyz.crazyh.litetweaker.util.autoInventoryProcess;
 
 import fi.dy.masa.malilib.overlay.message.MessageUtils;
 import fi.dy.masa.malilib.util.inventory.InventoryUtils;
@@ -8,10 +8,8 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.ClickType;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
-import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.server.SPacketOpenWindow;
 import xyz.crazyh.litetweaker.config.Configs;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
 import xyz.crazyh.litetweaker.util.RefreshInventory;
 
 public class FillContainer {
