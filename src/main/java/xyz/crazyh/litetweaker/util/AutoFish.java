@@ -30,16 +30,17 @@ public class AutoFish {
 
     private static int tickCounter;
     public static void autoReUseFishingRod(Minecraft minecraft, boolean inGame, boolean clock) {
-        if (!TweaksToggle.AUTO_FISH.getBooleanValue()) {
+        EntityPlayerSP playerSP = minecraft.player;
+
+        if (!TweaksToggle.AUTO_FISH.getBooleanValue() && !(playerSP.getHeldItemMainhand().getItem() instanceof ItemFishingRod)) {
             return;
         }
-
-        EntityPlayerSP playerSP = minecraft.player;
 
         if (inGame && clock) {
             if (tickCounter < 20) {
                 tickCounter ++;
             }
+
             if (tickCounter == 20) {
                 EnumActionResult result = minecraft.playerController.processRightClick(playerSP, playerSP.world, playerSP.getHeldItemMainhand().getItem() instanceof ItemFishingRod ? EnumHand.MAIN_HAND : EnumHand.OFF_HAND);
                 if (result == EnumActionResult.FAIL) {
