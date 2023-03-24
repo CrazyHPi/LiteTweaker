@@ -32,6 +32,10 @@ public class AutoFish {
     public static void autoReUseFishingRod(Minecraft minecraft, boolean inGame, boolean clock) {
         EntityPlayerSP playerSP = minecraft.player;
 
+        if (playerSP == null) {
+            return;
+        }
+
         if (!TweaksToggle.AUTO_FISH.getBooleanValue() && !(playerSP.getHeldItemMainhand().getItem() instanceof ItemFishingRod)) {
             return;
         }

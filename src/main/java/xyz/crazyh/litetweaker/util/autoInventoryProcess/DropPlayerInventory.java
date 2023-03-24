@@ -43,10 +43,10 @@ public class DropPlayerInventory {
 
     private static int tickCounter = 0;
     public static void autoDropInventory(boolean inGame, boolean clock) {
-        if (inGame && clock) {
+        if (Configs.Generic.AUTO_DROP_INVENTORY.getBooleanValue() && inGame && clock) {
             if (tickCounter++ >= Configs.Generic.AUTO_DROP_INVENTORY_INTERVAL.getIntegerValue()) {
                 dropInventory();
-                tickCounter =0;
+                tickCounter = 0;
             }
         }
     }
