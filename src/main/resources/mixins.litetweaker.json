@@ -55,6 +55,7 @@
     "Tweaks.placeIgnoreEntity.MixinItemBlock",
     "Tweaks.quickBlockSwapper.MixinPlayerControllerMP",
     "Tweaks.reducedBossBar.MixinGuiBossOverlay",
-    "Tweaks.stepUp.MixinEntityPlayerSP"
+    "Tweaks.stepUp.MixinEntityPlayerSP",
+    "Tweaks.tabPingDisplay.MixinGuiPlayerTabOverlay"
   ]
 }

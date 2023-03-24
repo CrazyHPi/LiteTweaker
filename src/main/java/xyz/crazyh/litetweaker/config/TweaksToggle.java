@@ -42,6 +42,8 @@ public enum TweaksToggle implements ConfigInfo {
     QUICK_BLOCK_SWAP("quickBlockSwap", false),
     REDUCED_BOSS_BAR("reducedBossBar", false),
     STEP_UP("stepUp", false),
+    TAB_PING_DISPLAY("tabPingDisplay", false),
+    //TAB_PING_DISPLAY_REMOVE_PING_BAR("tabPingDisplayRemovePingBar", false),
     DISABLE_ARMOR_STAND_RENDERING("disableArmorStandRendering", false),
     DISABLE_BEACON_BEAM("disableBeaconBeam", false),
     DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
