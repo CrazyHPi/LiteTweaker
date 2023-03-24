@@ -38,6 +38,8 @@ public class Configs {
         public static final IntegerConfig AUTO_FILL_CONTAINER_LIMIT = new IntegerConfig("autoFillContainerLimit", 3, 1, 36);
         public static final HotkeyedBooleanConfig AUTO_REFRESH_INVENTORY = new HotkeyedBooleanConfig("autoRefreshInventory", false, "");
         public static final IntegerConfig AUTO_REFRESH_INVENTORY_INTERVAL = new IntegerConfig("autoRefreshInventoryInterval", 100, 1, 1000);
+        public static final HotkeyedBooleanConfig AUTO_DROP_INVENTORY = new HotkeyedBooleanConfig("autoDropInventory", false, "");
+        public static final IntegerConfig AUTO_DROP_INVENTORY_INTERVAL = new IntegerConfig("autoDropInventory", 100, 1, 12000);
 
         public static final IntegerConfig BACKGROUND_FPS_LIMIT = new IntegerConfig("backgroundFPSLimit", -1, -1, 999);
         public static final IntegerConfig CLIENT_TIME = new IntegerConfig("clientTime", 6000, 0, 24000);
@@ -58,6 +60,8 @@ public class Configs {
                 AUTO_CLEAR_GHOST_BLOCK_INTERVAL,
                 AUTO_DROP_CONTAINER,
                 AUTO_DROP_CONTAINER_TYPE,
+                AUTO_DROP_INVENTORY,
+                AUTO_DROP_INVENTORY_INTERVAL,
                 AUTO_FILL_CONTAINER,
                 AUTO_FILL_CONTAINER_LIMIT,
                 AUTO_REFRESH_INVENTORY,

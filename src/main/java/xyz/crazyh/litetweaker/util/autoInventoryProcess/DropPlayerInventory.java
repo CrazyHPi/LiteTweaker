@@ -9,6 +9,7 @@ import net.minecraft.inventory.ClickType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import xyz.crazyh.litetweaker.config.Configs;
 
 public class DropPlayerInventory {
     private static final UsageRestriction<Item> itemDropList = new UsageRestriction<>();
@@ -36,6 +37,16 @@ public class DropPlayerInventory {
         for (int i = 9; i < invList.size(); i++) {
             if (itemDropList.isAllowed(invList.get(i).getItem()) && !invList.get(i).isEmpty()) {
                 mc.playerController.windowClick(0, i, 1, ClickType.THROW, playerSP);
+            }
+        }
+    }
+
+    private static int tickCounter = 0;
+    public static void autoDropInventory(boolean inGame, boolean clock) {
+        if (inGame && clock) {
+            if (tickCounter++ >= Configs.Generic.AUTO_DROP_INVENTORY_INTERVAL.getIntegerValue()) {
+                dropInventory();
+                tickCounter =0;
             }
         }
     }

@@ -9,6 +9,7 @@ import net.minecraft.client.Minecraft;
 import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
 import xyz.crazyh.litetweaker.util.*;
+import xyz.crazyh.litetweaker.util.autoInventoryProcess.DropPlayerInventory;
 
 import java.io.File;
 
@@ -87,6 +88,7 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
         RefreshInventory.autoRefreshInv(inGame, clock);
         AutoFish.autoReUseFishingRod(minecraft, inGame, clock);
         RandomUtils.cancelPlayerFall(minecraft, inGame, clock);
+        DropPlayerInventory.autoDropInventory(inGame, clock);
         //RandomUtils.tryToSwap(inGame, clock);
     }
 }
