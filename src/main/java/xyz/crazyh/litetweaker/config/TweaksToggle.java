@@ -42,6 +42,7 @@ public enum TweaksToggle implements ConfigInfo {
     PREVENT_DIG_BLOCKS_BELOW("preventDigBlocksBelow", false),
     QUICK_BLOCK_SWAP("quickBlockSwap", false),
     REDUCED_BOSS_BAR("reducedBossBar", false),
+    RISE_SOUND_CHANNEL("riseSoundChannel", false),
     STEP_UP("stepUp", false),
     TAB_PING_DISPLAY("tabPingDisplay", false),
     //TAB_PING_DISPLAY_REMOVE_PING_BAR("tabPingDisplayRemovePingBar", false),

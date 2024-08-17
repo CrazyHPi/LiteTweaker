@@ -8,6 +8,7 @@ import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.Display;
+import paulscode.sound.SoundSystemConfig;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 import xyz.crazyh.litetweaker.input.MouseInputHandlerImpl;
 import xyz.crazyh.litetweaker.mixins.Random.EntityAccessor;
@@ -70,6 +71,13 @@ public class RandomUtils {
 
         if (inGame && clock && TweaksToggle.NO_FALL.getBooleanValue() && playerSP.fallDistance > 2F && !playerSP.isElytraFlying()) {
             playerSP.connection.sendPacket(new CPacketPlayer(true));
+        }
+    }
+
+    public static void riseSoundChannel(boolean on) {
+        if (on) {
+            SoundSystemConfig.setNumberNormalChannels(2048);
+            SoundSystemConfig.setNumberStreamingChannels(64);
         }
     }
 }
