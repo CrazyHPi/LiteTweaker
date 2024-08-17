@@ -44,7 +44,6 @@ public class Configs {
         public static final IntegerConfig BACKGROUND_FPS_LIMIT = new IntegerConfig("backgroundFPSLimit", -1, -1, 999);
         public static final IntegerConfig CLIENT_TIME = new IntegerConfig("clientTime", 6000, 0, 24000);
         public static final StringConfig CUSTOM_TITLE  = new StringConfig("customTitle", "Minecraft 1.12.2");
-        public static final DoubleConfig MINIHUD_FONT_SCALE = new DoubleConfig("minihudFontScale", 1, 0.25, 20);
 
         public static final BlackWhiteListConfig<Block> BLOCK_HIT_LIST = new BlackWhiteListConfig<>("blockHitList", BlackWhiteList.blocks(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(Blocks.DRAGON_EGG), ImmutableList.of())) ;
         public static final StringListConfig ENTITY_HIT_LIST = new StringListConfig("entityHitList", ImmutableList.of("EntityEnderCrystal"));
@@ -72,7 +71,6 @@ public class Configs {
                 CUSTOM_TITLE,
                 ENTITY_HIT_LIST,
                 ITEM_DROP_LIST,
-                MINIHUD_FONT_SCALE,
                 PERIMETER_WALL_LIST
         );
 

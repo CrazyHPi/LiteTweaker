@@ -27,7 +27,6 @@
     "Random.BlocksAccessor",
     "Random.EntityAccessor",
     "Random.MinecraftAccessor",
-    "Random.MixinRenderHandler",
     "Tweaks.additionalBlockBreakingCooldown.MixinPlayerControllerMP",
     "Tweaks.alwaysRenderBarrierModel.MixinBlock",
     "Tweaks.alwaysRenderBarrierModel.MixinBlockBarrier",
