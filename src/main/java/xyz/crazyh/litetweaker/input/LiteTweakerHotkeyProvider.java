@@ -6,9 +6,11 @@ import fi.dy.masa.malilib.input.HotkeyCategory;
 import fi.dy.masa.malilib.input.HotkeyProvider;
 import xyz.crazyh.litetweaker.Reference;
 import xyz.crazyh.litetweaker.config.Configs;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 import xyz.crazyh.litetweaker.config.Hotkeys;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
+import java.sql.Ref;
 import java.util.List;
 
 public class LiteTweakerHotkeyProvider implements HotkeyProvider {
@@ -25,6 +27,7 @@ public class LiteTweakerHotkeyProvider implements HotkeyProvider {
         builder.addAll(Configs.Generic.OPTIONS_HOTKEY);
         builder.addAll(Hotkeys.HOTKEY_LIST);
         builder.addAll(TweaksToggle.TOGGLE_HOTKEYS);
+        builder.addAll(DisableToggle.TOGGLE_HOTKEYS);
 
         return builder.build();
     }
@@ -38,7 +41,8 @@ public class LiteTweakerHotkeyProvider implements HotkeyProvider {
         return ImmutableList.of(
                 new HotkeyCategory(Reference.MOD_INFO, "litetweaker.hotkeys.category.generic", Configs.Generic.OPTIONS_HOTKEY),
                 new HotkeyCategory(Reference.MOD_INFO, "litetweaker.hotkeys.category.generic_hotkeys", Hotkeys.HOTKEY_LIST),
-                new HotkeyCategory(Reference.MOD_INFO, "litetweaker.hotkeys.category.tweak_toggle_hotkeys", TweaksToggle.TOGGLE_HOTKEYS)
+                new HotkeyCategory(Reference.MOD_INFO, "litetweaker.hotkeys.category.tweak_toggle_hotkeys", TweaksToggle.TOGGLE_HOTKEYS),
+                new HotkeyCategory(Reference.MOD_INFO, "litetweaker.hotkeys.category.disable_toggle_hotkeys", DisableToggle.TOGGLE_HOTKEYS)
         );
     }
 }

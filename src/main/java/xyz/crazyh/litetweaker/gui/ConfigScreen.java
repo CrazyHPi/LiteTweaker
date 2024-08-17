@@ -12,6 +12,7 @@ import fi.dy.masa.malilib.util.data.ModInfo;
 import net.minecraft.client.gui.GuiScreen;
 import xyz.crazyh.litetweaker.Reference;
 import xyz.crazyh.litetweaker.config.Configs;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 import xyz.crazyh.litetweaker.config.Hotkeys;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
@@ -23,17 +24,20 @@ public class ConfigScreen {
 
     private static final BaseConfigTab GENERIC = new BaseConfigTab(MOD_INFO, "generic", 160, getGenericConfigs(), ConfigScreen::create);
     private static final BaseConfigTab TWEAKS = new BaseConfigTab(MOD_INFO, "tweaks", 200, TweaksToggle.VALUES, ConfigScreen::create);
+    private static final BaseConfigTab DISABLES = new BaseConfigTab(MOD_INFO, "disables", 200, DisableToggle.VALUES, ConfigScreen::create);
     private static final BaseConfigTab HOTKEYS =  new BaseConfigTab(MOD_INFO, "hotkeys", 160, getHotKeys(), ConfigScreen::create);
 
     private static final ImmutableList<ConfigTab> CONFIG_TABS = ImmutableList.of(
             GENERIC,
             TWEAKS,
+            DISABLES,
             HOTKEYS
     );
 
     private static final ImmutableList<ScreenTab> ALL_TABS = ImmutableList.of(
             GENERIC,
             TWEAKS,
+            DISABLES,
             HOTKEYS
     );
 

@@ -17,34 +17,7 @@ import java.util.Locale;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public enum TweaksToggle implements ConfigInfo {
-    //sort these from A-Z, then disable options (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
-    ALWAYS_RENDER_BARRIER_MODEL("alwaysRenderBarrierModel", false),
-    ALWAYS_RENDER_BARRIER_PARTICLES("alwaysRenderBarrierParticles", false),
-    ALWAYS_RENDER_STRUCTURE_VOID_MODEL("alwaysRenderStructureVoidModel", false),
-    ANVIL_RENAME_COPY("anvilRenameCopy", false),
-    AUTO_FISH("autoFish",false),
-    AUTO_RESPAWN("autoRespawn", false),
-    BETTER_F3N_CYCLE("betterF3nCycle", false),
-    CLIENT_TIME_OVERRIDE("clientTimeOverride", false),
-    //TODO CREATIVE_FLY_NO_DRAG("creativeFlyNoDrag", false),
-    CREATIVE_NO_CLIP("creativeNoClip", false),
-    ENTITY_CULLING("entityCulling",false),
-    FAKE_NIGHT_VISION("fakeNightVision", false),
-    MINING_GHOST_BLOCK_FIX("miningGhostBlockFix", false),
-    NEW_NOTE_BLOCK("newNoteBlock", false),
-    NO_FALL("noFall", false),
-    PERIMETER_WALL_HELPER("perimeterWallHelper", false),
-    PICK_MORE_BLOCKS("pickMoreBlocks", false),
-    PLACE_IGNORE_ENTITY("placeIgnoreEntity", false),
-    //PLACEMENT_OFFSET("placementOffset", false),
-    PREVENT_DIG_BLOCKS_BELOW("preventDigBlocksBelow", false),
-    QUICK_BLOCK_SWAP("quickBlockSwap", false),
-    REDUCED_BOSS_BAR("reducedBossBar", false),
-    RISE_SOUND_CHANNEL("riseSoundChannel", false),
-    STEP_UP("stepUp", false),
-    TAB_PING_DISPLAY("tabPingDisplay", false),
-    //TAB_PING_DISPLAY_REMOVE_PING_BAR("tabPingDisplayRemovePingBar", false),
+public enum DisableToggle implements ConfigInfo {
     DISABLE_ARMOR_STAND_RENDERING("disableArmorStandRendering", false),
     DISABLE_BEACON_BEAM("disableBeaconBeam", false),
     DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
@@ -61,29 +34,29 @@ public enum TweaksToggle implements ConfigInfo {
     DISABLE_VIGNETTING("disableVignetting", false),
     DISABLE_WATER_FOV("disableWaterFov", false);
 
-    public static final ImmutableList<TweaksToggle> VALUES = ImmutableList.copyOf(values());
-    public static final ImmutableList<BooleanConfig> TOGGLE_CONFIGS = ImmutableList.copyOf(VALUES.stream().map(TweaksToggle::getBooleanConfig).collect(Collectors.toList()));
-    public static final ImmutableList<HotkeyConfig> TOGGLE_HOTKEYS = ImmutableList.copyOf(VALUES.stream().map(TweaksToggle::getHotKeyConfig).collect(Collectors.toList()));
+    public static final ImmutableList<DisableToggle> VALUES = ImmutableList.copyOf(values());
+    public static final ImmutableList<BooleanConfig> TOGGLE_CONFIGS = ImmutableList.copyOf(VALUES.stream().map(DisableToggle::getBooleanConfig).collect(Collectors.toList()));
+    public static final ImmutableList<HotkeyConfig> TOGGLE_HOTKEYS = ImmutableList.copyOf(VALUES.stream().map(DisableToggle::getHotKeyConfig).collect(Collectors.toList()));
 
     private final BooleanConfig toggleStatus;
     private final HotkeyConfig toggleHotkey;
 
-    TweaksToggle(String name, boolean defaultValue) {
+    DisableToggle(String name, boolean defaultValue) {
         this(name, defaultValue, KeyBindSettings.INGAME_DEFAULT);
     }
 
-    TweaksToggle(String name, boolean defaultValue, KeyBindSettings settings) {
+    DisableToggle(String name, boolean defaultValue, KeyBindSettings settings) {
         this.toggleStatus = new BooleanConfig(name, defaultValue);
         this.toggleHotkey = new HotkeyConfig(name, "", settings);
 
         String nameLower = name.toLowerCase(Locale.ROOT);
-        String nameKey = "litetweaker.feature_toggle.name." + nameLower;
+        String nameKey = "litetweaker.disable_toggle.name." + nameLower;
         this.toggleHotkey.setNameTranslationKey(nameKey);
         this.toggleHotkey.setPrettyNameTranslationKey(nameKey);
 
         this.toggleStatus.setNameTranslationKey(nameKey);
         this.toggleStatus.setPrettyNameTranslationKey(nameKey);
-        this.toggleStatus.setCommentTranslationKey("litetweaker.feature_toggle.comment." + nameLower);
+        this.toggleStatus.setCommentTranslationKey("litetweaker.disable_toggle.comment." + nameLower);
 
         this.setSpecialToggleMessageFactory(null);
     }
@@ -92,8 +65,7 @@ public enum TweaksToggle implements ConfigInfo {
      * This will replace the default hotkey callback with the ToggleBooleanWithMessageKeyCallback
      * variant that takes in the message factory
      */
-    public void setSpecialToggleMessageFactory(@Nullable MessageHelpers.BooleanConfigMessageFactory messageFactory)
-    {
+    public void setSpecialToggleMessageFactory(@Nullable MessageHelpers.BooleanConfigMessageFactory messageFactory) {
         HotkeyCallback callback = new ToggleBooleanWithMessageKeyCallback(this.toggleStatus, messageFactory);
         this.toggleHotkey.getKeyBind().setCallback(callback);
     }
@@ -172,6 +144,5 @@ public enum TweaksToggle implements ConfigInfo {
     public Optional<String> getComment() {
         return this.toggleStatus.getComment();
     }
-
 
 }

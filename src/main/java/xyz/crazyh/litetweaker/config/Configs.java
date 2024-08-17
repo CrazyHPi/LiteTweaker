@@ -22,6 +22,7 @@ import net.minecraft.item.ItemBlock;
 import xyz.crazyh.litetweaker.Reference;
 import xyz.crazyh.litetweaker.util.autoInventoryProcess.AutoDropContainerType;
 
+import java.sql.Ref;
 import java.util.List;
 
 public class Configs {
@@ -89,6 +90,8 @@ public class Configs {
             BaseConfigOptionCategory.normal(Reference.MOD_INFO, "Generic", Generic.OPTIONS),
             BaseConfigOptionCategory.normal(Reference.MOD_INFO, "Tweaks", TweaksToggle.TOGGLE_CONFIGS),
             BaseConfigOptionCategory.normal(Reference.MOD_INFO, "TweakHotkeys", TweaksToggle.TOGGLE_HOTKEYS),
+            BaseConfigOptionCategory.normal(Reference.MOD_INFO, "Disables", DisableToggle.TOGGLE_CONFIGS),
+            BaseConfigOptionCategory.normal(Reference.MOD_INFO, "DisableHotKeys", DisableToggle.TOGGLE_HOTKEYS),
             BaseConfigOptionCategory.normal(Reference.MOD_INFO, "Hotkeys", Hotkeys.HOTKEY_LIST)
     );
 }

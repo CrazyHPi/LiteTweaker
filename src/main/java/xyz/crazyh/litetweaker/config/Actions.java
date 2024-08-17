@@ -27,6 +27,10 @@ public class Actions {
             ActionUtils.registerBooleanConfigActions(Reference.MOD_INFO, tweak.getBooleanConfig(), tweak.getKeyBind());
         }
 
+        for (DisableToggle disable : DisableToggle.VALUES) {
+            ActionUtils.registerBooleanConfigActions(Reference.MOD_INFO, disable.getBooleanConfig(), disable.getKeyBind());
+        }
+
         ActionUtils.registerBooleanConfigActions(Configs.Generic.OPTIONS);
     }
 
