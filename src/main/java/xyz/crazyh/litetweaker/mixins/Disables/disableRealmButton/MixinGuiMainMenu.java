@@ -5,7 +5,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(GuiMainMenu.class)
 public abstract class MixinGuiMainMenu {
@@ -18,7 +18,7 @@ public abstract class MixinGuiMainMenu {
             cancellable = true
     )
     private void noRealmButt(int p_73969_1_, int p_73969_2_, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_REALM_BUTTON.getBooleanValue()) {
+        if (DisableToggle.DISABLE_REALM_BUTTON.getBooleanValue()) {
             ci.cancel();
         }
     }

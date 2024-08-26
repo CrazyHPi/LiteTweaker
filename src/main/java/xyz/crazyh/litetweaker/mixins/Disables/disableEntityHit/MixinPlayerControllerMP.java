@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 import xyz.crazyh.litetweaker.util.EntityUtils;
 
 @Mixin(PlayerControllerMP.class)
@@ -30,7 +30,7 @@ public abstract class MixinPlayerControllerMP {
             cancellable = true
     )
     private void disableEntityHit(EntityPlayer playerIn, Entity targetEntity, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_ENTITY_HIT.getBooleanValue() && EntityUtils.checkEntityBlackList(targetEntity.getClass().getName())) {
+        if (DisableToggle.DISABLE_ENTITY_HIT.getBooleanValue() && EntityUtils.checkEntityBlackList(targetEntity.getClass().getName())) {
             ci.cancel();
         }
     }

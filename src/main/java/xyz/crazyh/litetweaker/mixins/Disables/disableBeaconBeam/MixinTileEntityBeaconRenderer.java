@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(TileEntityBeaconRenderer.class)
 public abstract class MixinTileEntityBeaconRenderer {
@@ -16,7 +16,7 @@ public abstract class MixinTileEntityBeaconRenderer {
             cancellable = true
     )
     private void disableBeaconBeam(TileEntityBeacon te, double x, double y, double z, float partialTicks, int destroyStage, float alpha, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_BEACON_BEAM.getBooleanValue()) {
+        if (DisableToggle.DISABLE_BEACON_BEAM.getBooleanValue()) {
             ci.cancel();
         }
     }

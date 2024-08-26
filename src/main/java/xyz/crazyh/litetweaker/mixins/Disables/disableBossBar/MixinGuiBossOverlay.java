@@ -5,7 +5,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(GuiBossOverlay.class)
 public abstract class MixinGuiBossOverlay {
@@ -15,7 +15,7 @@ public abstract class MixinGuiBossOverlay {
             cancellable = true
     )
     private void dontRender(CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_BOSS_BAR.getBooleanValue()) {
+        if (DisableToggle.DISABLE_BOSS_BAR.getBooleanValue()) {
             ci.cancel();
         }
     }

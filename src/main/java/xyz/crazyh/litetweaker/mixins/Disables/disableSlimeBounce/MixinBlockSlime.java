@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(BlockSlime.class)
 public abstract class MixinBlockSlime {
@@ -18,7 +18,7 @@ public abstract class MixinBlockSlime {
             cancellable = true
     )
     private void noBounce(World worldIn, Entity entityIn, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_SLIME_BOUNCE.getBooleanValue() && entityIn instanceof EntityPlayerSP) {
+        if (DisableToggle.DISABLE_SLIME_BOUNCE.getBooleanValue() && entityIn instanceof EntityPlayerSP) {
             entityIn.fallDistance = 0;
             //reset player's motion so player won't bounce when turing this off on slime
             entityIn.motionY = 0.0D;

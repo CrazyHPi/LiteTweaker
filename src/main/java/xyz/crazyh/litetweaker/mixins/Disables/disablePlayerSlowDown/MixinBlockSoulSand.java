@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(BlockSoulSand.class)
 public abstract class MixinBlockSoulSand {
@@ -20,7 +20,7 @@ public abstract class MixinBlockSoulSand {
             cancellable = true
     )
     private void onPlayerWalk(World worldIn, BlockPos pos, IBlockState state, Entity entityIn, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_SLOW_DOWN.getBooleanValue() && entityIn instanceof EntityPlayerSP) {
+        if (DisableToggle.DISABLE_SLOW_DOWN.getBooleanValue() && entityIn instanceof EntityPlayerSP) {
             ci.cancel();
         }
     }

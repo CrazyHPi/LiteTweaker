@@ -18,11 +18,12 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public enum DisableToggle implements ConfigInfo {
+    //sort these from A-Z (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
     DISABLE_ARMOR_STAND_RENDERING("disableArmorStandRendering", false),
     DISABLE_BEACON_BEAM("disableBeaconBeam", false),
     DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
     DISABLE_BLOCK_HIT("disableBlockHit", false),
-    DISABLE_BOSS_BAR("disabelBossBar", false),
+    DISABLE_BOSS_BAR("disableBossBar", false),
     DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE("disableCommandblockOutputToConsole", false),
     //DISABLE_ENDER_PEARL_COOLDOWN("disableEnderPearlCooldown", false),
     DISABLE_ENTITY_HIT("disableEntityHit", false),
@@ -32,7 +33,8 @@ public enum DisableToggle implements ConfigInfo {
     DISABLE_SLOW_DOWN("disableSlowDown", false),
     DISABLE_SNEAK_SLOW_DOWN("disableSneakSlowDown", false),
     DISABLE_VIGNETTING("disableVignetting", false),
-    DISABLE_WATER_FOV("disableWaterFov", false);
+    DISABLE_WATER_FOV("disableWaterFov", false),
+    ;
 
     public static final ImmutableList<DisableToggle> VALUES = ImmutableList.copyOf(values());
     public static final ImmutableList<BooleanConfig> TOGGLE_CONFIGS = ImmutableList.copyOf(VALUES.stream().map(DisableToggle::getBooleanConfig).collect(Collectors.toList()));

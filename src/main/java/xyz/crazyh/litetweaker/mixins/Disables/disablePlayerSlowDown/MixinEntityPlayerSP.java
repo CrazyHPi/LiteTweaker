@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(EntityPlayerSP.class)
 public abstract class MixinEntityPlayerSP extends EntityLivingBase {
@@ -28,7 +28,7 @@ public abstract class MixinEntityPlayerSP extends EntityLivingBase {
             )
     )
     private boolean isUsingItem(EntityPlayerSP playerSP) {
-        if (TweaksToggle.DISABLE_SLOW_DOWN.getBooleanValue()) {
+        if (DisableToggle.DISABLE_SLOW_DOWN.getBooleanValue()) {
             return false;
         }
         return this.handActive;

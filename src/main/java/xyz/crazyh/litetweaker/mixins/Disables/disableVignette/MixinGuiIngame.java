@@ -4,7 +4,7 @@ import net.minecraft.client.gui.GuiIngame;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(GuiIngame.class)
 public abstract class MixinGuiIngame {
@@ -17,7 +17,7 @@ public abstract class MixinGuiIngame {
             argsOnly = true
     )
     private float test(float value){
-        if (TweaksToggle.DISABLE_VIGNETTING.getBooleanValue()) {
+        if (DisableToggle.DISABLE_VIGNETTING.getBooleanValue()) {
             return -14;
         } else {
             return 1.0F - value;

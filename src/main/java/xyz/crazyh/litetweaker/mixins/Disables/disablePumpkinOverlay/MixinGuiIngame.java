@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(GuiIngame.class)
 public abstract class MixinGuiIngame {
@@ -16,7 +16,7 @@ public abstract class MixinGuiIngame {
             cancellable = true
     )
     private void noPumpkinOverlay(ScaledResolution scaledRes, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_PUMPKIN_OVERLAY.getBooleanValue()) {
+        if (DisableToggle.DISABLE_PUMPKIN_OVERLAY.getBooleanValue()) {
             ci.cancel();
         }
     }

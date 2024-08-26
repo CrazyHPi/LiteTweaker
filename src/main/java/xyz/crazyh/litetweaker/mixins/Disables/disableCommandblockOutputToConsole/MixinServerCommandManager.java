@@ -5,14 +5,13 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.CommandBlockBaseLogic;
-import net.minecraft.tileentity.TileEntityCommandBlock;
 import net.minecraft.util.text.ITextComponent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(ServerCommandManager.class)
 public abstract class MixinServerCommandManager {
@@ -23,7 +22,7 @@ public abstract class MixinServerCommandManager {
             at = @At("HEAD")
     )
         private void checkSender(ICommandSender sender, ICommand command, int flags, String translationKey, Object[] translationArgs, CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE.getBooleanValue() && sender instanceof CommandBlockBaseLogic ) {
+        if (DisableToggle.DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE.getBooleanValue() && sender instanceof CommandBlockBaseLogic ) {
             shouldCancel = true;
         }
     }

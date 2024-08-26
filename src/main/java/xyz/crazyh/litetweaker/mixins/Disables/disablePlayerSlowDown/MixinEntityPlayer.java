@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(EntityPlayer.class)
 public abstract class MixinEntityPlayer extends Entity {
@@ -22,7 +22,7 @@ public abstract class MixinEntityPlayer extends Entity {
             cancellable = true
     )
     private void onSetInWeb(CallbackInfo ci) {
-        if (TweaksToggle.DISABLE_SLOW_DOWN.getBooleanValue()) {
+        if (DisableToggle.DISABLE_SLOW_DOWN.getBooleanValue()) {
             this.fallDistance = 0.0F;
             ci.cancel();
         }

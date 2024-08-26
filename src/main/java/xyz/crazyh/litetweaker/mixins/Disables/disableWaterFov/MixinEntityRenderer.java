@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.EntityRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(EntityRenderer.class)
 public abstract class MixinEntityRenderer {
@@ -18,7 +18,7 @@ public abstract class MixinEntityRenderer {
             )
     )
     private Material getMaterial(IBlockState instance) {
-        if (TweaksToggle.DISABLE_WATER_FOV.getBooleanValue()) {
+        if (DisableToggle.DISABLE_WATER_FOV.getBooleanValue()) {
             return Material.AIR;
         }
         return instance.getMaterial();

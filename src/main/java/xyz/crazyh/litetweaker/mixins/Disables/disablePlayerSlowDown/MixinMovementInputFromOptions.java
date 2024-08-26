@@ -3,10 +3,9 @@ package xyz.crazyh.litetweaker.mixins.Disables.disablePlayerSlowDown;
 import net.minecraft.util.MovementInput;
 import net.minecraft.util.MovementInputFromOptions;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 
 @Mixin(MovementInputFromOptions.class)
 public abstract class MixinMovementInputFromOptions extends MovementInput {
@@ -19,7 +18,7 @@ public abstract class MixinMovementInputFromOptions extends MovementInput {
             )
     )
     private boolean isSneaking(MovementInputFromOptions instance){
-        if (TweaksToggle.DISABLE_SNEAK_SLOW_DOWN.getBooleanValue()) {
+        if (DisableToggle.DISABLE_SNEAK_SLOW_DOWN.getBooleanValue()) {
             return false;
         }
         return this.sneak;

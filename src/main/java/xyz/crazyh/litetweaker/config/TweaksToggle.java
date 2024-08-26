@@ -18,7 +18,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public enum TweaksToggle implements ConfigInfo {
-    //sort these from A-Z, then disable options (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
+    //sort these from A-Z (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
     ALWAYS_RENDER_BARRIER_MODEL("alwaysRenderBarrierModel", false),
     ALWAYS_RENDER_BARRIER_PARTICLES("alwaysRenderBarrierParticles", false),
     ALWAYS_RENDER_STRUCTURE_VOID_MODEL("alwaysRenderStructureVoidModel", false),
@@ -44,22 +44,7 @@ public enum TweaksToggle implements ConfigInfo {
     RISE_SOUND_CHANNEL("riseSoundChannel", false),
     STEP_UP("stepUp", false),
     TAB_PING_DISPLAY("tabPingDisplay", false),
-    //TAB_PING_DISPLAY_REMOVE_PING_BAR("tabPingDisplayRemovePingBar", false),
-    DISABLE_ARMOR_STAND_RENDERING("disableArmorStandRendering", false),
-    DISABLE_BEACON_BEAM("disableBeaconBeam", false),
-    DISABLE_BLOCK_BREAKING_COOLDOWN("disableBlockBreakingCooldown", false),
-    DISABLE_BLOCK_HIT("disableBlockHit", false),
-    DISABLE_BOSS_BAR("disabelBossBar", false),
-    DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE("disableCommandblockOutputToConsole", false),
-    //DISABLE_ENDER_PEARL_COOLDOWN("disableEnderPearlCooldown", false),
-    DISABLE_ENTITY_HIT("disableEntityHit", false),
-    DISABLE_PUMPKIN_OVERLAY("disablePumpkinOverlay", false),
-    DISABLE_REALM_BUTTON("disableRealmButton", false),
-    DISABLE_SLIME_BOUNCE("disableSlimeBounce", false),
-    DISABLE_SLOW_DOWN("disableSlowDown", false),
-    DISABLE_SNEAK_SLOW_DOWN("disableSneakSlowDown", false),
-    DISABLE_VIGNETTING("disableVignetting", false),
-    DISABLE_WATER_FOV("disableWaterFov", false);
+    ;
 
     public static final ImmutableList<TweaksToggle> VALUES = ImmutableList.copyOf(values());
     public static final ImmutableList<BooleanConfig> TOGGLE_CONFIGS = ImmutableList.copyOf(VALUES.stream().map(TweaksToggle::getBooleanConfig).collect(Collectors.toList()));

@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
+import xyz.crazyh.litetweaker.config.DisableToggle;
 import xyz.crazyh.litetweaker.util.BlockBlackListHelper;
 
 @Mixin(PlayerControllerMP.class)
@@ -23,7 +23,7 @@ public abstract class MixinPlayerControllerMP {
             cancellable = true
     )
     private void cancelClick(BlockPos loc, EnumFacing face, CallbackInfoReturnable<Boolean> cir) {
-        if (TweaksToggle.DISABLE_BLOCK_HIT.getBooleanValue() && BlockBlackListHelper.checkBlackListed(loc)) {
+        if (DisableToggle.DISABLE_BLOCK_HIT.getBooleanValue() && BlockBlackListHelper.checkBlackListed(loc)) {
             cir.setReturnValue(false);
         }
     }
@@ -34,7 +34,7 @@ public abstract class MixinPlayerControllerMP {
             cancellable = true
     )
     private void cancelDamage(BlockPos posBlock, EnumFacing directionFacing, CallbackInfoReturnable<Boolean> cir) {
-        if (TweaksToggle.DISABLE_BLOCK_HIT.getBooleanValue() && BlockBlackListHelper.checkBlackListed(posBlock)) {
+        if (DisableToggle.DISABLE_BLOCK_HIT.getBooleanValue() && BlockBlackListHelper.checkBlackListed(posBlock)) {
             cir.setReturnValue(true);
         }
     }
@@ -45,7 +45,7 @@ public abstract class MixinPlayerControllerMP {
             cancellable = true
     )
     private void cancelRightClick(EntityPlayerSP player, WorldClient worldIn, BlockPos pos, EnumFacing direction, Vec3d vec, EnumHand hand, CallbackInfoReturnable<EnumActionResult> cir) {
-        if (TweaksToggle.DISABLE_BLOCK_HIT.getBooleanValue() && BlockBlackListHelper.checkBlackListed(pos)) {
+        if (DisableToggle.DISABLE_BLOCK_HIT.getBooleanValue() && BlockBlackListHelper.checkBlackListed(pos)) {
             cir.setReturnValue(EnumActionResult.PASS);
         }
     }
