@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import xyz.crazyh.litetweaker.block.BlockFakeSV;
-import xyz.crazyh.litetweaker.mixins.Random.BlockAccessor;
+import xyz.crazyh.litetweaker.mixins.Accessors.BlockAccessor;
 
 @Mixin(Block.class)
 public abstract class MixinBlock {

@@ -11,8 +11,8 @@ import org.lwjgl.opengl.Display;
 import paulscode.sound.SoundSystemConfig;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 import xyz.crazyh.litetweaker.input.MouseInputHandlerImpl;
-import xyz.crazyh.litetweaker.mixins.Random.EntityAccessor;
-import xyz.crazyh.litetweaker.mixins.Random.MinecraftAccessor;
+import xyz.crazyh.litetweaker.mixins.Accessors.EntityAccessor;
+import xyz.crazyh.litetweaker.mixins.Accessors.MinecraftAccessor;
 
 public class RandomUtils {
     //for some simple methods that does not deserve its own class

@@ -1,4 +1,4 @@
-package xyz.crazyh.litetweaker.mixins.Random;
+package xyz.crazyh.litetweaker.mixins.Accessors;
 
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;

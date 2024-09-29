@@ -2,7 +2,7 @@ package xyz.crazyh.litetweaker.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Bootstrap;
-import xyz.crazyh.litetweaker.mixins.Random.BlocksAccessor;
+import xyz.crazyh.litetweaker.mixins.Accessors.BlocksAccessor;
 
 public class FakeBlocks {
     public static final Block FAKE_BARRIER;
