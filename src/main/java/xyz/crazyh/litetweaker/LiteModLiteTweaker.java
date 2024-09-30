@@ -1,11 +1,18 @@
 package xyz.crazyh.litetweaker;
 
+import com.mojang.realmsclient.dto.RealmsServer;
 import com.mumfrey.liteloader.Configurable;
+import com.mumfrey.liteloader.JoinGameListener;
 import com.mumfrey.liteloader.LiteMod;
 import com.mumfrey.liteloader.Tickable;
 import com.mumfrey.liteloader.modconfig.ConfigPanel;
 import fi.dy.masa.malilib.registry.Registry;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.ServerData;
+import net.minecraft.network.INetHandler;
+import net.minecraft.network.play.server.SPacketJoinGame;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.gui.LiteTweakerConfigPanel;
 import xyz.crazyh.litetweaker.util.*;
@@ -13,7 +20,9 @@ import xyz.crazyh.litetweaker.util.autoInventoryProcess.DropPlayerInventory;
 
 import java.io.File;
 
-public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
+public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable, JoinGameListener {
+    public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_NAME);
+
     /**
      * Default constructor. All LiteMods must have a default constructor. In general you should do very little
      * in the mod constructor EXCEPT for initialising any non-game-interfacing components or performing
@@ -52,6 +61,7 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
     @Override
     public void init(File configPath) {
         Registry.INITIALIZATION_DISPATCHER.registerInitializationHandler(new InitHandler());
+        RawInput.init();
     }
 
     /**
@@ -90,5 +100,10 @@ public class LiteModLiteTweaker implements LiteMod, Configurable, Tickable {
         RandomUtils.cancelPlayerFall(minecraft, inGame, clock);
         DropPlayerInventory.autoDropInventory(inGame, clock);
         //RandomUtils.tryToSwap(inGame, clock);
+    }
+
+    @Override
+    public void onJoinGame(INetHandler netHandler, SPacketJoinGame joinGamePacket, ServerData serverData, RealmsServer realmsServer) {
+        RawInput.getMouse();
     }
 }
