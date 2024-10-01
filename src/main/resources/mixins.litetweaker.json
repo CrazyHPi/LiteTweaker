@@ -9,6 +9,7 @@
     "Accessors.BlocksAccessor",
     "Accessors.EntityAccessor",
     "Accessors.MinecraftAccessor",
+    "Accessors.SoundHandlerAccessor",
     "Disables.disableArmorStandRendering.MixinRenderArmorStand",
     "Disables.disableBeaconBeam.MixinTileEntityBeaconRenderer",
     "Disables.disableBlockBreakingCooldown.MixinPLayerControllerMP",

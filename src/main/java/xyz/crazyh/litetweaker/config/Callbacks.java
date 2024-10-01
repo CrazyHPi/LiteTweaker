@@ -27,8 +27,8 @@ public class Callbacks {
         Configs.Generic.ITEM_DROP_LIST.setValueLoadCallback(DropPlayerInventory::updateItemDropList);
         Configs.Generic.ITEM_DROP_LIST.setValueChangeCallback(((newValue, oldValue) -> DropPlayerInventory.updateItemDropList(newValue)));
 
-        TweaksToggle.RISE_SOUND_CHANNEL.getBooleanConfig().setValueLoadCallback(RandomUtils::riseSoundChannel);
-        TweaksToggle.RISE_SOUND_CHANNEL.getBooleanConfig().setValueChangeCallback((newValue, oldValue) -> RandomUtils.riseSoundChannel(newValue));
+        TweaksToggle.RISE_SOUND_CHANNEL.getBooleanConfig().setValueLoadCallback(newValue -> RandomUtils.riseSoundChannel(newValue, true));
+        TweaksToggle.RISE_SOUND_CHANNEL.getBooleanConfig().setValueChangeCallback((newValue, oldValue) -> RandomUtils.riseSoundChannel(newValue, false));
 
         //Configs.Generic.ENTITY_HIT_LIST.setValueLoadCallback(EntityUtils::updateEntityHitRestriction);
         //Configs.Generic.ENTITY_HIT_LIST.setValueChangeCallback(((newValue, oldValue) -> EntityUtils.updateEntityHitRestriction(newValue)));

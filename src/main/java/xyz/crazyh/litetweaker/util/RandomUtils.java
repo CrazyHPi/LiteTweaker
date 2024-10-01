@@ -13,6 +13,7 @@ import xyz.crazyh.litetweaker.config.TweaksToggle;
 import xyz.crazyh.litetweaker.input.MouseInputHandlerImpl;
 import xyz.crazyh.litetweaker.mixins.Accessors.EntityAccessor;
 import xyz.crazyh.litetweaker.mixins.Accessors.MinecraftAccessor;
+import xyz.crazyh.litetweaker.mixins.Accessors.SoundHandlerAccessor;
 
 public class RandomUtils {
     //for some simple methods that does not deserve its own class
@@ -74,10 +75,17 @@ public class RandomUtils {
         }
     }
 
-    public static void riseSoundChannel(boolean on) {
-        if (on) {
-            SoundSystemConfig.setNumberNormalChannels(2048);
-            SoundSystemConfig.setNumberStreamingChannels(64);
+    public static void riseSoundChannel(boolean isEnabled, boolean isInit) {
+        if (isEnabled) {
+            SoundSystemConfig.setNumberNormalChannels(1024);
+            SoundSystemConfig.setNumberStreamingChannels(32);
+        } else {
+            SoundSystemConfig.setNumberNormalChannels(28);
+            SoundSystemConfig.setNumberStreamingChannels(4);
         }
+        if (isInit) {
+            return;
+        }
+        ((SoundHandlerAccessor) Minecraft.getMinecraft().getSoundHandler()).getsSndManager().reloadSoundSystem();
     }
 }
