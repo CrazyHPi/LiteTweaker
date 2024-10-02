@@ -31,6 +31,7 @@ public enum TweaksToggle implements ConfigInfo {
     CREATIVE_NO_CLIP("creativeNoClip", false),
     ENTITY_CULLING("entityCulling",false),
     FAKE_NIGHT_VISION("fakeNightVision", false),
+    FAST_CHEST("fastChest", false),
     MINING_GHOST_BLOCK_FIX("miningGhostBlockFix", false),
     NEW_NOTE_BLOCK("newNoteBlock", false),
     NO_FALL("noFall", false),
