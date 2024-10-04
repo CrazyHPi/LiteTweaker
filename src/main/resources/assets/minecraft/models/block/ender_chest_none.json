@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/basic_chest_none",
+	"textures": {
+		"all": "minecraft:entity/chest/ender",
+		"particle": "minecraft:entity/chest/ender"
+	}
+}

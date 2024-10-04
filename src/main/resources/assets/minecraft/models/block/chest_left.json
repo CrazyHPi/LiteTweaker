@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/basic_chest_left",
+	"textures": {
+		"all": "entity/chest/normal_double",
+		"particle": "entity/chest/normal_double"
+	}
+}
