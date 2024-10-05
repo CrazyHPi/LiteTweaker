@@ -1,5 +1,7 @@
 package xyz.crazyh.litetweaker.util;
 
+import com.google.gson.JsonElement;
+import fi.dy.masa.malilib.util.data.json.JsonUtils;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -14,6 +16,8 @@ import xyz.crazyh.litetweaker.input.MouseInputHandlerImpl;
 import xyz.crazyh.litetweaker.mixins.Accessors.EntityAccessor;
 import xyz.crazyh.litetweaker.mixins.Accessors.MinecraftAccessor;
 import xyz.crazyh.litetweaker.mixins.Accessors.SoundHandlerAccessor;
+
+import java.nio.file.Path;
 
 public class RandomUtils {
     //for some simple methods that does not deserve its own class
@@ -87,5 +91,23 @@ public class RandomUtils {
             return;
         }
         ((SoundHandlerAccessor) Minecraft.getMinecraft().getSoundHandler()).getsSndManager().reloadSoundSystem();
+    }
+
+    public static boolean readTweakValueFromConfig(String tweakName) {
+        Path cfgDir = Minecraft.getMinecraft().gameDir.toPath();
+        JsonElement json = JsonUtils.parseJsonFile(cfgDir.resolve("liteconfig/common/litetweaker.json"));
+        boolean value = false;
+
+        if (json != null) {
+            try {
+                value = json.getAsJsonObject()
+                        .getAsJsonObject("Tweaks")
+                        .get(tweakName)
+                        .getAsBoolean();
+            } catch (Exception ignored) {
+            }
+        }
+
+        return value;
     }
 }

@@ -15,7 +15,8 @@ import xyz.crazyh.litetweaker.config.TweaksToggle;
 public abstract class TileEntityRenderDispatcherMixin {
     @Inject(method = "getRenderer(Ljava/lang/Class;)Lnet/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer;", at = @At("HEAD"), cancellable = true)
     private <T extends TileEntity> void fastChest(Class<? extends TileEntity> teClass, CallbackInfoReturnable<TileEntitySpecialRenderer<T>> cir) {
-        if (TweaksToggle.FAST_CHEST.getBooleanValue()) {
+//        if (TweaksToggle.FAST_CHEST.getBooleanValue()) {
+        if (true) {
             if (teClass == TileEntityChest.class || teClass == TileEntityEnderChest.class) {
                 cir.setReturnValue(null);
             }
