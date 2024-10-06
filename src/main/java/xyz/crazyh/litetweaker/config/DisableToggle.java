@@ -27,6 +27,7 @@ public enum DisableToggle implements ConfigInfo {
     DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE("disableCommandblockOutputToConsole", false),
     //DISABLE_ENDER_PEARL_COOLDOWN("disableEnderPearlCooldown", false),
     DISABLE_ENTITY_HIT("disableEntityHit", false),
+    DISABLE_EXPLOSION_SOUND("disableExplosionSound", false),
     DISABLE_PUMPKIN_OVERLAY("disablePumpkinOverlay", false),
     DISABLE_REALM_BUTTON("disableRealmButton", false),
     DISABLE_SLIME_BOUNCE("disableSlimeBounce", false),
@@ -34,6 +35,7 @@ public enum DisableToggle implements ConfigInfo {
     DISABLE_SNEAK_SLOW_DOWN("disableSneakSlowDown", false),
     DISABLE_VIGNETTING("disableVignetting", false),
     DISABLE_WATER_FOV("disableWaterFov", false),
+    DISABLE_WITHER_SOUND("disableWitherSound", false),
     ;
 
     public static final ImmutableList<DisableToggle> VALUES = ImmutableList.copyOf(values());
