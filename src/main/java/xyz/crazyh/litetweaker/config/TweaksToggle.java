@@ -43,6 +43,7 @@ public enum TweaksToggle implements ConfigInfo {
     QUICK_BLOCK_SWAP("quickBlockSwap", false),
     RAW_INPUT("rawInput", false),
     REDUCED_BOSS_BAR("reducedBossBar", false),
+    RISE_CHAT_HISTORY_LIMIT("riseChatHistoryLimit",false),
     RISE_SOUND_CHANNEL("riseSoundChannel", false),
     STEP_UP("stepUp", false),
     TAB_PING_DISPLAY("tabPingDisplay", false),
