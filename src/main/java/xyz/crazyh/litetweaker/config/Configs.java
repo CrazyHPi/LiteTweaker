@@ -51,6 +51,8 @@ public class Configs {
         //not usable cuz forge messing with registry
         //public static final BlackWhiteListConfig<Class <? extends Entity>> ENTITY_HIT_LIST = new BlackWhiteListConfig<>("entityHitList", EntityListConfig.entities(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(EntityEnderCrystal.class), ImmutableList.of()));
         public static final BlockListConfig PERIMETER_WALL_LIST = new BlockListConfig("perimeterWallList", ImmutableList.of(Blocks.SANDSTONE, Blocks.NETHERRACK), BlockUtils::getBlockRegistryName, BlockUtils::getBlockByRegistryName);
+        public static final IntegerConfig MAX_CHAT_HEIGHT = new IntegerConfig("maxChatHeight", 180, 180, 1000);
+        public static final IntegerConfig MAX_CHAT_WIDTH = new IntegerConfig("maxChatWidth", 280, 280, 1000);
         public static final BlackWhiteListConfig<Item> ITEM_DROP_LIST = new BlackWhiteListConfig<>("itemDropList", BlackWhiteList.itemNames((UsageRestriction.ListType.WHITELIST),ImmutableList.of(), ImmutableList.of("minecraft:stone")));
 
         public static final ImmutableList<ConfigOption<?>> OPTIONS = ImmutableList.of(
