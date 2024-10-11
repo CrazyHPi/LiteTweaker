@@ -45,14 +45,14 @@ public class Configs {
         public static final IntegerConfig BACKGROUND_FPS_LIMIT = new IntegerConfig("backgroundFPSLimit", -1, -1, 999);
         public static final IntegerConfig CLIENT_TIME = new IntegerConfig("clientTime", 6000, 0, 24000);
         public static final StringConfig CUSTOM_TITLE  = new StringConfig("customTitle", "Minecraft 1.12.2");
+        public static final IntegerConfig MAX_CHAT_HEIGHT = new IntegerConfig("maxChatHeight", 180, 180, 1000);
+        public static final IntegerConfig MAX_CHAT_WIDTH = new IntegerConfig("maxChatWidth", 280, 280, 1000);
 
         public static final BlackWhiteListConfig<Block> BLOCK_HIT_LIST = new BlackWhiteListConfig<>("blockHitList", BlackWhiteList.blocks(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(Blocks.DRAGON_EGG), ImmutableList.of())) ;
         public static final StringListConfig ENTITY_HIT_LIST = new StringListConfig("entityHitList", ImmutableList.of("EntityEnderCrystal"));
         //not usable cuz forge messing with registry
         //public static final BlackWhiteListConfig<Class <? extends Entity>> ENTITY_HIT_LIST = new BlackWhiteListConfig<>("entityHitList", EntityListConfig.entities(UsageRestriction.ListType.BLACKLIST, ImmutableList.of(EntityEnderCrystal.class), ImmutableList.of()));
         public static final BlockListConfig PERIMETER_WALL_LIST = new BlockListConfig("perimeterWallList", ImmutableList.of(Blocks.SANDSTONE, Blocks.NETHERRACK), BlockUtils::getBlockRegistryName, BlockUtils::getBlockByRegistryName);
-        public static final IntegerConfig MAX_CHAT_HEIGHT = new IntegerConfig("maxChatHeight", 180, 180, 1000);
-        public static final IntegerConfig MAX_CHAT_WIDTH = new IntegerConfig("maxChatWidth", 280, 280, 1000);
         public static final BlackWhiteListConfig<Item> ITEM_DROP_LIST = new BlackWhiteListConfig<>("itemDropList", BlackWhiteList.itemNames((UsageRestriction.ListType.WHITELIST),ImmutableList.of(), ImmutableList.of("minecraft:stone")));
 
         public static final ImmutableList<ConfigOption<?>> OPTIONS = ImmutableList.of(
@@ -74,6 +74,8 @@ public class Configs {
                 CUSTOM_TITLE,
                 ENTITY_HIT_LIST,
                 ITEM_DROP_LIST,
+                MAX_CHAT_HEIGHT,
+                MAX_CHAT_WIDTH,
                 PERIMETER_WALL_LIST
         );
 

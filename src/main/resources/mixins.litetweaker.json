@@ -52,6 +52,7 @@
     "Tweaks.fastChest.BlockEnderChestMixin",
     "Tweaks.fastChest.BlockModelShapesMixin",
     "Tweaks.fastChest.TileEntityRenderDispatcherMixin",
+    "Tweaks.maxChatSize.GuiNewChatMixin",
     "Tweaks.miningGhostBlockFix.MixinPlayerControllerMP",
     "Tweaks.newNoteBlock.MixinBlockNote",
     "Tweaks.nightVision.MixinEntityLivingBase",
