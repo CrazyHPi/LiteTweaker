@@ -14,8 +14,8 @@ public abstract class BlockEnderChestMixin {
     @Inject(method = "getRenderType", at = @At("HEAD"), cancellable = true)
     private void fastChest(IBlockState state, CallbackInfoReturnable<EnumBlockRenderType> cir) {
 //        if (TweaksToggle.FAST_CHEST.getBooleanValue()) {
-        if (true) {
-            cir.setReturnValue(EnumBlockRenderType.MODEL);
-        }
+//        if (true) {
+//            cir.setReturnValue(EnumBlockRenderType.MODEL);
+//        }
     }
 }

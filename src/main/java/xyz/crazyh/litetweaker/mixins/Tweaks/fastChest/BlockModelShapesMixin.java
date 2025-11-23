@@ -24,13 +24,13 @@ public abstract class BlockModelShapesMixin {
     @Inject(method = "registerBuiltInBlocks", at = @At("HEAD"), cancellable = true)
     private void fastChest(Block[] builtIns, CallbackInfo ci) {
 //        if (RandomUtils.readTweakValueFromConfig("fastChest")) {
-        if (true) {
-            List<Block> blocks = new ArrayList<>(Arrays.asList(builtIns));
-            blocks.remove(Blocks.CHEST);
-            blocks.remove(Blocks.TRAPPED_CHEST);
-            blocks.remove(Blocks.ENDER_CHEST);
-            this.blockStateMapper.registerBuiltInBlocks(blocks.toArray(new Block[0]));
-            ci.cancel();
-        }
+//        if (true) {
+//            List<Block> blocks = new ArrayList<>(Arrays.asList(builtIns));
+//            blocks.remove(Blocks.CHEST);
+//            blocks.remove(Blocks.TRAPPED_CHEST);
+//            blocks.remove(Blocks.ENDER_CHEST);
+//            this.blockStateMapper.registerBuiltInBlocks(blocks.toArray(new Block[0]));
+//            ci.cancel();
+//        }
     }
 }
