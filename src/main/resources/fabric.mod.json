@@ -11,7 +11,7 @@
   "environment": "client",
   "entrypoints": {
     "client-init": [
-      "xyz.crazyh.litetweaker.LiteModLiteTweaker"
+      "xyz.crazyh.litetweaker.LiteTweaker"
     ]
   },
   "mixins": [

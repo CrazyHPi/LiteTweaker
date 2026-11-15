@@ -9,7 +9,7 @@ import xyz.crazyh.litetweaker.config.InitHandler;
 import xyz.crazyh.litetweaker.util.*;
 import xyz.crazyh.litetweaker.util.autoInventoryProcess.DropPlayerInventory;
 
-public class LiteModLiteTweaker implements ClientModInitializer {
+public class LiteTweaker implements ClientModInitializer {
     public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_NAME);
 
     /**
@@ -23,14 +23,13 @@ public class LiteModLiteTweaker implements ClientModInitializer {
     }
 
     /**
-     * Called at the end of every client world tick (see {@link InitHandler}).
+     * Called at the end of every client world tick.
      *
      * @param minecraft    Minecraft instance
-     * @param partialTicks Partial tick value
      * @param inGame       True if in-game, false if in the menu
      * @param clock        True if this is a new tick, otherwise false if it's a regular frame
      */
-    public static void onTick(Minecraft minecraft, float partialTicks, boolean inGame, boolean clock) {
+    public static void onTick(Minecraft minecraft, boolean inGame, boolean clock) {
         AntiGhostBlock.autoClearGhostBlock(inGame, clock);
         RefreshInventory.autoRefreshInv(inGame, clock);
         AutoFish.autoReUseFishingRod(minecraft, inGame, clock);
@@ -42,4 +41,5 @@ public class LiteModLiteTweaker implements ClientModInitializer {
     public static void onJoinGame() {
         RawInput.getMouse();
     }
+
 }

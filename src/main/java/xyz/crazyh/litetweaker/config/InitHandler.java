@@ -6,9 +6,8 @@ import malilib.event.InitializationHandler;
 import malilib.event.dispatch.InitializationDispatcherImpl;
 import malilib.gui.config.ConfigSearchInfo;
 import malilib.registry.Registry;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
-import xyz.crazyh.litetweaker.LiteModLiteTweaker;
+import xyz.crazyh.litetweaker.LiteTweaker;
 import xyz.crazyh.litetweaker.Reference;
 import xyz.crazyh.litetweaker.config.option.EntityListConfig;
 import xyz.crazyh.litetweaker.config.option.EntityListConfigWidget;
@@ -60,21 +59,6 @@ public class InitHandler implements InitializationHandler {
         //Haven't use these two yet, so just leave them here?
         //Registry.INPUT_DISPATCHER.registerKeyboardInputHandler(KeyboardInputHandlerImpl.INSTANCE);
         Registry.INPUT_DISPATCHER.registerMouseClickHandler(new MouseInputHandlerImpl());
-
-        //tick and world change handlers
-        Registry.TICK_EVENT_DISPATCHER.registerClientTickHandler(() -> {
-            Minecraft minecraft = Minecraft.getMinecraft();
-            boolean inGame = minecraft.world != null && minecraft.player != null;
-            LiteModLiteTweaker.onTick(minecraft, 0.0F, inGame, true);
-        });
-        Registry.CLIENT_WORLD_CHANGE_EVENT_DISPATCHER.registerClientWorldChangeHandler(new ClientWorldChangeHandler() {
-            @Override
-            public void onPostClientWorldChange(WorldClient worldBefore, WorldClient worldAfter) {
-                if (worldAfter != null) {
-                    LiteModLiteTweaker.onJoinGame();
-                }
-            }
-        });
 
         //hotkey callback
         Actions.init();

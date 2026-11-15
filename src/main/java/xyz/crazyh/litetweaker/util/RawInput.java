@@ -4,7 +4,7 @@ import net.java.games.input.Controller;
 import net.java.games.input.DirectAndRawInputEnvironmentPlugin;
 import net.java.games.input.Mouse;
 import net.minecraft.client.Minecraft;
-import xyz.crazyh.litetweaker.LiteModLiteTweaker;
+import xyz.crazyh.litetweaker.LiteTweaker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,7 @@ public class RawInput {
                 try {
                     Thread.sleep(pollingInterval);
                 } catch (InterruptedException e) {
-                    LiteModLiteTweaker.LOGGER.error(e.getStackTrace());
+                    LiteTweaker.LOGGER.error(e.getStackTrace());
                 }
             }
         });
