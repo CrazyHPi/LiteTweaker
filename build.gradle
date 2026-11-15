@@ -21,6 +21,15 @@ repositories {
 //    implementation.extendsFrom shadow
 //}
 
+loom {
+    runConfigs.configureEach {
+        jvmArguments.add("-Dmixin.debug.export=true") // Exports transformed classes for debugging
+
+        programArguments.add("--username=Crazy_H")
+        programArguments.addAll("--width=1600", "--height=900")
+    }
+}
+
 ploceus {
     setIntermediaryGeneration(1)
 }
