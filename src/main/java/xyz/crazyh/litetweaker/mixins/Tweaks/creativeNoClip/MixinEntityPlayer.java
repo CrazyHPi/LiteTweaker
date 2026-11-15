@@ -13,9 +13,11 @@ import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(EntityPlayer.class)
 public abstract class MixinEntityPlayer extends Entity {
-    @Shadow public abstract boolean isCreative();
+    @Shadow
+    public abstract boolean isCreative();
 
-    @Shadow public PlayerCapabilities capabilities;
+    @Shadow
+    public PlayerCapabilities capabilities;
 
     public MixinEntityPlayer(World worldIn) {
         super(worldIn);

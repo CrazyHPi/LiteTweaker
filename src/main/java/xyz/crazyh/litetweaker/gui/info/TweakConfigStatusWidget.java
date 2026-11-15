@@ -1,8 +1,7 @@
 package xyz.crazyh.litetweaker.gui.info;
 
-import fi.dy.masa.malilib.config.option.HotkeyedBooleanConfig;
-import fi.dy.masa.malilib.overlay.widget.sub.HotkeyedBooleanConfigStatusWidget;
-import fi.dy.masa.malilib.util.data.ConfigOnTab;
+import malilib.overlay.widget.sub.HotkeyedBooleanConfigStatusWidget;
+import malilib.util.data.ConfigOnTab;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 public class TweakConfigStatusWidget extends HotkeyedBooleanConfigStatusWidget {

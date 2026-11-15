@@ -1,7 +1,7 @@
 package xyz.crazyh.litetweaker.util.autoInventoryProcess;
 
 import com.google.common.collect.ImmutableList;
-import fi.dy.masa.malilib.config.value.BaseOptionListConfigValue;
+import malilib.config.value.BaseOptionListConfigValue;
 
 public class AutoDropContainerType extends BaseOptionListConfigValue {
     public static final AutoDropContainerType SHULKER = new AutoDropContainerType("shulker", "litetweaker.label.auto_drop_container_type.shulker");

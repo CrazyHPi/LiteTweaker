@@ -1,9 +1,9 @@
 package xyz.crazyh.litetweaker.util;
 
 import com.google.common.collect.ImmutableList;
-import fi.dy.masa.malilib.overlay.message.MessageUtils;
-import fi.dy.masa.malilib.util.game.wrap.ItemWrap;
-import fi.dy.masa.malilib.util.inventory.InventoryUtils;
+import malilib.overlay.message.MessageUtils;
+import malilib.util.game.wrap.ItemWrap;
+import malilib.util.inventory.InventoryUtils;
 import net.minecraft.block.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;

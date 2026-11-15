@@ -3,13 +3,10 @@ package xyz.crazyh.litetweaker.mixins.Tweaks.fastChest;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.tileentity.TileEntityEnderChest;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(TileEntityRendererDispatcher.class)
 public abstract class TileEntityRenderDispatcherMixin {

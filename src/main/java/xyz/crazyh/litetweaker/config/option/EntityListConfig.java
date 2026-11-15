@@ -1,9 +1,9 @@
 package xyz.crazyh.litetweaker.config.option;
 
 import com.google.common.collect.ImmutableList;
-import fi.dy.masa.malilib.config.option.list.ValueListConfig;
-import fi.dy.masa.malilib.config.value.BlackWhiteList;
-import fi.dy.masa.malilib.util.restriction.UsageRestriction;
+import malilib.config.option.list.ValueListConfig;
+import malilib.config.value.BlackWhiteList;
+import malilib.util.restriction.UsageRestriction;
 import net.minecraft.entity.Entity;
 import xyz.crazyh.litetweaker.util.EntityUtils;
 
@@ -11,22 +11,22 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
-public class EntityListConfig extends ValueListConfig<Class <? extends Entity>> {
+public class EntityListConfig extends ValueListConfig<Class<? extends Entity>> {
     /**
      * This is a working ListConfig if you wonder
      * But for some reason Forge removed vanilla entity registry so this basically doesn't work with forge<3.
      * Use StringListConfig for now until I come up with a work around.
      * Have some ideas but #ToD0
      */
-    public EntityListConfig(String name, ImmutableList<Class <? extends Entity>> defaultValues,
-                            Function<Class <? extends Entity>, String> toStringConverter,
-                            Function<String, Class <? extends Entity>> fromStringConverter) {
+    public EntityListConfig(String name, ImmutableList<Class<? extends Entity>> defaultValues,
+                            Function<Class<? extends Entity>, String> toStringConverter,
+                            Function<String, Class<? extends Entity>> fromStringConverter) {
         super(name, defaultValues, toStringConverter, fromStringConverter);
     }
 
-    public EntityListConfig(String name, ImmutableList<Class <? extends Entity>> defaultValues, String comment,
-                            Function<Class <? extends Entity>, String> toStringConverter,
-                            Function<String, Class <? extends Entity>>  fromStringConverter) {
+    public EntityListConfig(String name, ImmutableList<Class<? extends Entity>> defaultValues, String comment,
+                            Function<Class<? extends Entity>, String> toStringConverter,
+                            Function<String, Class<? extends Entity>> fromStringConverter) {
         super(name, defaultValues, toStringConverter, fromStringConverter, comment);
     }
 
@@ -41,16 +41,13 @@ public class EntityListConfig extends ValueListConfig<Class <? extends Entity>> 
         return fromNames(cfgName, Arrays.asList(entityNames));
     }
 
-    public static EntityListConfig fromNames(String cfgName, List<String> entityNames)
-    {
-        ImmutableList.Builder<Class <? extends Entity>> builder = ImmutableList.builder();
+    public static EntityListConfig fromNames(String cfgName, List<String> entityNames) {
+        ImmutableList.Builder<Class<? extends Entity>> builder = ImmutableList.builder();
 
-        for (String name : entityNames)
-        {
-            Class <? extends Entity> entity = EntityUtils.getEntityByRegistryName(name);
+        for (String name : entityNames) {
+            Class<? extends Entity> entity = EntityUtils.getEntityByRegistryName(name);
 
-            if (entity != null)
-            {
+            if (entity != null) {
                 builder.add(entity);
             }
         }
@@ -58,21 +55,21 @@ public class EntityListConfig extends ValueListConfig<Class <? extends Entity>> 
         return create(cfgName, builder.build());
     }
 
-    public static EntityListConfig create(String cfgName, ImmutableList<Class <? extends Entity>> entities) {
+    public static EntityListConfig create(String cfgName, ImmutableList<Class<? extends Entity>> entities) {
         return new EntityListConfig(cfgName, entities, EntityUtils::getEntityRegistryName, EntityUtils::getEntityByRegistryName);
     }
 
-    public static BlackWhiteList<Class <? extends Entity>> entities(UsageRestriction.ListType type,
-                                                                    ImmutableList<Class <? extends Entity>> blackList,
-                                                                    ImmutableList<Class <? extends Entity>> whiteList) {
+    public static BlackWhiteList<Class<? extends Entity>> entities(UsageRestriction.ListType type,
+                                                                   ImmutableList<Class<? extends Entity>> blackList,
+                                                                   ImmutableList<Class<? extends Entity>> whiteList) {
         return BlackWhiteList.of(type,
                 EntityListConfig.create("litetweaker.label.list_type.blacklist", blackList),
                 EntityListConfig.create("litetweaker.label.list_type.whitelist", whiteList));
     }
 
-    public static BlackWhiteList<Class <? extends Entity>> entityNames(UsageRestriction.ListType type,
-                                                                    ImmutableList<String> blackList,
-                                                                    ImmutableList<String> whiteList) {
+    public static BlackWhiteList<Class<? extends Entity>> entityNames(UsageRestriction.ListType type,
+                                                                      ImmutableList<String> blackList,
+                                                                      ImmutableList<String> whiteList) {
         return BlackWhiteList.of(type,
                 EntityListConfig.fromNames("litetweaker.label.list_type.blacklist", blackList),
                 EntityListConfig.fromNames("litetweaker.label.list_type.whitelist", whiteList));

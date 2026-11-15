@@ -1,7 +1,7 @@
 package xyz.crazyh.litetweaker.util;
 
 import com.google.gson.JsonElement;
-import fi.dy.masa.malilib.util.data.json.JsonUtils;
+import malilib.util.data.json.JsonUtils;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;

@@ -1,7 +1,7 @@
 package xyz.crazyh.litetweaker.util.autoInventoryProcess;
 
-import fi.dy.masa.malilib.config.value.BlackWhiteList;
-import fi.dy.masa.malilib.util.restriction.UsageRestriction;
+import malilib.config.value.BlackWhiteList;
+import malilib.util.restriction.UsageRestriction;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -17,6 +17,7 @@ public class DropPlayerInventory {
     public static void updateItemDropList(BlackWhiteList<Item> list) {
         itemDropList.setListContents(list);
     }
+
     public static void dropInventory() {
         Minecraft mc = Minecraft.getMinecraft();
         EntityPlayerSP playerSP = mc.player;
@@ -42,6 +43,7 @@ public class DropPlayerInventory {
     }
 
     private static int tickCounter = 0;
+
     public static void autoDropInventory(boolean inGame, boolean clock) {
         if (Configs.Generic.AUTO_DROP_INVENTORY.getBooleanValue() && inGame && clock) {
             if (tickCounter++ >= Configs.Generic.AUTO_DROP_INVENTORY_INTERVAL.getIntegerValue()) {

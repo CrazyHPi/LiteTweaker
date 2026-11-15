@@ -14,7 +14,7 @@ public abstract class GuiNewChatMixin {
             require = 0
     )
     private static float maxChatHeight(float constant) {
-        if (Configs.Generic.MAX_CHAT_HEIGHT.isModified()){
+        if (Configs.Generic.MAX_CHAT_HEIGHT.isModified()) {
             constant = Configs.Generic.MAX_CHAT_HEIGHT.getIntegerValue();
         }
         return constant;
@@ -26,7 +26,7 @@ public abstract class GuiNewChatMixin {
             require = 0
     )
     private static float maxChatWidth(float constant) {
-        if (Configs.Generic.MAX_CHAT_WIDTH.isModified()){
+        if (Configs.Generic.MAX_CHAT_WIDTH.isModified()) {
             constant = Configs.Generic.MAX_CHAT_WIDTH.getIntegerValue();
         }
         return constant;

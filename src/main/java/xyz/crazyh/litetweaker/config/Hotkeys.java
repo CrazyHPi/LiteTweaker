@@ -1,8 +1,8 @@
 package xyz.crazyh.litetweaker.config;
 
 import com.google.common.collect.ImmutableList;
-import fi.dy.masa.malilib.config.option.HotkeyConfig;
-import fi.dy.masa.malilib.input.KeyBindSettings;
+import malilib.config.option.HotkeyConfig;
+import malilib.input.KeyBindSettings;
 
 import java.util.List;
 

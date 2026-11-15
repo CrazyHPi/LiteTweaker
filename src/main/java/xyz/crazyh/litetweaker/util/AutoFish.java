@@ -1,6 +1,6 @@
 package xyz.crazyh.litetweaker.util;
 
-import fi.dy.masa.malilib.overlay.message.MessageUtils;
+import malilib.overlay.message.MessageUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.item.ItemFishingRod;
@@ -29,6 +29,7 @@ public class AutoFish {
     }
 
     private static int tickCounter;
+
     public static void autoReUseFishingRod(Minecraft minecraft, boolean inGame, boolean clock) {
         EntityPlayerSP playerSP = minecraft.player;
 
@@ -42,7 +43,7 @@ public class AutoFish {
 
         if (inGame && clock) {
             if (tickCounter < 20) {
-                tickCounter ++;
+                tickCounter++;
             }
 
             if (tickCounter == 20) {

@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RawInput {
-    public static Minecraft minecraft = Minecraft.getMinecraft();
     public static Controller[] controllers;
     public static List<Controller> mouses = new ArrayList<>();
 
@@ -27,7 +26,9 @@ public class RawInput {
     public static void startTickMouse() {
         Thread mouseTickThread = new Thread(() -> {
             while (true) {
-                if (mouse != null && minecraft.currentScreen == null) {
+                Minecraft minecraft = Minecraft.getMinecraft();
+
+                if (mouse != null && minecraft != null && minecraft.currentScreen == null) {
                     mouse.poll();
                     dx += (int) mouse.getX().getPollData();
                     dy += (int) mouse.getY().getPollData();

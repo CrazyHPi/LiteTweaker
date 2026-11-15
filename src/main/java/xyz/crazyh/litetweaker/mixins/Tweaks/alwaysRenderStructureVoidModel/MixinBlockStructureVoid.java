@@ -6,7 +6,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
-import net.minecraft.util.math.AxisAlignedBB;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -14,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(BlockStructureVoid.class)
-public abstract class MixinBlockStructureVoid extends Block{
+public abstract class MixinBlockStructureVoid extends Block {
 
     protected MixinBlockStructureVoid(Material materialIn) {
         super(materialIn);

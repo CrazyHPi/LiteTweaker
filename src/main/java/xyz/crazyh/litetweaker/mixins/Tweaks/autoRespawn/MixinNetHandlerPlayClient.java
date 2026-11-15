@@ -12,7 +12,8 @@ import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(NetHandlerPlayClient.class)
 public abstract class MixinNetHandlerPlayClient {
-    @Shadow private Minecraft client;
+    @Shadow
+    private Minecraft client;
 
     @Inject(
             method = "handleCombatEvent",

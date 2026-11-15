@@ -1,6 +1,6 @@
 package xyz.crazyh.litetweaker.util;
 
-import fi.dy.masa.malilib.overlay.message.MessageUtils;
+import malilib.overlay.message.MessageUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.network.NetHandlerPlayClient;
@@ -21,6 +21,7 @@ public class RefreshInventory {
     }
 
     private static int autoRefreshInventoryCounter;
+
     public static void autoRefreshInv(boolean inGame, boolean clock) {
         if (clock && inGame) {
             if (Configs.Generic.AUTO_REFRESH_INVENTORY.getBooleanValue()) {

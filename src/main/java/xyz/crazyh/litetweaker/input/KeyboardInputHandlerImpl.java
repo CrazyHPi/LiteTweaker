@@ -1,6 +1,6 @@
 package xyz.crazyh.litetweaker.input;
 
-import fi.dy.masa.malilib.input.KeyboardInputHandler;
+import malilib.input.KeyboardInputHandler;
 
 public class KeyboardInputHandlerImpl implements KeyboardInputHandler {
     public static final KeyboardInputHandlerImpl INSTANCE = new KeyboardInputHandlerImpl();
@@ -22,6 +22,7 @@ public class KeyboardInputHandlerImpl implements KeyboardInputHandler {
 
     /**
      * Called on keyboard events with the key and whether the key was pressed or released.
+     *
      * @return true if further processing of this key event should be cancelled
      */
     @Override
@@ -29,15 +30,13 @@ public class KeyboardInputHandlerImpl implements KeyboardInputHandler {
         return false;
     }
 
-    public enum LeftRight
-    {
+    public enum LeftRight {
         NONE,
         LEFT,
         RIGHT
     }
 
-    public enum ForwardBack
-    {
+    public enum ForwardBack {
         NONE,
         FORWARD,
         BACK

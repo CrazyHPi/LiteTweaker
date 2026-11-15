@@ -19,9 +19,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(ItemBlock.class)
-public abstract class MixinItemBlock{
+public abstract class MixinItemBlock {
 
-    @Shadow @Final protected Block block;
+    @Shadow
+    @Final
+    protected Block block;
 
     @Inject(
             method = "canPlaceBlockOnSide",

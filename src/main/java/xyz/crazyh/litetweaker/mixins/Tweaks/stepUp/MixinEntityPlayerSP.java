@@ -10,7 +10,8 @@ import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 @Mixin(EntityPlayerSP.class)
 public abstract class MixinEntityPlayerSP {
-    @Shadow public abstract boolean isSneaking();
+    @Shadow
+    public abstract boolean isSneaking();
 
     @Inject(
             method = "onUpdate",

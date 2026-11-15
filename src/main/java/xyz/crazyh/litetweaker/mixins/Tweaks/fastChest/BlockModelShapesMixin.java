@@ -3,17 +3,12 @@ package xyz.crazyh.litetweaker.mixins.Tweaks.fastChest;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.BlockModelShapes;
 import net.minecraft.client.renderer.block.statemap.BlockStateMapper;
-import net.minecraft.init.Blocks;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 @Mixin(BlockModelShapes.class)
 public abstract class BlockModelShapesMixin {

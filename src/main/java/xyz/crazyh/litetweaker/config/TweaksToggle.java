@@ -1,15 +1,15 @@
 package xyz.crazyh.litetweaker.config;
 
 import com.google.common.collect.ImmutableList;
-import fi.dy.masa.malilib.config.option.BooleanConfig;
-import fi.dy.masa.malilib.config.option.ConfigInfo;
-import fi.dy.masa.malilib.config.option.HotkeyConfig;
-import fi.dy.masa.malilib.input.KeyBind;
-import fi.dy.masa.malilib.input.KeyBindSettings;
-import fi.dy.masa.malilib.input.callback.HotkeyCallback;
-import fi.dy.masa.malilib.input.callback.ToggleBooleanWithMessageKeyCallback;
-import fi.dy.masa.malilib.overlay.message.MessageHelpers;
-import fi.dy.masa.malilib.util.data.ModInfo;
+import malilib.config.option.BooleanConfig;
+import malilib.config.option.ConfigInfo;
+import malilib.config.option.HotkeyConfig;
+import malilib.input.KeyBind;
+import malilib.input.KeyBindSettings;
+import malilib.input.callback.HotkeyCallback;
+import malilib.input.callback.ToggleBooleanWithMessageKeyCallback;
+import malilib.overlay.message.MessageHelpers;
+import malilib.util.data.ModInfo;
 import xyz.crazyh.litetweaker.Reference;
 
 import javax.annotation.Nullable;
@@ -23,13 +23,13 @@ public enum TweaksToggle implements ConfigInfo {
     ALWAYS_RENDER_BARRIER_PARTICLES("alwaysRenderBarrierParticles", false),
     ALWAYS_RENDER_STRUCTURE_VOID_MODEL("alwaysRenderStructureVoidModel", false),
     ANVIL_RENAME_COPY("anvilRenameCopy", false),
-    AUTO_FISH("autoFish",false),
+    AUTO_FISH("autoFish", false),
     AUTO_RESPAWN("autoRespawn", false),
     BETTER_F3N_CYCLE("betterF3nCycle", false),
     CLIENT_TIME_OVERRIDE("clientTimeOverride", false),
     //TODO CREATIVE_FLY_NO_DRAG("creativeFlyNoDrag", false),
     CREATIVE_NO_CLIP("creativeNoClip", false),
-    ENTITY_CULLING("entityCulling",false),
+    ENTITY_CULLING("entityCulling", false),
     FAKE_NIGHT_VISION("fakeNightVision", false),
     FAST_CHEST("fastChest", false),
     MINING_GHOST_BLOCK_FIX("miningGhostBlockFix", false),
@@ -43,7 +43,7 @@ public enum TweaksToggle implements ConfigInfo {
     QUICK_BLOCK_SWAP("quickBlockSwap", false),
     RAW_INPUT("rawInput", false),
     REDUCED_BOSS_BAR("reducedBossBar", false),
-    RISE_CHAT_HISTORY_LIMIT("riseChatHistoryLimit",false),
+    RISE_CHAT_HISTORY_LIMIT("riseChatHistoryLimit", false),
     RISE_SOUND_CHANNEL("riseSoundChannel", false),
     STEP_UP("stepUp", false),
     TAB_PING_DISPLAY("tabPingDisplay", false),
@@ -80,8 +80,7 @@ public enum TweaksToggle implements ConfigInfo {
      * This will replace the default hotkey callback with the ToggleBooleanWithMessageKeyCallback
      * variant that takes in the message factory
      */
-    public void setSpecialToggleMessageFactory(@Nullable MessageHelpers.BooleanConfigMessageFactory messageFactory)
-    {
+    public void setSpecialToggleMessageFactory(@Nullable MessageHelpers.BooleanConfigMessageFactory messageFactory) {
         HotkeyCallback callback = new ToggleBooleanWithMessageKeyCallback(this.toggleStatus, messageFactory);
         this.toggleHotkey.getKeyBind().setCallback(callback);
     }

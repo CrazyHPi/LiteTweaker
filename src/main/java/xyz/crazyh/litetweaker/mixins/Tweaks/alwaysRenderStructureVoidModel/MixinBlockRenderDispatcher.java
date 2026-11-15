@@ -3,11 +3,9 @@ package xyz.crazyh.litetweaker.mixins.Tweaks.alwaysRenderStructureVoidModel;
 import net.minecraft.block.BlockStructureVoid;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.BlockRendererDispatcher;
-import net.minecraft.init.Blocks;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
-import xyz.crazyh.litetweaker.block.BlockFakeSV;
 import xyz.crazyh.litetweaker.block.FakeBlocks;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 

@@ -21,8 +21,8 @@ public abstract class MixinServerCommandManager {
             method = "notifyListener",
             at = @At("HEAD")
     )
-        private void checkSender(ICommandSender sender, ICommand command, int flags, String translationKey, Object[] translationArgs, CallbackInfo ci) {
-        if (DisableToggle.DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE.getBooleanValue() && sender instanceof CommandBlockBaseLogic ) {
+    private void checkSender(ICommandSender sender, ICommand command, int flags, String translationKey, Object[] translationArgs, CallbackInfo ci) {
+        if (DisableToggle.DISABLE_COMMANDBLOCK_OUTPUT_TO_CONSOLE.getBooleanValue() && sender instanceof CommandBlockBaseLogic) {
             shouldCancel = true;
         }
     }

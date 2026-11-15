@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "litetweaker",
+  "name": "LiteTweaker",
+  "version": "${version}",
+  "description": "A collection of client-side tweaks and fixes.",
+  "authors": [
+    "Crazy_H"
+  ],
+  "license": "LGPL-3.0-or-later",
+  "environment": "client",
+  "entrypoints": {
+    "client-init": [
+      "xyz.crazyh.litetweaker.LiteModLiteTweaker"
+    ]
+  },
+  "mixins": [
+    "mixins.litetweaker.json"
+  ],
+  "depends": {
+    "minecraft": "1.12.2",
+    "osl": "*",
+    "malilib": "*"
+  }
+}

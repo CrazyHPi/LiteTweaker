@@ -1,15 +1,15 @@
 package xyz.crazyh.litetweaker.config;
 
 import com.google.common.collect.ImmutableList;
-import fi.dy.masa.malilib.config.option.BooleanConfig;
-import fi.dy.masa.malilib.config.option.ConfigInfo;
-import fi.dy.masa.malilib.config.option.HotkeyConfig;
-import fi.dy.masa.malilib.input.KeyBind;
-import fi.dy.masa.malilib.input.KeyBindSettings;
-import fi.dy.masa.malilib.input.callback.HotkeyCallback;
-import fi.dy.masa.malilib.input.callback.ToggleBooleanWithMessageKeyCallback;
-import fi.dy.masa.malilib.overlay.message.MessageHelpers;
-import fi.dy.masa.malilib.util.data.ModInfo;
+import malilib.config.option.BooleanConfig;
+import malilib.config.option.ConfigInfo;
+import malilib.config.option.HotkeyConfig;
+import malilib.input.KeyBind;
+import malilib.input.KeyBindSettings;
+import malilib.input.callback.HotkeyCallback;
+import malilib.input.callback.ToggleBooleanWithMessageKeyCallback;
+import malilib.overlay.message.MessageHelpers;
+import malilib.util.data.ModInfo;
 import xyz.crazyh.litetweaker.Reference;
 
 import javax.annotation.Nullable;

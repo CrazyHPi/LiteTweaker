@@ -1,7 +1,7 @@
 package xyz.crazyh.litetweaker.util;
 
-import fi.dy.masa.malilib.config.value.BlackWhiteList;
-import fi.dy.masa.malilib.util.restriction.UsageRestriction;
+import malilib.config.value.BlackWhiteList;
+import malilib.util.restriction.UsageRestriction;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.util.ResourceLocation;
@@ -15,21 +15,21 @@ public class EntityUtils {
     public static boolean checkEntityBlackList(String name) {
         String[] s = name.split("\\.");
 
-        return Configs.Generic.ENTITY_HIT_LIST.getValuesAsString().contains(s[s.length-1]);
+        return Configs.Generic.ENTITY_HIT_LIST.getValuesAsString().contains(s[s.length - 1]);
     }
 
     //not used yet
-    public static final UsageRestriction<Class <? extends Entity>> entityHitRestriction = new UsageRestriction<>();
+    public static final UsageRestriction<Class<? extends Entity>> entityHitRestriction = new UsageRestriction<>();
 
-    public static boolean checkEntityBlackList(Class <? extends Entity> entity) {
+    public static boolean checkEntityBlackList(Class<? extends Entity> entity) {
         return !entityHitRestriction.isAllowed(entity);
     }
 
-    public static void updateEntityHitRestriction(BlackWhiteList<Class <? extends Entity>> list) {
+    public static void updateEntityHitRestriction(BlackWhiteList<Class<? extends Entity>> list) {
         entityHitRestriction.setListContents(list);
     }
 
-    public static String getEntityRegistryName(Class <? extends Entity > entity) {
+    public static String getEntityRegistryName(Class<? extends Entity> entity) {
         try {
             return EntityList.REGISTRY.getNameForObject(entity).toString();
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class EntityUtils {
         }
     }
 
-    public static Class <? extends Entity > getEntityByRegistryName(String name) {
+    public static Class<? extends Entity> getEntityByRegistryName(String name) {
         try {
             return EntityList.REGISTRY.getObject(new ResourceLocation(name));
         } catch (Exception e) {
@@ -45,10 +45,10 @@ public class EntityUtils {
         }
     }
 
-    public static List<Class <? extends Entity>> getEntityList() {
-        List<Class <? extends Entity>> entityList = new ArrayList<>();
+    public static List<Class<? extends Entity>> getEntityList() {
+        List<Class<? extends Entity>> entityList = new ArrayList<>();
 
-        for (Class <? extends Entity> entity : EntityList.REGISTRY) {
+        for (Class<? extends Entity> entity : EntityList.REGISTRY) {
             entityList.add(entity);
         }
 

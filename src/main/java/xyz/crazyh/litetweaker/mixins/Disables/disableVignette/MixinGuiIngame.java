@@ -16,7 +16,7 @@ public abstract class MixinGuiIngame {
             ),
             argsOnly = true
     )
-    private float test(float value){
+    private float test(float value) {
         if (DisableToggle.DISABLE_VIGNETTING.getBooleanValue()) {
             return -14;
         } else {

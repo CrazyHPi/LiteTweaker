@@ -1,10 +1,14 @@
 package xyz.crazyh.litetweaker.config;
 
-import fi.dy.masa.malilib.config.JsonModConfig;
-import fi.dy.masa.malilib.event.InitializationHandler;
-import fi.dy.masa.malilib.event.dispatch.InitializationDispatcherImpl;
-import fi.dy.masa.malilib.gui.config.ConfigSearchInfo;
-import fi.dy.masa.malilib.registry.Registry;
+import malilib.config.JsonModConfig;
+import malilib.event.ClientWorldChangeHandler;
+import malilib.event.InitializationHandler;
+import malilib.event.dispatch.InitializationDispatcherImpl;
+import malilib.gui.config.ConfigSearchInfo;
+import malilib.registry.Registry;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.WorldClient;
+import xyz.crazyh.litetweaker.LiteModLiteTweaker;
 import xyz.crazyh.litetweaker.Reference;
 import xyz.crazyh.litetweaker.config.option.EntityListConfig;
 import xyz.crazyh.litetweaker.config.option.EntityListConfigWidget;
@@ -13,7 +17,6 @@ import xyz.crazyh.litetweaker.gui.DisableToggleConfigWidget;
 import xyz.crazyh.litetweaker.gui.TweaksToggleConfigWidget;
 import xyz.crazyh.litetweaker.gui.info.DisableConfigStatusWidget;
 import xyz.crazyh.litetweaker.gui.info.TweakConfigStatusWidget;
-import xyz.crazyh.litetweaker.input.KeyboardInputHandlerImpl;
 import xyz.crazyh.litetweaker.input.LiteTweakerHotkeyProvider;
 import xyz.crazyh.litetweaker.input.MouseInputHandlerImpl;
 
@@ -33,7 +36,7 @@ public class InitHandler implements InitializationHandler {
         Registry.CONFIG_MANAGER.registerConfigHandler(new JsonModConfig(Reference.MOD_INFO, Configs.CURRENT_VERSION, Configs.CATEGORIES));
 
         Registry.CONFIG_SCREEN.registerConfigScreenFactory(Reference.MOD_INFO, ConfigScreen::create);
-        Registry.CONFIG_TAB.registerConfigTabProvider(Reference.MOD_INFO, ConfigScreen::getConfigTabs);
+        Registry.CONFIG_TAB.registerConfigTabSupplier(Reference.MOD_INFO, ConfigScreen::getConfigTabs);
 
         //widgets
         //tweaks
@@ -57,6 +60,21 @@ public class InitHandler implements InitializationHandler {
         //Haven't use these two yet, so just leave them here?
         //Registry.INPUT_DISPATCHER.registerKeyboardInputHandler(KeyboardInputHandlerImpl.INSTANCE);
         Registry.INPUT_DISPATCHER.registerMouseClickHandler(new MouseInputHandlerImpl());
+
+        //tick and world change handlers
+        Registry.TICK_EVENT_DISPATCHER.registerClientTickHandler(() -> {
+            Minecraft minecraft = Minecraft.getMinecraft();
+            boolean inGame = minecraft.world != null && minecraft.player != null;
+            LiteModLiteTweaker.onTick(minecraft, 0.0F, inGame, true);
+        });
+        Registry.CLIENT_WORLD_CHANGE_EVENT_DISPATCHER.registerClientWorldChangeHandler(new ClientWorldChangeHandler() {
+            @Override
+            public void onPostClientWorldChange(WorldClient worldBefore, WorldClient worldAfter) {
+                if (worldAfter != null) {
+                    LiteModLiteTweaker.onJoinGame();
+                }
+            }
+        });
 
         //hotkey callback
         Actions.init();

@@ -1,7 +1,6 @@
 package xyz.crazyh.litetweaker.mixins.Tweaks.perventDigBlocksBelow;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;

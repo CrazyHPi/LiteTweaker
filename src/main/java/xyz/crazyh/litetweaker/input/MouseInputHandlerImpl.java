@@ -1,7 +1,7 @@
 package xyz.crazyh.litetweaker.input;
 
-import fi.dy.masa.malilib.input.MouseClickHandler;
-import fi.dy.masa.malilib.util.game.wrap.GameUtils;
+import malilib.input.MouseClickHandler;
+import malilib.util.game.wrap.GameUtils;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
 public class MouseInputHandlerImpl implements MouseClickHandler {

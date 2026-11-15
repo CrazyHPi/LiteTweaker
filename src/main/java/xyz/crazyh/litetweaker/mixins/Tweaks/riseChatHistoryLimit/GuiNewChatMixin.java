@@ -12,7 +12,7 @@ public abstract class GuiNewChatMixin {
             method = "setChatLine",
             constant = @Constant(intValue = 100)
     )
-    private int riseChatLimit(int constant){
+    private int riseChatLimit(int constant) {
         if (TweaksToggle.RISE_CHAT_HISTORY_LIMIT.getBooleanValue()) {
             return 23333;
         }

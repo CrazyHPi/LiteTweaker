@@ -1,6 +1,5 @@
 package xyz.crazyh.litetweaker.mixins.Tweaks.tabPingDisplay;
 
-import com.mojang.authlib.GameProfile;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiPlayerTabOverlay;
 import net.minecraft.client.network.NetHandlerPlayClient;
@@ -10,7 +9,10 @@ import net.minecraft.scoreboard.Scoreboard;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
@@ -24,7 +26,9 @@ public abstract class MixinGuiPlayerTabOverlay {
     private static int PLAYER_ICON_WIDTH = 9;
     private static int EXTRA_WIDTH = 25;
 
-    @Shadow @Final private Minecraft mc;
+    @Shadow
+    @Final
+    private Minecraft mc;
 
     @ModifyConstant(
             method = "renderPlayerlist",

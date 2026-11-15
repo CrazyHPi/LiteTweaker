@@ -1,7 +1,7 @@
 package xyz.crazyh.litetweaker.util.autoInventoryProcess;
 
-import fi.dy.masa.malilib.overlay.message.MessageUtils;
-import fi.dy.masa.malilib.util.inventory.InventoryUtils;
+import malilib.overlay.message.MessageUtils;
+import malilib.util.inventory.InventoryUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -23,7 +23,7 @@ public class FillContainer {
             long minLimit = Configs.Generic.AUTO_FILL_CONTAINER_LIMIT.getIntegerValue();
             Slot bestSlot = null;
 
-            Container container = ((GuiContainer)mc.currentScreen).inventorySlots;
+            Container container = ((GuiContainer) mc.currentScreen).inventorySlots;
 
             for (int i = packetIn.getSlotCount(); i < packetIn.getSlotCount() + 36; i++) {
                 Slot slot = container.getSlot(i);
@@ -41,7 +41,7 @@ public class FillContainer {
                 }
             }
 
-            if (bestSlot !=null && !playerSP.inventory.mainInventory.isEmpty()) {
+            if (bestSlot != null && !playerSP.inventory.mainInventory.isEmpty()) {
                 int success = 1;
                 for (int i = packetIn.getSlotCount(); i < packetIn.getSlotCount() + 36; i++) {
                     Slot slot = container.getSlot(i);

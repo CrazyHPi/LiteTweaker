@@ -1,20 +1,20 @@
 package xyz.crazyh.litetweaker.input;
 
 import com.google.common.collect.ImmutableList;
-import fi.dy.masa.malilib.input.Hotkey;
-import fi.dy.masa.malilib.input.HotkeyCategory;
-import fi.dy.masa.malilib.input.HotkeyProvider;
+import malilib.input.Hotkey;
+import malilib.input.HotkeyCategory;
+import malilib.input.HotkeyProvider;
 import xyz.crazyh.litetweaker.Reference;
 import xyz.crazyh.litetweaker.config.Configs;
 import xyz.crazyh.litetweaker.config.DisableToggle;
 import xyz.crazyh.litetweaker.config.Hotkeys;
 import xyz.crazyh.litetweaker.config.TweaksToggle;
 
-import java.sql.Ref;
 import java.util.List;
 
 public class LiteTweakerHotkeyProvider implements HotkeyProvider {
     public static final LiteTweakerHotkeyProvider INSTANCE = new LiteTweakerHotkeyProvider();
+
     /**
      * Returns a list of all hotkeys that should be registered.
      * This is called when the master hotkey list in malilib is being rebuilt,

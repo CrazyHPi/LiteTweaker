@@ -17,7 +17,7 @@ public abstract class MixinMovementInputFromOptions extends MovementInput {
                     ordinal = 1
             )
     )
-    private boolean isSneaking(MovementInputFromOptions instance){
+    private boolean isSneaking(MovementInputFromOptions instance) {
         if (DisableToggle.DISABLE_SNEAK_SLOW_DOWN.getBooleanValue()) {
             return false;
         }

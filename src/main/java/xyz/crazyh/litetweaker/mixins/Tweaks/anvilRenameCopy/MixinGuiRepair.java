@@ -16,9 +16,12 @@ import xyz.crazyh.litetweaker.util.ClipBoardHelper;
 
 @Mixin(GuiRepair.class)
 public abstract class MixinGuiRepair extends GuiContainer {
-    @Shadow private GuiTextField nameField;
+    @Shadow
+    private GuiTextField nameField;
 
-    @Shadow @Final private ContainerRepair anvil;
+    @Shadow
+    @Final
+    private ContainerRepair anvil;
 
     public MixinGuiRepair(Container inventorySlotsIn) {
         super(inventorySlotsIn);
@@ -34,7 +37,7 @@ public abstract class MixinGuiRepair extends GuiContainer {
     private void setNameToClipboard(GuiTextField instance, String textIn) {
         Slot slot = this.anvil.getSlot(0);
 
-        if (TweaksToggle.ANVIL_RENAME_COPY.getBooleanValue() && slot != null && slot.getHasStack()){
+        if (TweaksToggle.ANVIL_RENAME_COPY.getBooleanValue() && slot != null && slot.getHasStack()) {
             instance.setText(ClipBoardHelper.getClipBoardString() != null ? ClipBoardHelper.getClipBoardString() : textIn);
         } else {
             instance.setText(textIn);
