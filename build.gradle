@@ -22,23 +22,26 @@ repositories {
 //}
 
 ploceus {
-    setIntermediaryGeneration(2)
+    setIntermediaryGeneration(1)
 }
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
 //    mappings ploceus.featherMappings(project.feather_build)
-    mappings ploceus.mcpMappings("stable", "1.12", "39") // mcp
+    // mcp
+    mappings ploceus.mcpMappings("stable", "1.12", "39")
 
     exceptions ploceus.raven(project.raven_build) // remove this line if not using exceptions patches
     signatures ploceus.sparrow(project.sparrow_build) // remove this line if not using generics patches
 //	nests ploceus.nests(project.nests_build) // remove this line if not using inner class patches
 
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    ploceus.dependOsl(project.osl_version)
 
     // malilib
     modImplementation "malilib:malilib-ornithe-1.12.2:${project.malilib_version}"
 
+    compileOnly "com.google.code.findbugs:jsr305:3.0.2"
     // shadow jar to include mixin extra for older fabric loader version
 //    include(shadow(annotationProcessor("io.github.llamalad7:mixinextras-common:${project.mixin_extra_version}")))
 }
