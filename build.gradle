@@ -22,6 +22,11 @@ repositories {
 //}
 
 loom {
+    runs {
+        client { preferGradleTask = false }
+        server { preferGradleTask = false }
+    }
+
     runConfigs.configureEach {
         jvmArguments.add("-Dmixin.debug.export=true") // Exports transformed classes for debugging
 
@@ -73,6 +78,11 @@ tasks.withType(JavaCompile).configureEach {
     it.options.encoding = 'UTF-8'
     it.options.release = 8
 }
+
+// java 8 for run task
+//tasks.named('runClient') {
+//    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(8) }
+//}
 
 java {
     // Still required by IDEs such as Eclipse and Visual Studio Code
