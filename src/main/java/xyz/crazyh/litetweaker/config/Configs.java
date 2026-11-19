@@ -34,7 +34,7 @@ public class Configs {
         public static final HotkeyedBooleanConfig AUTO_REFRESH_INVENTORY = new HotkeyedBooleanConfig("autoRefreshInventory", false, "");
         public static final IntegerConfig AUTO_REFRESH_INVENTORY_INTERVAL = new IntegerConfig("autoRefreshInventoryInterval", 100, 1, 1000);
         public static final HotkeyedBooleanConfig AUTO_DROP_INVENTORY = new HotkeyedBooleanConfig("autoDropInventory", false, "");
-        public static final IntegerConfig AUTO_DROP_INVENTORY_INTERVAL = new IntegerConfig("autoDropInventory", 100, 1, 12000);
+        public static final IntegerConfig AUTO_DROP_INVENTORY_INTERVAL = new IntegerConfig("autoDropInventoryInterval", 100, 1, 12000);
 
         public static final IntegerConfig BACKGROUND_FPS_LIMIT = new IntegerConfig("backgroundFPSLimit", -1, -1, 999);
         public static final IntegerConfig CLIENT_TIME = new IntegerConfig("clientTime", 6000, 0, 24000);
