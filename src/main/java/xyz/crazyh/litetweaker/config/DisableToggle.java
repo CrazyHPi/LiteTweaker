@@ -29,7 +29,7 @@ public enum DisableToggle implements ConfigInfo {
     DISABLE_ENTITY_HIT("disableEntityHit", false),
     DISABLE_EXPLOSION_SOUND("disableExplosionSound", false),
     DISABLE_PUMPKIN_OVERLAY("disablePumpkinOverlay", false),
-    DISABLE_REALM_BUTTON("disableRealmButton", false),
+    DISABLE_REALM_BUTTON("disableRealmButton", true),
     DISABLE_SLIME_BOUNCE("disableSlimeBounce", false),
     DISABLE_SLOW_DOWN("disableSlowDown", false),
     DISABLE_SNEAK_SLOW_DOWN("disableSneakSlowDown", false),

@@ -3,6 +3,9 @@
   "package": "xyz.crazyh.litetweaker.mixins",
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.7",
+  "mixinextras": {
+    "minVersion": "0.5.2"
+  },
   "mixins": [
     "Accessors.BlockAccessor",
     "Accessors.BlocksAccessor",
